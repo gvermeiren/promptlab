@@ -320,27 +320,27 @@ textarea:focus{outline:none;border-color:var(--accent)}
 const PATHS = {
   jong:   {label:'12–14 jaar', gids:'Nova', rol:'ontdekkingsreiziger', kleur:'var(--c-jong)',
            pitch:'Speels en kort. Voorbeelden uit school, hobby en vrienden.',
-           kaart:'Klaar om te vertrekken? We beginnen in het Startdorp. Elke halte leert je één nieuwe truc.',
-           reward:{seal:'Dorps&shy;verkenner', titel:'Badge verdiend: Dorpsverkenner', tekst:'Je eerste badge! Volgende halte: de Helderheidsburcht, waar je leert om precies te zeggen wat je wil.'}},
+           kaart:'Klaar om te vertrekken? We beginnen bij halte 1: de basis. Elke halte leert je één nieuwe truc.',
+           reward:{seal:'Starter', titel:'Badge verdiend: Starter', tekst:'Je eerste badge! Volgende halte: duidelijk vragen. Daar leer je precies zeggen wat je wil.'}},
   tiener: {label:'15–18 jaar', gids:'Kai', rol:'laatstejaars en coach', kleur:'var(--c-tiener)',
            pitch:'Sec, met wat humor. Voorbeelden uit examens, GIP, bijjob en studiekeuze.',
-           kaart:'Dit is de route. Startdorp is de basis; daarna wordt het pas interessant.',
-           reward:{seal:'Level 2', titel:'Level 2 bereikt · +300 XP', tekst:'Basis zit erin. In de Helderheidsburcht leer je doel, publiek en lengte vastleggen, zodat je minder moet herschrijven.'}},
+           kaart:'Dit is de route. Halte 1 is de basis; daarna wordt het pas interessant.',
+           reward:{seal:'Level 2', titel:'Level 2 bereikt · +300 XP', tekst:'Basis zit erin. Bij de volgende halte leer je doel, publiek en lengte vastleggen, zodat je minder moet herschrijven.'}},
   volw:   {label:'Volwassenen', gids:'Sam', rol:'collega die meedenkt', kleur:'var(--c-volw)',
            pitch:'Helder en zakelijk. Voorbeelden uit werk, gezin en administratie.',
-           kaart:'Welkom. We starten met de basis in het Startdorp. Elke les duurt een vijftal minuten.',
+           kaart:'Welkom. We starten met de basis. Elke les duurt een vijftal minuten.',
            reward:{seal:'1 / 8', titel:'Onderdeel 1 van 8 afgerond', tekst:'Je kent nu de basis. Volgende onderdeel: specifiek zijn over doel, publiek en lengte.'}}
 };
 
 const AREAS = [
-  {naam:'Startdorp', thema:'Wat een prompt is en waarom duidelijkheid telt', n:3, open:true},
-  {naam:'Helderheidsburcht', thema:'Specifiek zijn: doel, publiek, afbakening', n:3},
-  {naam:'Contextgrotten', thema:'Achtergrond, voorbeelden, formaat en grenzen', n:4},
-  {naam:'Rollenravijn', thema:'Rollen, stap voor stap, creatief werken, laten doorvragen', n:4},
-  {naam:'Bijschaafbaai', thema:'Antwoorden beoordelen, bijsturen en vergelijken', n:4},
-  {naam:'Waaktoren', thema:'Fouten, privacy, eerlijk gebruik, vooroordelen', n:5},
-  {naam:'Werkplaats', thema:'Samenvatten, verbeteren, leren, beslissen', n:5},
-  {naam:'Meestertop', thema:'Alles samen en de eindproef', n:2}
+  {naam:'De basis', thema:'Wat een prompt is en waarom duidelijkheid telt', n:3, open:true},
+  {naam:'Duidelijk vragen', thema:'Specifiek zijn: doel, publiek, afbakening', n:3},
+  {naam:'Context geven', thema:'Achtergrond, voorbeelden, formaat en grenzen', n:4},
+  {naam:'Rollen en stappen', thema:'Rollen, stap voor stap, creatief werken, laten doorvragen', n:4},
+  {naam:'Bijsturen', thema:'Antwoorden beoordelen, bijsturen en vergelijken', n:4},
+  {naam:'Veilig en kritisch', thema:'Fouten, privacy, eerlijk gebruik, vooroordelen', n:5},
+  {naam:'In de praktijk', thema:'Samenvatten, verbeteren, leren, beslissen', n:5},
+  {naam:'Eindproef', thema:'Alles samen en de eindproef', n:2}
 ];
 const TOTAL = AREAS.reduce((s,a)=>s+a.n,0);
 
@@ -453,7 +453,7 @@ const L = [
         {t:'Overhoor me over deze 10 Engelse woordjes. Vraag ze één per één en zeg of ik juist ben.', mono:true, ok:true, f:'Duidelijk wat de AI moet doen en hoe.'},
         {t:'Hallo! Ik moet voor school iets doen met Engels en ik weet niet goed hoe ik eraan moet beginnen, want het is best veel. Kan jij me daar een beetje mee helpen, alsjeblieft?', mono:true, ok:false, f:'Lang en beleefd, maar nog altijd vaag: wat moet de AI precies doen? Langer is niet automatisch beter.'}]}
     ],
-    slot:'Je ziet nu het verschil tussen vaag en duidelijk. Daarmee heb je het hele Startdorp verkend!'},
+    slot:'Je ziet nu het verschil tussen vaag en duidelijk. Daarmee ken je de basis!'},
   tiener:{
     gids:'Vage prompts geven vage antwoorden. Klinkt logisch, maar je zou schrikken hoe vaak het gebeurt. Test jezelf.',
     uitleg:'Een <b>vage</b> prompt laat de AI raden. Een <b>duidelijke</b> prompt zegt waarover het gaat, waarvoor je het nodig hebt en hoe het antwoord eruit moet zien. Een lange prompt is niet automatisch een goede: het gaat om wát erin staat.',
@@ -470,7 +470,7 @@ const L = [
         {t:'Ik heb binnen 3 weken 7 examens en begin altijd te laat. Maak een realistische studieplanning als tabel, met pauzes.', mono:true, ok:true, f:'Situatie, doel en vorm: hier kan je mee aan de slag.'},
         {t:'Ik heb binnenkort examens en ik ben echt gestresseerd, want ik heb het gevoel dat ik veel te weinig tijd heb en ik weet niet waar ik moet beginnen. Kan je me helpen om alles wat beter te organiseren?', mono:true, ok:false, f:'Veel woorden, maar hoeveel examens, hoeveel tijd en in welke vorm? De AI weet het nog steeds niet. Langer is niet automatisch beter.'}]}
     ],
-    slot:'Vaag herkennen is de helft van het werk. Startdorp: afgevinkt.'},
+    slot:'Vaag herkennen is de helft van het werk. Basis: afgevinkt.'},
   volw:{
     gids:'Het verschil tussen een bruikbaar en een nutteloos antwoord zit vaak in één of twee zinnen extra. Herken jij een vage prompt?',
     uitleg:'Een <b>vage</b> prompt laat de tool raden. Een <b>duidelijke</b> prompt zegt waarover het gaat, waarvoor je het nodig hebt en hoe het antwoord eruit moet zien. Een lange prompt is niet automatisch een goede: het gaat om wát erin staat.',
@@ -487,21 +487,21 @@ const L = [
         {t:'Schrijf een uitnodiging voor het buurtfeest in onze straat, zaterdag om 15 uur. Iedereen brengt iets mee om te eten. Warme toon, past op één A5.', mono:true, ok:true, f:'Alle nodige info staat erin, plus toon en formaat.'},
         {t:'Wij organiseren binnenkort iets gezelligs in onze straat en ik zou graag hebben dat er een mooie uitnodiging van gemaakt wordt, zodat zoveel mogelijk buren komen. Kan je daar iets leuks voor schrijven?', mono:true, ok:false, f:'Lang, maar wanneer is het, en wat moeten de buren meebrengen? Langer is niet automatisch beter.'}]}
     ],
-    slot:'Je herkent nu vage prompts en weet hoe je ze duidelijk maakt. Het Startdorp zit erop.'}
+    slot:'Je herkent nu vage prompts en weet hoe je ze duidelijk maakt. De basis zit erop.'}
 }}
 ];
 
 
-/* ---------- halte 2: Helderheidsburcht ---------- */
+/* ---------- halte 2: Duidelijk vragen ---------- */
 AREAS[1].open = true;
-PATHS.jong.rewards = [PATHS.jong.reward, {seal:'Burcht&shy;bewaker', titel:'Badge verdiend: Burchtbewaker', tekst:'Twee badges! Volgende halte: de Contextgrotten, waar je leert om achtergrond mee te geven.'}];
-PATHS.tiener.rewards = [PATHS.tiener.reward, {seal:'Level 3', titel:'Level 3 bereikt · +300 XP', tekst:'Je prompts hebben nu een doel, een publiek en grenzen. Volgende halte: de Contextgrotten.'}];
+PATHS.jong.rewards = [PATHS.jong.reward, {seal:'Scherp&shy;steller', titel:'Badge verdiend: Scherpsteller', tekst:'Twee badges! Volgende halte: context geven. Daar leer je achtergrond meegeven.'}];
+PATHS.tiener.rewards = [PATHS.tiener.reward, {seal:'Level 3', titel:'Level 3 bereikt · +300 XP', tekst:'Je prompts hebben nu een doel, een publiek en grenzen. Volgende halte: context geven.'}];
 PATHS.volw.rewards = [PATHS.volw.reward, {seal:'2 / 8', titel:'Onderdeel 2 van 8 afgerond', tekst:'Je legt nu doel, publiek en grenzen vast. Volgende onderdeel: context, voorbeelden en formaat meegeven.'}];
 
 L.push(
 { id:'2.1', titel:'Wat ontbreekt er?', duur:'6 min', per:{
   jong:{
-    gids:'Welkom in de Helderheidsburcht! Hier word je detective: je speurt naar wat er ontbreekt in een prompt.',
+    gids:'Halte 2: duidelijk vragen! Hier word je detective: je speurt naar wat er ontbreekt in een prompt.',
     uitleg:'Soms lijkt een prompt duidelijk, maar mist er iets belangrijks. Stel jezelf de speurvragen: <b>wat</b> precies, <b>voor wie</b>, <b>wanneer of waar</b>, en <b>hoe</b> wil je het antwoord? Wat jij niet zegt, moet de AI raden.',
     voorbeeld:{kind:'vergelijk', vaag:'Schrijf een verjaardagsbericht.', sterk:'Schrijf een grappig verjaardagsbericht voor mijn oma die 80 wordt. Ze houdt van tuinieren. Max. 4 zinnen, om op een kaartje te schrijven.', waarom:'Nu weet de AI voor wie het is, wat oma graag doet, welke toon je wil en hoe lang het mag zijn.'},
     oef:[
@@ -518,7 +518,7 @@ L.push(
     ],
     slot:'Goed gespeurd! In de volgende les leer je zeggen waarvoor en voor wie je iets vraagt.'},
   tiener:{
-    gids:'Helderheidsburcht. Hier leer je zien wat er mist in een prompt, nog vóór je op verzenden drukt. Scheelt veel heen-en-weer.',
+    gids:'Halte 2: duidelijk vragen. Hier leer je zien wat er mist in een prompt, nog vóór je op verzenden drukt. Scheelt veel heen-en-weer.',
     uitleg:'Een prompt kan prima klinken en toch gaten hebben. Check vier dingen: <b>wat</b> precies, <b>voor wie</b>, <b>wanneer of waar</b>, en <b>in welke vorm</b>. Elk gat vult de AI zelf in, en meestal niet zoals jij het wil.',
     voorbeeld:{kind:'vergelijk', vaag:'Schrijf een post over ons schoolevent.', sterk:'Schrijf een Instagram-post voor het schoolfeest van vrijdag om 20 uur in de turnzaal. Voor leerlingen van 15 tot 18. Max. 3 zinnen, eindig met een oproep om tickets te kopen.', waarom:'Platform, wanneer, waar, voor wie, lengte en doel: de AI hoeft niets meer te verzinnen.'},
     oef:[
@@ -535,7 +535,7 @@ L.push(
     ],
     slot:'Gaten gevonden en gedicht. Volgende les: doel en publiek.'},
   volw:{
-    gids:'Welkom in de Helderheidsburcht. Hier leer je een prompt nalezen op ontbrekende info, zoals je een mail naleest voor je hem verstuurt.',
+    gids:'Welkom bij halte 2: duidelijk vragen. Hier leer je een prompt nalezen op ontbrekende info, zoals je een mail naleest voor je hem verstuurt.',
     uitleg:'Een prompt kan duidelijk klinken en toch belangrijke info missen. Loop vier vragen af: <b>wat</b> precies, <b>voor wie</b>, <b>wanneer of waar</b>, en <b>in welke vorm</b>. Wat ontbreekt, vult de tool zelf in, vaak met algemene of verzonnen details.',
     voorbeeld:{kind:'vergelijk', vaag:'Maak een verslag van de vergadering.', sterk:'Maak een kort verslag van onze teamvergadering van dinsdag, op basis van de notities hieronder. Voor collega’s die afwezig waren. Zet de beslissingen en acties met naam en deadline in een tabel.', waarom:'Welke vergadering, op basis van wat, voor wie en in welke vorm: alles staat erin.'},
     oef:[
@@ -613,7 +613,7 @@ L.push(
 }},
 { id:'2.3', titel:'Afbakenen', duur:'7 min', per:{
   jong:{
-    gids:'Laatste les in de burcht! Zonder grenzen schrijft de AI soms een hele bladzijde, terwijl jij maar drie zinnen nodig had.',
+    gids:'Laatste les van deze halte! Zonder grenzen schrijft de AI soms een hele bladzijde, terwijl jij maar drie zinnen nodig had.',
     uitleg:'Afbakenen betekent grenzen geven. Zeg hoe <b>lang</b> het mag zijn, in welke <b>toon</b> en op welk <b>niveau</b>. Zo krijg je meteen wat je nodig hebt.',
     voorbeeld:{kind:'delen', labels:['Opdracht','Lengte','Toon','Niveau'], delen:['Vat het verhaal van de Rattenvanger van Hamelen samen,','in maximaal 100 woorden,','spannend verteld,','voor kinderen van 10.']},
     oef:[
@@ -627,7 +627,7 @@ L.push(
        check:['Ik zeg hoe lang het antwoord mag zijn','Ik zeg welke toon ik wil','Ik zeg voor wie of op welk niveau'],
        model:'Leg in maximaal 5 zinnen uit wat AI is, alsof je het aan een klasgenoot van 12 vertelt. Gebruik een voorbeeld uit het dagelijks leven.'}
     ],
-    slot:'Lengte, toon en niveau: je weet nu hoe je grenzen stelt. De Helderheidsburcht is veroverd!'},
+    slot:'Lengte, toon en niveau: je weet nu hoe je grenzen stelt. Halte 2 zit erop!'},
   tiener:{
     gids:'Zonder grenzen krijg je een lap tekst die je zelf moet inkorten. Hier leer je die grenzen meteen meegeven.',
     uitleg:'Afbakenen betekent grenzen geven: hoe <b>lang</b>, in welke <b>toon</b> en op welk <b>niveau</b>. Zo krijg je in één keer iets wat je kan gebruiken.',
@@ -643,7 +643,7 @@ L.push(
        check:['Ik zeg hoe lang het antwoord mag zijn','Ik zeg welke toon ik wil','Ik zeg voor wie of op welk niveau'],
        model:'Leg in maximaal 150 woorden uit wat AI is, voor een spreekbeurt in het 5de middelbaar. Helder en een beetje luchtig, met één voorbeeld uit sociale media.'}
     ],
-    slot:'Grenzen stellen: check. Helderheidsburcht uitgespeeld.'},
+    slot:'Grenzen stellen: check. Halte 2: uitgespeeld.'},
   volw:{
     gids:'Zonder grenzen krijg je vaak een lange, algemene tekst die je zelf moet inkorten. Dat kan sneller.',
     uitleg:'Afbakenen betekent grenzen geven: hoe <b>lang</b>, in welke <b>toon</b> en op welk <b>niveau</b>. Zo bespaar je het werk achteraf.',
@@ -664,11 +664,10 @@ L.push(
 );
 L.forEach(l=>l.area = +l.id.split('.')[0]-1);
 
-/* ---------- halte 3: Contextgrotten ---------- */
+/* ---------- halte 3: Context geven ---------- */
 AREAS[2].open = true;
-['het','de','de','het','de','de','de','de'].forEach((a,i)=>AREAS[i].lw = a);
-PATHS.jong.rewards.push({seal:'Grotten&shy;gids', titel:'Badge verdiend: Grottengids', tekst:'Drie badges! Volgende halte: het Rollenravijn, waar je de AI een rol laat spelen.'});
-PATHS.tiener.rewards.push({seal:'Level 4', titel:'Level 4 bereikt · +400 XP', tekst:'Context, voorbeelden, formaat en grenzen: je prompts zijn nu echt op maat. Volgende halte: het Rollenravijn.'});
+PATHS.jong.rewards.push({seal:'Context&shy;kenner', titel:'Badge verdiend: Contextkenner', tekst:'Drie badges! Volgende halte: rollen en stappen. Daar laat je de AI een rol spelen.'});
+PATHS.tiener.rewards.push({seal:'Level 4', titel:'Level 4 bereikt · +400 XP', tekst:'Context, voorbeelden, formaat en grenzen: je prompts zijn nu echt op maat. Volgende halte: rollen en stappen.'});
 PATHS.volw.rewards.push({seal:'3 / 8', titel:'Onderdeel 3 van 8 afgerond', tekst:'Je geeft nu context, voorbeelden, formaat en grenzen mee. Volgende onderdeel: rollen en werken in stappen.'});
 
 const nuttig = ['Nuttig','Niet nodig'];
@@ -681,7 +680,7 @@ const jfStellingen = (extra) => ({type:'keuze2', titel:'Juist of fout?', opdrach
 L.push(
 { id:'3.1', titel:'Achtergrond geven', duur:'7 min', per:{
   jong:{
-    gids:'Welkom in de Contextgrotten! Hier is het donker, tenzij jij licht geeft. Dat licht heet context.',
+    gids:'Halte 3: context geven! Hoe meer de AI over jouw situatie weet, hoe beter hij je kan helpen.',
     uitleg:'<b>Context</b> is de achtergrond bij je vraag: wie je bent, waarvoor je het nodig hebt en wat je al weet. Hoe meer nuttige context, hoe beter de AI begrijpt wat je bedoelt. Privégegevens zoals je adres of wachtwoord horen er nooit bij.',
     voorbeeld:{kind:'vergelijk', vaag:'Help me oefenen voor Frans.', sterk:'Ik zit in het 1ste middelbaar en heb vrijdag een toets Frans over de passé composé. Ik vergis me vaak tussen être en avoir. Maak 6 oefenzinnen.', waarom:'Niveau, onderwerp, deadline en wat je moeilijk vindt: zo oefen je net wat jij nodig hebt.'},
     oef:[
@@ -698,7 +697,7 @@ L.push(
     ],
     slot:'Je weet nu welke achtergrond helpt en wat je beter weglaat. Volgende les: een voorbeeld meegeven.'},
   tiener:{
-    gids:'Contextgrotten. Zonder context tast de AI in het duister en krijg je antwoorden die voor iedereen gelden. Met context krijg je er één voor jou.',
+    gids:'Halte 3: context geven. Zonder context tast de AI in het duister en krijg je antwoorden die voor iedereen gelden. Met context krijg je er één voor jou.',
     uitleg:'<b>Context</b> is alles wat de AI moet weten om jou te begrijpen: je richting, je opdracht, wat je al hebt en waar je vastzit. Geef wat relevant is, niet je hele levensverhaal. Privégegevens laat je altijd weg.',
     voorbeeld:{kind:'vergelijk', vaag:'Help me met mijn GIP-planning.', sterk:'Ik zit in het 6de jaar Handel. Mijn GIP is een ondernemingsplan voor een foodtruck, deadline 15 maart. Het marktonderzoek is klaar, de financiële planning nog niet. Maak een weekplanning tot de deadline.', waarom:'Richting, onderwerp, deadline en wat al klaar is: de planning sluit aan bij waar jij staat.'},
     oef:[
@@ -715,7 +714,7 @@ L.push(
     ],
     slot:'Relevante context in, privé eruit. Volgende les: een voorbeeld meegeven.'},
   volw:{
-    gids:'Welkom in de Contextgrotten. Een AI-tool weet niets over jouw werk of situatie. Hoe beter je die schetst, hoe minder je achteraf moet bijsturen.',
+    gids:'Welkom bij halte 3: context geven. Een AI-tool weet niets over jouw werk of situatie. Hoe beter je die schetst, hoe minder je achteraf moet bijsturen.',
     uitleg:'<b>Context</b> is de achtergrond bij je vraag: je rol, je situatie, wat er al is en wat het probleem is. Geef wat relevant is. Persoonsgegevens van klanten of collega’s en vertrouwelijke info laat je weg.',
     voorbeeld:{kind:'vergelijk', vaag:'Schrijf een antwoord op een klacht.', sterk:'Ik werk bij de klantendienst van een webshop in fietsonderdelen. Een klant klaagt dat zijn bestelling 10 dagen te laat is door een fout in ons magazijn. We bieden gratis verzending bij een volgende bestelling. Schrijf een kort, oprecht antwoord.', waarom:'Je rol, wat er misliep, wiens fout het was en wat je aanbiedt: het antwoord kan meteen de deur uit.'},
     oef:[
@@ -828,7 +827,7 @@ L.push(
 }},
 { id:'3.4', titel:'Grenzen stellen', duur:'7 min', per:{
   jong:{
-    gids:'Laatste grot! Hier leer je zeggen wat de AI níet moet doen. Zo blijf jij de baas.',
+    gids:'Laatste les van deze halte! Hier leer je zeggen wat de AI níet moet doen. Zo blijf jij de baas.',
     uitleg:'Zeg ook wat de AI <b>niet</b> moet doen. Bijvoorbeeld: geef een hint, niet het antwoord. Of: wijs mijn fouten aan, maar verbeter ze niet. Zo leer je zelf iets en neemt de AI je huiswerk niet over.',
     voorbeeld:{kind:'vergelijk', pills:['Zonder grens','Met grens'], vaag:'Help me met deze oefening: 3x + 5 = 20.', aiVaag:'3x = 15, dus x = 5.', sterk:'Help me met deze oefening: 3x + 5 = 20. Geef me alleen een hint voor de eerste stap, niet het antwoord. Ik wil het zelf oplossen.', aiSterk:'Hint: probeer eerst die +5 weg te krijgen. Wat moet je dan aan beide kanten doen?', waarom:'Zonder grens krijg je meteen het antwoord. Met grens los jij het zelf op, en dat onthoud je veel beter.'},
     oef:[
@@ -844,9 +843,9 @@ L.push(
        check:['Ik zeg waarmee de AI moet helpen','Ik zeg wat de AI níet mag doen','Ik zeg wat ik zelf wil doen'],
        model:'Ik moet een verhaal van één bladzijde schrijven over een avontuur in het bos. Geef me 3 ideeën voor een begin, maar schrijf het verhaal niet: dat wil ik zelf doen.'}
     ],
-    slot:'Jij bepaalt wat de AI wel en niet doet. De Contextgrotten zijn verkend!'},
+    slot:'Jij bepaalt wat de AI wel en niet doet. Halte 3 zit erop!'},
   tiener:{
-    gids:'Laatste les in de grotten. AI kan je werk overnemen, maar dan leer jij niks en is het ook niet echt van jou. Grenzen stellen lost dat op.',
+    gids:'Laatste les van deze halte. AI kan je werk overnemen, maar dan leer jij niks en is het ook niet echt van jou. Grenzen stellen lost dat op.',
     uitleg:'Zeg ook wat de AI <b>niet</b> moet doen: geef feedback maar herschrijf niet, stel vragen maar geef geen antwoorden, gebruik alleen mijn bronnen. Zo blijft het jouw werk en gebruik je AI eerlijk.',
     voorbeeld:{kind:'vergelijk', pills:['Zonder grens','Met grens'], vaag:'Verbeter mijn betoog hieronder.', aiVaag:'Hier is je verbeterde betoog: [volledig herschreven tekst]', sterk:'Geef feedback op mijn betoog hieronder: noem de 3 zwakste punten en zeg waarom. Herschrijf niets, ik pas het zelf aan.', aiSterk:'1. Je tweede argument heeft geen bron. 2. Je slot herhaalt je inleiding. 3. …', waarom:'Zonder grens is het niet meer jouw tekst. Met grens krijg je feedback en blijft het jouw werk.'},
     oef:[
@@ -862,9 +861,9 @@ L.push(
        check:['Ik zeg waarmee de AI moet helpen','Ik zeg wat de AI níet mag doen','Ik zeg wat ik zelf wil doen'],
        model:'Ik geef maandag een presentatie van 5 minuten over fast fashion. Stel me één voor één 5 vragen die het publiek zou kunnen stellen. Geef geen antwoorden en herschrijf mijn tekst niet: ik wil zelf leren antwoorden.'}
     ],
-    slot:'Grenzen gesteld, werk blijft van jou. Contextgrotten uitgespeeld.'},
+    slot:'Grenzen gesteld, werk blijft van jou. Halte 3: uitgespeeld.'},
   volw:{
-    gids:'Laatste les in de grotten. Een AI-tool vult gaten graag zelf op, soms met verzonnen info. Met een grens voorkom je dat.',
+    gids:'Laatste les van deze halte. Een AI-tool vult gaten graag zelf op, soms met verzonnen info. Met een grens voorkom je dat.',
     uitleg:'Zeg ook wat de tool <b>niet</b> moet doen: verzin geen cijfers, gebruik alleen de info hieronder, pas mijn tekst niet aan. Laat hem open plekken markeren in plaats van ze in te vullen. Zo kan je erop vertrouwen wat erin staat.',
     voorbeeld:{kind:'vergelijk', pills:['Zonder grens','Met grens'], vaag:'Schrijf een jaarverslag voor onze vzw.', aiVaag:'In 2026 bereikte onze vzw meer dan 2.000 deelnemers met 45 activiteiten…', sterk:'Schrijf een eerste versie van het jaarverslag van onze vzw op basis van de cijfers hieronder. Verzin geen cijfers of activiteiten: zet [AANVULLEN] waar info ontbreekt.', aiSterk:'In 2026 organiseerde onze vzw [AANVULLEN] activiteiten, met in totaal 640 deelnemers…', waarom:'Zonder grens verzint de tool cijfers die echt lijken. Met grens zie je meteen wat je nog moet aanvullen.'},
     oef:[
@@ -885,10 +884,10 @@ L.push(
 );
 L.forEach(l=>l.area = +l.id.split('.')[0]-1);
 
-/* ---------- halte 4: Rollenravijn ---------- */
+/* ---------- halte 4: Rollen en stappen ---------- */
 AREAS.forEach(a=>a.open=true);
-PATHS.jong.rewards.push({seal:'Ravijn&shy;springer', titel:'Badge verdiend: Ravijnspringer', tekst:'Vier badges! Volgende halte: de Bijschaafbaai, waar je antwoorden leert verbeteren.'});
-PATHS.tiener.rewards.push({seal:'Level 5', titel:'Level 5 bereikt · +400 XP', tekst:'Rollen, stappen, ideeën en doorvragen: je werkt nu echt samen met AI. Volgende halte: de Bijschaafbaai.'});
+PATHS.jong.rewards.push({seal:'Regis&shy;seur', titel:'Badge verdiend: Regisseur', tekst:'Vier badges! Volgende halte: bijsturen. Daar leer je antwoorden verbeteren.'});
+PATHS.tiener.rewards.push({seal:'Level 5', titel:'Level 5 bereikt · +400 XP', tekst:'Rollen, stappen, ideeën en doorvragen: je werkt nu echt samen met AI. Volgende halte: bijsturen.'});
 PATHS.volw.rewards.push({seal:'4 / 8', titel:'Onderdeel 4 van 8 afgerond', tekst:'Halfweg! Volgende onderdeel: antwoorden beoordelen en bijsturen.'});
 
 const eenOfStappen = ['In één keer','Stap voor stap'];
@@ -897,7 +896,7 @@ const stappen4 = ['Stap 1','Stap 2','Stap 3','Stap 4'];
 L.push(
 { id:'4.1', titel:'Speel een rol', duur:'6 min', per:{
   jong:{
-    gids:'Welkom in het Rollenravijn! Hier geef je de AI een rol, zoals in een toneelstuk. Hij kan quizmaster zijn, coach of zelfs iemand uit de geschiedenis.',
+    gids:'Halte 4: rollen en stappen! Hier geef je de AI een rol, zoals in een toneelstuk. Hij kan quizmaster zijn, coach of zelfs iemand uit de geschiedenis.',
     uitleg:'Je kan de AI een <b>rol</b> geven. De rol bepaalt hoe hij praat en waar hij op let. Zeg er ook bij wat hij in die rol moet doen.',
     voorbeeld:{kind:'gesprek', msgs:[
       ['me','Wees een quizmaster. Stel me 5 vragen over de planeten, één per keer. Zeg na elk antwoord of het juist is.'],
@@ -920,7 +919,7 @@ L.push(
     ],
     slot:'Rollen geven: gelukt! Volgende les: grote opdrachten in stapjes opdelen.'},
   tiener:{
-    gids:'Rollenravijn. Geef de AI een rol en hij verandert van toon, focus en kritiek. Handig om te oefenen voor examens, sollicitaties of debatten.',
+    gids:'Halte 4: rollen en stappen. Geef de AI een rol en hij verandert van toon, focus en kritiek. Handig om te oefenen voor examens, sollicitaties of debatten.',
     uitleg:'Een <b>rol</b> bepaalt hoe de AI reageert: als strenge examinator, als coach of als tegenstander in een debat. Zeg erbij wat hij in die rol moet doen en waarop hij moet letten.',
     voorbeeld:{kind:'gesprek', msgs:[
       ['me','Wees een strenge examinator biologie. Stel me één vraag over celdeling en geef daarna kritische feedback op mijn antwoord.'],
@@ -943,7 +942,7 @@ L.push(
     ],
     slot:'Rol gekozen, oefening op maat. Volgende les: grote taken opdelen.'},
   volw:{
-    gids:'Welkom in het Rollenravijn. Een AI-tool kan een rol aannemen: een kritische klant, een coach of een collega met een andere mening. Ideaal om iets voor te bereiden.',
+    gids:'Welkom bij halte 4: rollen en stappen. Een AI-tool kan een rol aannemen: een kritische klant, een coach of een collega met een andere mening. Ideaal om iets voor te bereiden.',
     uitleg:'Geef de tool een <b>rol</b> en hij reageert vanuit dat perspectief. Zeg erbij wat hij in die rol moet doen, bijvoorbeeld kritische vragen stellen of je voorstel beoordelen.',
     voorbeeld:{kind:'gesprek', msgs:[
       ['me','Speel een klant die een offerte van 4.000 euro voor een nieuwe website te duur vindt. Ik oefen mijn antwoord.'],
@@ -1108,7 +1107,7 @@ L.push(
        check:['Ik zeg waarover het gaat','Ik vraag de AI om eerst vragen te stellen','Ik zeg hoeveel vragen, of dat hij pas daarna mag helpen'],
        model:'Ik zoek een idee voor een uitstap met mijn klas van 25 leerlingen. Stel me eerst 4 vragen, één per keer. Geef pas daarna 3 voorstellen.'}
     ],
-    slot:'Doorvragen laten stellen: slim! Het Rollenravijn is overgestoken.'},
+    slot:'Doorvragen laten stellen: slim! Halte 4 zit erop!'},
   tiener:{
     gids:'Soms is je vraag nog niet scherp. Laat de AI dan eerst doorvragen: dat dwingt jou ook om na te denken.',
     uitleg:'Vraag de AI om eerst <b>vragen te stellen</b>, één per keer, voor hij advies geeft. Handig bij grote keuzes zoals een studierichting. Zo ontdek je wat je zelf belangrijk vindt.',
@@ -1126,7 +1125,7 @@ L.push(
        check:['Ik zeg waarover het gaat','Ik vraag de AI om eerst vragen te stellen','Ik zeg hoeveel vragen, of dat hij pas daarna mag helpen'],
        model:'Ik moet een onderwerp kiezen voor mijn eindwerk in het 6de jaar Wetenschappen. Stel me eerst 5 vragen, één per keer, over mijn interesses en wat haalbaar is. Stel pas daarna 3 onderwerpen voor.'}
     ],
-    slot:'Eerst vragen, dan antwoorden. Rollenravijn: uitgespeeld.'},
+    slot:'Eerst vragen, dan antwoorden. Halte 4: uitgespeeld.'},
   volw:{
     gids:'Bij complexe vragen weet je soms zelf nog niet welke info relevant is. Laat de tool dan eerst doorvragen.',
     uitleg:'Vraag de tool om eerst <b>vragen te stellen</b>, één per keer, voor hij advies geeft. Zo vergeet je geen belangrijke info en past het antwoord bij jouw situatie.',
@@ -1148,9 +1147,9 @@ L.push(
 }}
 );
 
-/* ---------- halte 5: Bijschaafbaai ---------- */
-PATHS.jong.rewards.push({seal:'Baai&shy;kapitein', titel:'Badge verdiend: Baaikapitein', tekst:'Vijf badges! Volgende halte: de Waaktoren, waar je leert opletten.'});
-PATHS.tiener.rewards.push({seal:'Level 6', titel:'Level 6 bereikt · +500 XP', tekst:'Je keurt en stuurt AI bij als een pro. Volgende halte: de Waaktoren.'});
+/* ---------- halte 5: Bijsturen ---------- */
+PATHS.jong.rewards.push({seal:'Bij&shy;sturer', titel:'Badge verdiend: Bijsturer', tekst:'Vijf badges! Volgende halte: veilig en kritisch. Daar leer je opletten.'});
+PATHS.tiener.rewards.push({seal:'Level 6', titel:'Level 6 bereikt · +500 XP', tekst:'Je keurt en stuurt AI bij als een pro. Volgende halte: veilig en kritisch.'});
 PATHS.volw.rewards.push({seal:'5 / 8', titel:'Onderdeel 5 van 8 afgerond', tekst:'Je beoordeelt en verbetert antwoorden bewust. Volgende onderdeel: veilig en kritisch gebruik.'});
 
 const klopt = ['Klopt','Klopt niet'];
@@ -1164,7 +1163,7 @@ const vergelijkJF = (laatste) => ({type:'keuze2', titel:'Juist of fout?', opdrac
 L.push(
 { id:'5.1', titel:'Is dit goed?', duur:'6 min', per:{
   jong:{
-    gids:'Ahoi, welkom in de Bijschaafbaai! Hier leer je antwoorden keuren, zoals een kapitein zijn schip keurt voor het vertrekt.',
+    gids:'Halte 5: bijsturen! Hier leer je antwoorden keuren en verbeteren voor je ze gebruikt.',
     uitleg:'Een antwoord kan goed klinken en toch niet doen wat je vroeg. Leg het naast je prompt en check: klopt het <b>onderwerp</b>, de <b>lengte</b>, de <b>vorm</b> en het <b>niveau</b>?',
     voorbeeld:{kind:'chat', prompt:'Geef 3 korte tips om beter te slapen, voor iemand van 12. Eén zin per tip.', antwoord:'Slaap is heel belangrijk voor je lichaam. Tijdens de REM-slaap verwerken je hersenen informatie. Hier zijn enkele tips: 1. Ga elke dag op hetzelfde uur slapen, ook in het weekend, zodat je biologische klok een vast ritme krijgt. 2. Leg je gsm een uur voor het slapengaan weg. 3. Zorg voor een donkere kamer. 4. Drink ’s avonds geen cola. 5. Beweeg overdag genoeg.',
       noot:'Klinkt goed, maar kijk eens: je vroeg 3 tips van één zin. Je kreeg een inleiding, 5 tips en moeilijke woorden zoals REM-slaap.'},
@@ -1182,9 +1181,9 @@ L.push(
         {t:'Je vroeg een grappig gedichtje van 4 regels en kreeg dat.', a:0, f:'Onderwerp, toon en lengte kloppen.'},
         {t:'Je vroeg tips voor een hamster en kreeg tips voor een konijn.', a:1, f:'Het onderwerp klopt niet.'}]}
     ],
-    slot:'Jij keurt nu als een echte kapitein. Volgende les: bijsturen.'},
+    slot:'Jij keurt nu als een echte expert. Volgende les: bijsturen.'},
   tiener:{
-    gids:'Bijschaafbaai. Hier word je kritisch: niet alles wat vlot klinkt, is ook wat je vroeg.',
+    gids:'Halte 5: bijsturen. Hier word je kritisch: niet alles wat vlot klinkt, is ook wat je vroeg.',
     uitleg:'Check een antwoord altijd tegen je prompt: het <b>onderwerp</b>, de <b>lengte</b>, de <b>vorm</b> en het <b>niveau</b>. Vlot geschreven is niet hetzelfde als bruikbaar.',
     voorbeeld:{kind:'chat', prompt:'Vat de tekst hieronder over de Franse Revolutie samen in 5 bullets voor mijn examen.', antwoord:'De Franse Revolutie (1789–1799) was een periode van ingrijpende politieke en maatschappelijke veranderingen in Frankrijk, die de absolute monarchie omverwierp. Ze begon met de bestorming van de Bastille en eindigde met de machtsovername door Napoleon Bonaparte. De revolutie had grote gevolgen voor heel Europa…',
       noot:'Correct en vlot, maar het zijn geen 5 bullets, en het lijkt niet op jouw tekst gebaseerd. Je zou het zelf nog moeten herschrijven.'},
@@ -1204,7 +1203,7 @@ L.push(
     ],
     slot:'Kritisch lezen: check. Volgende les: bijsturen.'},
   volw:{
-    gids:'Welkom in de Bijschaafbaai. Hier leer je antwoorden nalezen voor je ze gebruikt, zoals je een rapport naleest voor je het doorstuurt.',
+    gids:'Welkom bij halte 5: bijsturen. Hier leer je antwoorden nalezen voor je ze gebruikt, zoals je een rapport naleest voor je het doorstuurt.',
     uitleg:'Een antwoord kan professioneel klinken en toch niet doen wat je vroeg. Leg het naast je prompt: klopt het <b>onderwerp</b>, de <b>lengte</b>, de <b>vorm</b> en het <b>niveau</b>?',
     voorbeeld:{kind:'chat', prompt:'Schrijf een korte mail (max. 5 zinnen) aan mijn team: de vergadering van donderdag verschuift naar vrijdag 10 uur.', antwoord:'Beste collega’s, ik hoop dat jullie een productieve week hebben. Graag informeer ik jullie over een wijziging in onze planning. Door onvoorziene omstandigheden verplaatsen we de vergadering van donderdag. Ze vindt nu plaats op vrijdag. Bedankt voor jullie begrip en flexibiliteit. Heb je vragen, aarzel dan niet om contact op te nemen. Met vriendelijke groeten',
       noot:'Netjes, maar 7 zinnen in plaats van 5, het uur ontbreekt, en het is stijver dan nodig.'},
@@ -1342,7 +1341,7 @@ L.push(
         {t:'Beste vriend, hierbij nodig ik u formeel uit op mijn verjaardagsfeest op zaterdag om 14.00 uur ten mijnen huize. Gelieve zwemkledij mee te brengen.', ok:false, f:'Alles staat erin, maar veel te stijf voor vrienden.'}]},
       vergelijkJF({t:'Als twee versies hetzelfde zeggen, is het zeker juist.', a:1, f:'Ze kunnen allebei dezelfde fout maken. Check belangrijke feiten zelf.'})
     ],
-    slot:'Kiezen op je doel: gelukt! De Bijschaafbaai is bevaren.'},
+    slot:'Kiezen op je doel: gelukt! Halte 5 zit erop!'},
   tiener:{
     gids:'Twee versies naast elkaar leggen is de snelste manier om te zien wat werkt. Maar kies op je doel, niet op je gevoel.',
     uitleg:'Vraag <b>twee of drie versies</b> en vergelijk ze met je doel: doet het wat je vroeg, klopt het, past het bij je publiek? Vaak is de beste versie een mix.',
@@ -1354,7 +1353,7 @@ L.push(
         {t:'Het schoolfeest is een traditie die al jaren een belangrijke rol speelt in onze schoolgemeenschap. Om het feest te doen slagen, zijn wij op zoek naar gemotiveerde leerlingen die…', ok:false, f:'Te lang voor een affiche: niemand leest dat in het voorbijgaan.'}]},
       vergelijkJF({t:'Als twee versies hetzelfde feit noemen, klopt het zeker.', a:1, f:'Ze kunnen dezelfde fout herhalen. Check feiten in een betrouwbare bron.'})
     ],
-    slot:'Vergelijken en kiezen op je doel. Bijschaafbaai: uitgespeeld.'},
+    slot:'Vergelijken en kiezen op je doel. Halte 5: uitgespeeld.'},
   volw:{
     gids:'Een tweede versie vragen kost een paar seconden. Vergelijken helpt je kiezen wat echt werkt.',
     uitleg:'Vraag <b>twee versies</b> en leg ze naast je doel: doet het wat je vroeg, klopt het, past het bij de lezer? Kies bewust, of combineer het beste van beide.',
@@ -1370,9 +1369,9 @@ L.push(
 }}
 );
 
-/* ---------- halte 6: Waaktoren ---------- */
-PATHS.jong.rewards.push({seal:'Toren&shy;wachter', titel:'Badge verdiend: Torenwachter', tekst:'Zes badges! Volgende halte: de Werkplaats, waar je AI echt aan het werk zet.'});
-PATHS.tiener.rewards.push({seal:'Level 7', titel:'Level 7 bereikt · +500 XP', tekst:'Je weet nu waar je moet opletten. Volgende halte: de Werkplaats.'});
+/* ---------- halte 6: Veilig en kritisch ---------- */
+PATHS.jong.rewards.push({seal:'Speur&shy;neus', titel:'Badge verdiend: Speurneus', tekst:'Zes badges! Volgende halte: in de praktijk. Daar zet je AI echt aan het werk.'});
+PATHS.tiener.rewards.push({seal:'Level 7', titel:'Level 7 bereikt · +500 XP', tekst:'Je weet nu waar je moet opletten. Volgende halte: in de praktijk.'});
 PATHS.volw.rewards.push({seal:'6 / 8', titel:'Onderdeel 6 van 8 afgerond', tekst:'Je gebruikt AI veilig, eerlijk en kritisch. Volgende onderdeel: praktische toepassingen.'});
 
 const deel = ['Oké om te delen','Niet delen'];
@@ -1383,7 +1382,7 @@ const zelfOfAI = ['AI is handig','Zelf doen'];
 L.push(
 { id:'6.1', titel:'AI kan zich vergissen', duur:'7 min', per:{
   jong:{
-    gids:'Welkom in de Waaktoren! Van hieruit hou je de wacht. Je leert opletten voor fouten, privacy en eerlijkheid.',
+    gids:'Halte 6: veilig en kritisch! Hier word je een echte speurneus. Je leert opletten voor fouten, privacy en eerlijkheid.',
     uitleg:'AI klinkt altijd heel zeker, ook als hij zich vergist. Soms <b>verzint</b> hij feiten, jaartallen of namen. Check belangrijke info daarom in een betrouwbare bron, zoals je cursus, een boek of een officiële website.',
     voorbeeld:{kind:'chat', prompt:'Wie schreef het boek ‘Het geheim van de oude molen’?', antwoord:'‘Het geheim van de oude molen’ werd geschreven in 1998 en won dat jaar een belangrijke jeugdboekenprijs.',
       noot:'In dit voorbeeld bestaat het boek niet eens! Toch verzint de AI een jaartal en een prijs. Het klinkt heel zeker, en dat maakt het gevaarlijk.'},
@@ -1401,7 +1400,7 @@ L.push(
     ],
     slot:'Jij laat je niet foppen door een zeker klinkend antwoord. Volgende les: wat je niet deelt.'},
   tiener:{
-    gids:'Waaktoren. AI kan met een stalen gezicht onzin vertellen, inclusief verzonnen bronnen. Hier leer je dat spotten.',
+    gids:'Halte 6: veilig en kritisch. AI kan met een stalen gezicht onzin vertellen, inclusief verzonnen bronnen. Hier leer je dat spotten.',
     uitleg:'AI voorspelt woorden die logisch klinken. Daardoor kan hij <b>feiten, cijfers en zelfs bronnen verzinnen</b> die heel overtuigend lijken. Gebruik je iets voor school? Check het in een betrouwbare bron en zoek elke bron zelf op.',
     voorbeeld:{kind:'chat', prompt:'Geef 2 wetenschappelijke bronnen over sociale media en slaap bij tieners.', antwoord:'1. Peeters, J. (2021). ‘Scrollen tot middernacht’. Tijdschrift voor Jeugdslaap, 14(2), 45–61. 2. …',
       noot:'Ziet er perfect uit, met auteur, jaartal en bladzijden. Maar in dit voorbeeld bestaat dat tijdschrift niet. Zoek elke bron zelf op voor je ze gebruikt.'},
@@ -1419,7 +1418,7 @@ L.push(
     ],
     slot:'Verzonnen bronnen spotten: check. Volgende les: wat je niet deelt.'},
   volw:{
-    gids:'Welkom in de Waaktoren. Hier leer je de risico’s van AI-tools kennen: verzonnen info, privacy, eerlijkheid en vooroordelen.',
+    gids:'Welkom bij halte 6: veilig en kritisch. Hier leer je de risico’s van AI-tools kennen: verzonnen info, privacy, eerlijkheid en vooroordelen.',
     uitleg:'AI-tools klinken zelfzeker, ook als ze zich vergissen. Ze kunnen <b>cijfers, regels, wetsartikels en bronnen verzinnen</b> die heel echt lijken. Gaat het over geld, recht, gezondheid of je werk? Controleer het dan bij een officiële bron.',
     voorbeeld:{kind:'chat', prompt:'Hoeveel dagen wettelijke vakantie heb ik als voltijdse bediende in België?', antwoord:'Als voltijdse bediende in België heb je recht op 25 wettelijke vakantiedagen per jaar.',
       noot:'Fout. In een vijfdagenweek zijn het er 20 (24 in een zesdagenweek), als je het jaar ervoor voltijds werkte. Het klinkt zeker, maar het klopt niet. Check zulke regels bij een officiële bron.'},
@@ -1439,7 +1438,7 @@ L.push(
 }},
 { id:'6.2', titel:'Wat deel je niet?', duur:'7 min', per:{
   jong:{
-    gids:'Een slimme wachter weet wat hij niet weggeeft. Bij AI geldt dat ook voor jouw gegevens.',
+    gids:'Een slimme speurneus weet ook wat hij niet weggeeft. Bij AI geldt dat ook voor jouw gegevens.',
     uitleg:'Wat je in een AI-tool typt, kan bewaard worden. Deel daarom nooit <b>gevoelige gegevens</b>: je volledige naam, je adres, wachtwoorden, foto’s van jezelf of info over anderen. Vervang ze door iets algemeens, zoals ‘mijn vriendin’.',
     voorbeeld:{kind:'vergelijk', pills:['Riskant','Veilig'], vaag:'Ik ben Lotte Janssens uit de Lindenlaan 8. Help me een verjaardagskaart maken voor mijn oma.', aiVaag:'Natuurlijk, Lotte! Hier is een idee voor de kaart…', sterk:'Help me een verjaardagskaart maken voor mijn oma. Ze wordt 75 en houdt van tuinieren.', aiSterk:'Natuurlijk! Hier is een idee voor de kaart…', waarom:'Voor een verjaardagskaart heeft de AI je naam en adres niet nodig. Wat wel helpt: info over je oma.'},
     oef:[
@@ -1498,7 +1497,7 @@ L.push(
 }},
 { id:'6.3', titel:'Eerlijk gebruik', duur:'6 min', per:{
   jong:{
-    gids:'Een echte wachter is eerlijk. Ook over hoe je AI gebruikt.',
+    gids:'Een echte speurneus is eerlijk. Ook over hoe je AI gebruikt.',
     uitleg:'AI gebruiken is niet altijd verboden, maar wel <b>eerlijk</b>. Volg de afspraken van je juf of meester. Zeg erbij waarvoor je AI gebruikte. En werk dat je zelf moet maken, laat je niet door AI maken.',
     voorbeeld:{kind:'chat', prompt:'Ik heb AI gebruikt om ideeën te zoeken voor mijn spreekbeurt. Hoe zeg ik dat eerlijk aan mijn juf?', antwoord:'Je kan zeggen: “Ik gebruikte AI om ideeën voor mijn onderwerp te zoeken. De tekst en de slides maakte ik zelf.”'},
     oef:[
@@ -1551,7 +1550,7 @@ L.push(
 }},
 { id:'6.4', titel:'Vooroordelen herkennen', duur:'7 min', per:{
   jong:{
-    gids:'Een wachter kijkt verder dan de eerste indruk. Ook AI heeft soms vooroordelen.',
+    gids:'Een speurneus kijkt verder dan de eerste indruk. Ook AI heeft soms vooroordelen.',
     uitleg:'AI leert van heel veel teksten van het internet, en daar zitten <b>vooroordelen</b> in. Daardoor geeft AI soms een eenzijdig beeld, bijvoorbeeld dat alleen jongens gamen of alleen meisjes dansen. Merk het op en vraag om een eerlijker antwoord.',
     voorbeeld:{kind:'vergelijk', pills:['Eenzijdig','Evenwichtig'], vaag:'Beschrijf een typische gamer.', aiVaag:'Een typische gamer is een jongen van 15 die de hele dag op zijn kamer zit.', sterk:'Beschrijf verschillende soorten mensen die graag gamen. Vermijd clichés.', aiSterk:'Gamers zijn jong en oud, jongens en meisjes. Sommigen spelen een kwartiertje op de bus, anderen online met vrienden of in een team.', waarom:'Het eerste antwoord is een cliché. Door te vragen om clichés te vermijden, krijg je een eerlijker beeld.'},
     oef:[
@@ -1604,7 +1603,7 @@ L.push(
 }},
 { id:'6.5', titel:'Zelf blijven denken', duur:'6 min', per:{
   jong:{
-    gids:'Laatste wacht in de toren! Hier leer je wanneer je AI beter even links laat liggen.',
+    gids:'Laatste les van deze halte! Hier leer je wanneer je AI beter even links laat liggen.',
     uitleg:'AI is handig, maar niet voor alles. Wil je iets <b>leren</b>, je eigen <b>mening</b> geven of iets <b>persoonlijks</b> maken, dan doe je het denkwerk zelf. AI kan je dan hoogstens overhoren of vragen stellen.',
     voorbeeld:{kind:'vergelijk', pills:['AI doet het','Jij denkt, AI helpt'], vaag:'Wat vind ik van zoo’s? Schrijf mijn mening.', aiVaag:'Je vindt zoo’s goed omdat ze dieren beschermen…', sterk:'Ik moet mijn mening geven over zoo’s. Stel me 4 vragen die me helpen nadenken, maar geef zelf geen mening.', aiSterk:'Vraag 1: wat heeft een dier volgens jou nodig om gelukkig te zijn?', waarom:'Je mening is van jou. De AI kan je helpen nadenken, maar niet in jouw plaats.'},
     oef:[
@@ -1619,9 +1618,9 @@ L.push(
         {t:'De woordjes zelf leren en je daarna laten overhoren door AI, één woord per keer.', ok:true, f:'Jij leert, AI helpt je oefenen.'},
         {t:'De AI voor elk woord een grappig ezelsbruggetje laten verzinnen en die ezelsbruggetjes de avond voor de toets nog eens snel doorlezen.', ok:false, f:'Ezelsbruggetjes kunnen helpen, maar alleen lezen is niet oefenen. Laat je overhoren.'}]}
     ],
-    slot:'Jij blijft de baas over je eigen hoofd. De Waaktoren is bewaakt!'},
+    slot:'Jij blijft de baas over je eigen hoofd. Halte 6 zit erop!'},
   tiener:{
-    gids:'Laatste les in de Waaktoren. Het grootste risico is niet een verzonnen feit, maar dat je stopt met zelf denken.',
+    gids:'Laatste les van deze halte. Het grootste risico is niet een verzonnen feit, maar dat je stopt met zelf denken.',
     uitleg:'Laat AI niet het denkwerk doen dat jij moet leren. Bij <b>studeren</b>, je <b>eigen mening</b> en <b>persoonlijke keuzes</b> doe jij het denkwerk. AI kan je dan uitdagen, overhoren of tegenargumenten geven.',
     voorbeeld:{kind:'vergelijk', pills:['AI doet het','Jij denkt, AI helpt'], vaag:'Schrijf mijn mening over een verbod op energiedrankjes voor min-16-jarigen.', aiVaag:'Ik ben voor een verbod, omdat…', sterk:'Ik schreef mijn mening over een verbod op energiedrankjes voor min-16-jarigen (hieronder). Geef de 3 sterkste tegenargumenten, zodat ik mijn tekst kan versterken.', aiSterk:'1. Jongeren kunnen ook via andere dranken veel cafeïne binnenkrijgen, zoals koffie…', waarom:'Jij bepaalt je mening. De AI daagt je uit, en daardoor wordt je tekst sterker.'},
     oef:[
@@ -1636,9 +1635,9 @@ L.push(
         {t:'De oefeningen zelf oplossen en de AI een hint vragen als je vastzit, of uitleg bij een fout.', ok:true, f:'Jij oefent, AI helpt je verder.'},
         {t:'De AI vragen welke vragen er dit jaar op mijn examen wiskunde komen, en dan alleen die oefeningen grondig leren.', ok:false, f:'Dat weet de AI niet. En wie gokt, mist een groot deel van de leerstof.'}]}
     ],
-    slot:'Zelf denken, AI als sparringpartner. Waaktoren: uitgespeeld.'},
+    slot:'Zelf denken, AI als sparringpartner. Halte 6: uitgespeeld.'},
   volw:{
-    gids:'Laatste les in de Waaktoren. AI kan veel werk overnemen. Sommige dingen hou je beter zelf in handen.',
+    gids:'Laatste les van deze halte. AI kan veel werk overnemen. Sommige dingen hou je beter zelf in handen.',
     uitleg:'Laat AI geen beslissingen nemen waarvoor <b>jij verantwoordelijk</b> bent, zoals over mensen, geld of gezondheid. Gebruik hem om opties te zien, niet om te kiezen. En blijf je vak zelf oefenen: wie alles uitbesteedt, verliest zijn eigen <b>expertise</b>.',
     voorbeeld:{kind:'vergelijk', pills:['AI beslist','Jij beslist, AI helpt'], vaag:'Welke van deze twee kandidaten moet ik aannemen?', aiVaag:'Neem kandidaat B aan.', sterk:'Ik twijfel tussen twee kandidaten. Zet hun sterktes naast de vereisten van de functie hieronder in een tabel. Geef geen advies over wie ik moet kiezen.', aiSterk:'Vereiste: klantgericht → Kandidaat A: 5 jaar klantendienst. Kandidaat B: …', waarom:'Deze beslissing heeft gevolgen voor mensen. Jij beslist, de tool helpt je ordenen. En zet geen gevoelige gegevens van kandidaten in de tool.'},
     oef:[
@@ -1657,9 +1656,9 @@ L.push(
 }}
 );
 
-/* ---------- halte 7: Werkplaats ---------- */
-PATHS.jong.rewards.push({seal:'Werkplaats&shy;held', titel:'Badge verdiend: Werkplaatsheld', tekst:'Zeven badges! Nog één halte: de Meestertop.'});
-PATHS.tiener.rewards.push({seal:'Level 8', titel:'Level 8 bereikt · +600 XP', tekst:'Nog één halte: de Meestertop. Tijd om alles te tonen.'});
+/* ---------- halte 7: In de praktijk ---------- */
+PATHS.jong.rewards.push({seal:'Praktijk&shy;pro', titel:'Badge verdiend: Praktijkpro', tekst:'Zeven badges! Nog één halte: de eindproef.'});
+PATHS.tiener.rewards.push({seal:'Level 8', titel:'Level 8 bereikt · +600 XP', tekst:'Nog één halte: de eindproef. Tijd om alles te tonen.'});
 PATHS.volw.rewards.push({seal:'7 / 8', titel:'Onderdeel 7 van 8 afgerond', tekst:'Nog één onderdeel: alles samen in de eindproef.'});
 
 const jfBeslis = (a,b,c,d) => ({type:'keuze2', titel:'Juist of fout?', opdracht:'Wat weet je over beslissen met hulp van AI?', knoppen:['Juist','Fout'], items:[a,b,c,d]});
@@ -1667,7 +1666,7 @@ const jfBeslis = (a,b,c,d) => ({type:'keuze2', titel:'Juist of fout?', opdracht:
 L.push(
 { id:'7.1', titel:'Samenvatten', duur:'7 min', per:{
   jong:{
-    gids:'Welkom in de Werkplaats! Hier zet je AI aan het werk voor echte klusjes, zoals samenvatten, leren en kiezen.',
+    gids:'Halte 7: in de praktijk! Hier zet je AI aan het werk voor echte klusjes, zoals samenvatten, leren en kiezen.',
     uitleg:'AI kan lange teksten goed samenvatten, als je zegt <b>waarvoor</b>: om te leren, om aan iemand te vertellen of om snel te weten waarover het gaat. Zeg ook hoe lang en in welke vorm. Lees daarna na of er niets belangrijks ontbreekt.',
     voorbeeld:{kind:'vergelijk', vaag:'Vat dit hoofdstuk samen.', sterk:'Vat het hoofdstuk over de Romeinen hieronder samen in 6 bullets, zodat ik het kan leren voor mijn toets. Zet bij elke bullet het jaartal als dat er is.', waarom:'Doel (leren voor de toets), lengte (6 bullets) en wat erin moet (jaartallen): zo krijg je een samenvatting om mee te studeren.'},
     oef:[
@@ -1685,7 +1684,7 @@ L.push(
     ],
     slot:'Samenvatten met een doel: gelukt! Volgende les: je tekst laten nalezen.'},
   tiener:{
-    gids:'Werkplaats. Hier zet je AI in voor echte taken: samenvatten, feedback, studeren en kiezen.',
+    gids:'Halte 7: in de praktijk. Hier zet je AI in voor echte taken: samenvatten, feedback, studeren en kiezen.',
     uitleg:'Een goede samenvatting hangt af van je <b>doel</b>: studeren, een paper onderbouwen of iemand bijpraten. Zeg wat erin moet (kernideeën, cijfers, argumenten) en hoe lang. Lees na: AI laat soms nuances weg of voegt iets toe.',
     voorbeeld:{kind:'vergelijk', vaag:'Vat dit artikel samen.', sterk:'Vat het wetenschappelijke artikel hieronder samen voor mijn paper biologie: onderzoeksvraag, methode, belangrijkste resultaat en beperkingen, elk in 1 à 2 zinnen. Voeg niets toe wat niet in het artikel staat.', waarom:'Je zegt waarvoor, welke onderdelen en hoe lang, en je stelt een grens tegen verzinsels.'},
     oef:[
@@ -1703,7 +1702,7 @@ L.push(
     ],
     slot:'Samenvatten met een doel. Volgende les: feedback op je tekst.'},
   volw:{
-    gids:'Welkom in de Werkplaats. Hier zet je AI-tools in voor alledaagse taken, op het werk en thuis.',
+    gids:'Welkom bij halte 7: in de praktijk. Hier zet je AI-tools in voor alledaagse taken, op het werk en thuis.',
     uitleg:'Een samenvatting is pas bruikbaar als ze past bij je <b>doel</b>: zelf snel lezen, je team informeren of een beslissing voorbereiden. Zeg wat erin moet en hoe lang. Lees na: een tool laat soms nuances weg of voegt iets toe.',
     voorbeeld:{kind:'vergelijk', vaag:'Vat dit document samen.', sterk:'Vat het beleidsdocument hieronder samen voor mijn team: wat verandert er voor ons, vanaf wanneer en wat moeten we doen? Maximaal 8 bullets. Gebruik alleen info uit het document.', waarom:'Doel, lezers, inhoud, lengte en een grens: de samenvatting kan zo naar je team.'},
     oef:[
@@ -1883,7 +1882,7 @@ L.push(
 }},
 { id:'7.5', titel:'Je eigen sjabloon', duur:'7 min', per:{
   jong:{
-    gids:'Laatste klus in de Werkplaats! Een goede prompt moet je niet elke keer opnieuw uitvinden.',
+    gids:'Laatste les van deze halte! Een goede prompt moet je niet elke keer opnieuw uitvinden.',
     uitleg:'Gebruik je vaak hetzelfde soort prompt? Maak er een <b>sjabloon</b> van met lege plekken tussen [haakjes]. Bewaar het en vul telkens de lege plekken in. Zo heb je in een paar seconden een sterke prompt.',
     voorbeeld:{kind:'sjabloon', sjabloon:'Overhoor me over [onderwerp] voor mijn toets [vak]. Stel [aantal] vragen, één per keer, en zeg na elk antwoord of het juist is. Geef een tip als ik het fout heb.', ingevuld:'Overhoor me over de planeten voor mijn toets wetenschappen. Stel 8 vragen, één per keer, en zeg na elk antwoord of het juist is. Geef een tip als ik het fout heb.'},
     oef:[
@@ -1895,9 +1894,9 @@ L.push(
        check:['Mijn sjabloon heeft vaste stukjes die altijd gelden','De stukjes die veranderen, staan tussen [haakjes]','Er staan bouwstenen in: doel, vorm of een grens'],
        model:'Ik geef een spreekbeurt van [aantal] minuten over [onderwerp] voor mijn klas. Geef me een structuur met [aantal] delen en 3 weetjes per deel. Schrijf de tekst niet: die maak ik zelf.'}
     ],
-    slot:'Je eigen sjabloon: klaar om te hergebruiken. De Werkplaats is afgewerkt!'},
+    slot:'Je eigen sjabloon: klaar om te hergebruiken. Halte 7 zit erop!'},
   tiener:{
-    gids:'Laatste les in de Werkplaats. Pro’s typen niet elke keer alles opnieuw: ze hebben sjablonen.',
+    gids:'Laatste les van deze halte. Pro’s typen niet elke keer alles opnieuw: ze hebben sjablonen.',
     uitleg:'Maak van prompts die je vaak gebruikt een <b>sjabloon</b> met [invulvelden]. Bewaar je sjablonen in je notities en vul ze telkens aan. Zo zitten je bouwstenen er standaard in: rol, doel, formaat en grenzen.',
     voorbeeld:{kind:'sjabloon', sjabloon:'Wees mijn leerkracht [vak]. Geef feedback op mijn [soort tekst] hieronder volgens deze criteria: [criteria]. Geef per criterium één tip. Herschrijf niets.', ingevuld:'Wees mijn leerkracht Engels. Geef feedback op mijn essay hieronder volgens deze criteria: structuur, woordenschat en grammatica. Geef per criterium één tip. Herschrijf niets.'},
     oef:[
@@ -1909,9 +1908,9 @@ L.push(
        check:['Mijn sjabloon heeft vaste stukjes die altijd gelden','De stukjes die veranderen, staan tussen [haakjes]','Er staan bouwstenen in: rol, doel, formaat of een grens'],
        model:'Hieronder staat mijn cursustekst over [onderwerp] voor [vak]. Stel me [aantal] examenvragen, één per keer, op het niveau van het [jaar] middelbaar. Geef na elk antwoord kort feedback. Verzin geen leerstof die niet in de tekst staat.'}
     ],
-    slot:'Sjablonen = sneller en sterker prompten. Werkplaats: uitgespeeld.'},
+    slot:'Sjablonen = sneller en sterker prompten. Halte 7: uitgespeeld.'},
   volw:{
-    gids:'Laatste les in de Werkplaats. Wie vaak dezelfde soort taken doet, wint veel tijd met een eigen sjabloon.',
+    gids:'Laatste les van deze halte. Wie vaak dezelfde soort taken doet, wint veel tijd met een eigen sjabloon.',
     uitleg:'Maak van een prompt die je vaak gebruikt een <b>sjabloon</b> met [invulvelden]. Bewaar het in een document of je notities en deel het eventueel met je team. Zo werkt iedereen met dezelfde, goed doordachte prompt.',
     voorbeeld:{kind:'sjabloon', sjabloon:'Schrijf een [soort mail] aan [ontvanger] over [onderwerp]. Toon: [toon]. Maximaal [aantal] zinnen. Voeg geen info toe die hieronder niet staat.', ingevuld:'Schrijf een herinneringsmail aan een klant over een openstaande factuur. Toon: vriendelijk maar duidelijk. Maximaal 5 zinnen. Voeg geen info toe die hieronder niet staat.'},
     oef:[
@@ -1927,7 +1926,7 @@ L.push(
 }}
 );
 
-/* ---------- halte 8: Meestertop ---------- */
+/* ---------- halte 8: Eindproef ---------- */
 PATHS.jong.rewards.push({seal:'Prompt&shy;meester', titel:'Titel verdiend: Promptmeester', tekst:'Alle acht badges! Je bent nu een echte Promptmeester.'});
 PATHS.tiener.rewards.push({seal:'Max level', titel:'Hoogste level bereikt · skillkaart vrijgespeeld', tekst:'Alle haltes uitgespeeld. Je skillkaart staat klaar.'});
 PATHS.volw.rewards.push({seal:'8 / 8', titel:'Alle onderdelen afgerond', tekst:'Je hebt de volledige route afgelegd. Je deelnamebewijs staat klaar.'});
@@ -1943,7 +1942,7 @@ const vaagDuid = ['Vaag','Duidelijk'];
 L.push(
 { id:'8.1', titel:'De perfecte prompt', duur:'8 min', per:{
   jong:{
-    gids:'Welkom op de Meestertop! Van hierboven zie je de hele route. Tijd om alles wat je leerde samen te brengen.',
+    gids:'Welkom bij de laatste halte! Tijd om alles wat je leerde samen te brengen.',
     uitleg:'Je kent nu alle bouwstenen: <b>rol</b>, <b>situatie</b>, <b>opdracht</b>, <b>formaat</b> en <b>grenzen</b>. Niet elke prompt heeft ze allemaal nodig. Maar hoe belangrijker de taak, hoe meer bouwstenen je gebruikt.',
     voorbeeld:{kind:'delen', labels:bouw5, delen:['Wees een reisplanner voor jongeren.','Ik ga met 3 vrienden van 13 en de mama van Lars een dag naar zee, met de trein vanuit Antwerpen.','Maak een plan voor de dag,','als tabel met uur, activiteit en wat het kost,','en hou het onder 20 euro per persoon.']},
     oef:[
@@ -1955,7 +1954,7 @@ L.push(
     ],
     slot:'Alle bouwstenen in één prompt: knap werk! Nog één stap: de eindproef.'},
   tiener:{
-    gids:'Meestertop. Vanaf hier zie je de hele route. Tijd om al je skills te combineren.',
+    gids:'Laatste halte. Tijd om al je skills te combineren.',
     uitleg:'Je hebt alle bouwstenen: <b>rol</b>, <b>situatie</b>, <b>opdracht</b>, <b>formaat</b> en <b>grenzen</b>. Een snelle vraag heeft er twee nodig, een belangrijke taak alle vijf. De kunst is kiezen wat nodig is.',
     voorbeeld:{kind:'delen', labels:bouw5, delen:['Wees een eventplanner.','Ik word 18 en geef een feest voor 30 vrienden in de jeugdlokalen, met een budget van 400 euro.','Maak een plan voor de voorbereiding,','als tabel met week, taak en wie het doet,','en verzin geen prijzen: laat ze open.']},
     oef:[
@@ -1967,7 +1966,7 @@ L.push(
     ],
     slot:'Alle bouwstenen gecombineerd. Laatste stap: de eindproef.'},
   volw:{
-    gids:'Welkom op de Meestertop. Van hierboven zie je de hele route. Tijd om alles samen te brengen.',
+    gids:'Welkom bij de laatste halte. Tijd om alles samen te brengen.',
     uitleg:'Je kent alle bouwstenen: <b>rol</b>, <b>situatie</b>, <b>opdracht</b>, <b>formaat</b> en <b>grenzen</b>. Voor een snelle vraag volstaan er twee, voor een belangrijke taak gebruik je ze alle vijf.',
     voorbeeld:{kind:'delen', labels:bouw5, delen:['Wees een loopbaancoach.','Ik werk 10 jaar in de logistiek en wil binnen 2 jaar teamleider worden; ik heb 4 uur per week om bij te leren.','Maak een opleidingsplan voor mij,','als tabel met periode, wat ik leer en hoe (opleiding, boek, praktijk),','en noem geen opleidingen of prijzen die je niet zeker weet.']},
     oef:[
@@ -2157,40 +2156,40 @@ function say(p, lines, opts={}){
 const STOPS = [[110,690],[290,600],[110,505],[290,415],[110,325],[290,240],[110,155],[280,72]];
 const ROUTE = 'M110 690 C200 700 290 670 290 600 C290 545 110 560 110 505 C110 450 290 470 290 415 C290 360 110 380 110 325 C110 270 290 295 290 240 C290 185 110 210 110 155 C110 100 280 125 280 72';
 const LM = [
-  /* Startdorp */ () => `<ellipse class="f-land2 ns" cx="0" cy="20" rx="44" ry="8"/>
+  /* 1 De basis: dorp */ () => `<ellipse class="f-land2 ns" cx="0" cy="20" rx="44" ry="8"/>
     <rect class="f-wall" x="-34" y="0" width="22" height="19"/><polygon class="f-roof" points="-37,0 -23,-14 -9,0"/><rect class="f-door ns" x="-26" y="9" width="6" height="10"/>
     <rect class="f-wall" x="-6" y="-10" width="28" height="29"/><polygon class="f-roof" points="-10,-10 8,-28 26,-10"/><rect class="f-glow ns" x="0" y="-3" width="7" height="7"/><rect class="f-door ns" x="11" y="8" width="7" height="11"/>
     <rect class="f-wall" x="25" y="5" width="15" height="14"/><polygon class="f-roof" points="23,5 32.5,-5 42,5"/>`,
-  /* Helderheidsburcht */ () => `<ellipse class="f-land2 ns" cx="0" cy="20" rx="44" ry="8"/>
+  /* 2 Duidelijk vragen: burcht */ () => `<ellipse class="f-land2 ns" cx="0" cy="20" rx="44" ry="8"/>
     <rect class="f-wall" x="-24" y="-8" width="48" height="27"/>
     ${[-22,-12,-2,8,18].map(x=>`<rect class="f-wall" x="${x}" y="-14" width="6" height="7"/>`).join('')}
     <rect class="f-wall" x="-36" y="-24" width="14" height="43"/><polygon class="f-roof" points="-39,-24 -29,-40 -19,-24"/>
     <rect class="f-wall" x="22" y="-24" width="14" height="43"/><polygon class="f-roof" points="19,-24 29,-40 39,-24"/>
     <path class="f-door" d="M-7 19 L-7 6 A7 7 0 0 1 7 6 L7 19 Z"/><rect class="f-glow ns" x="-31" y="-14" width="4" height="7"/><rect class="f-glow ns" x="27" y="-14" width="4" height="7"/>
     <path d="M29 -40 L29 -54" style="stroke:var(--ink)" stroke-width="1.6"/><polygon class="f-accent" points="29,-54 41,-50 29,-46"/>`,
-  /* Contextgrotten */ () => `<path class="f-rock" d="M-42 19 C-40 -6 -22 -28 0 -28 C22 -28 40 -6 42 19 Z"/><path class="f-land2 ns" d="M-30 -8 C-22 -18 -10 -22 2 -22 C-8 -16 -20 -12 -30 -8 Z" opacity=".6"/>
+  /* 3 Context geven: grot */ () => `<path class="f-rock" d="M-42 19 C-40 -6 -22 -28 0 -28 C22 -28 40 -6 42 19 Z"/><path class="f-land2 ns" d="M-30 -8 C-22 -18 -10 -22 2 -22 C-8 -16 -20 -12 -30 -8 Z" opacity=".6"/>
     <path class="f-door" d="M-14 19 C-14 -2 14 -2 14 19 Z"/><polygon class="f-glow ns" points="-4,12 0,2 4,12"/><polygon class="f-accent ns" points="5,14 8,7 11,14"/>
     <path class="f-rock" d="M30 19 C30 8 44 6 46 19 Z"/>`,
-  /* Rollenravijn */ () => `<path class="f-rock" d="M-44 19 L-44 -12 L-26 -22 L-10 -10 L-8 19 Z"/><path class="f-rock" d="M8 19 L10 -12 L26 -24 L44 -14 L44 19 Z"/>
+  /* 4 Rollen en stappen: ravijn */ () => `<path class="f-rock" d="M-44 19 L-44 -12 L-26 -22 L-10 -10 L-8 19 Z"/><path class="f-rock" d="M8 19 L10 -12 L26 -24 L44 -14 L44 19 Z"/>
     <path class="f-door ns" d="M-8 19 L-10 -10 L10 -12 L8 19 Z" opacity=".55"/>
     <path d="M-12 -10 Q0 -2 12 -12" fill="none" style="stroke:var(--trunk)" stroke-width="3"/>
     ${[-8,-3,2,7].map((x,i)=>`<rect class="f-trunk" x="${x-1.5}" y="${[-8.5,-6.6,-6.6,-8.6][i]}" width="3" height="5"/>`).join('')}
     <circle class="f-tree" cx="-34" cy="-18" r="6"/><circle class="f-tree" cx="34" cy="-20" r="6"/>`,
-  /* Bijschaafbaai */ () => `<path class="f-trunk" d="M-44 8 L-14 8 L-14 12 L-44 12 Z"/><rect class="f-trunk ns" x="-40" y="12" width="3" height="8"/><rect class="f-trunk ns" x="-22" y="12" width="3" height="8"/>
+  /* 5 Bijsturen: baai */ () => `<path class="f-trunk" d="M-44 8 L-14 8 L-14 12 L-44 12 Z"/><rect class="f-trunk ns" x="-40" y="12" width="3" height="8"/><rect class="f-trunk ns" x="-22" y="12" width="3" height="8"/>
     <path class="f-roof" d="M-4 8 L32 8 L26 18 L2 18 Z"/><path d="M14 8 L14 -30" style="stroke:var(--ink)" stroke-width="1.8"/>
     <path class="f-wall" d="M15 -28 L15 4 L36 4 Z"/><path class="f-wall" d="M13 -24 L13 4 L-2 4 Z"/>
     <path d="M-30 26 q6 -4 12 0 t12 0 M10 28 q6 -4 12 0 t12 0" fill="none" style="stroke:var(--surface)" stroke-width="1.6" opacity=".8"/>`,
-  /* Waaktoren */ () => `<ellipse class="f-land2 ns" cx="0" cy="20" rx="30" ry="7"/>
+  /* 6 Veilig en kritisch: vuurtoren */ () => `<ellipse class="f-land2 ns" cx="0" cy="20" rx="30" ry="7"/>
     <path class="f-wall" d="M-11 19 L-7 -22 L7 -22 L11 19 Z"/><rect class="f-roof" x="-13" y="-28" width="26" height="6"/><polygon class="f-roof" points="-13,-28 0,-44 13,-28"/>
     <circle class="f-glow ns" cx="0" cy="-34" r="10" opacity=".35"/><circle class="f-glow" cx="0" cy="-34" r="3.5"/>
     <rect class="f-door ns" x="-3" y="7" width="6" height="12"/><rect class="f-glow ns" x="-2.5" y="-12" width="5" height="7"/>
     <path d="M-10 -2 L10 -2 M-9 -14 L9 -14" style="stroke:var(--ink)" stroke-opacity=".3"/>`,
-  /* Werkplaats */ () => `<ellipse class="f-land2 ns" cx="0" cy="20" rx="44" ry="8"/>
+  /* 7 In de praktijk: werkplaats */ () => `<ellipse class="f-land2 ns" cx="0" cy="20" rx="44" ry="8"/>
     <rect class="f-wall" x="-32" y="-6" width="48" height="25"/><path class="f-roof" d="M-34 -6 L-22 -20 L-22 -6 L-10 -20 L-10 -6 L2 -20 L2 -6 L16 -6 Z"/>
     <rect class="f-wall" x="8" y="-26" width="7" height="20"/><circle class="f-muted ns" cx="11.5" cy="-32" r="4" opacity=".35"/><circle class="f-muted ns" cx="16" cy="-40" r="5" opacity=".25"/>
     <rect class="f-glow ns" x="-26" y="2" width="8" height="8"/><rect class="f-glow ns" x="-12" y="2" width="8" height="8"/><rect class="f-door ns" x="2" y="5" width="9" height="14"/>
     <g transform="translate(30 0)">${Array.from({length:8},(_,i)=>`<rect class="f-stamp ns" x="-2.5" y="-14" width="5" height="6" transform="rotate(${i*45})"/>`).join('')}<circle class="f-stamp" r="10"/><circle class="f-land" r="4"/></g>`,
-  /* Meestertop */ () => `<path class="f-rock" d="M-50 19 L-10 -36 L4 -18 L16 -30 L50 19 Z"/><path class="f-wall" d="M-10 -36 L-21 -21 L-13 -23 L-7 -18 L-1 -24 Z"/><path class="f-wall" d="M16 -30 L10 -22 L15 -24 L21 -21 Z"/>
+  /* 8 Eindproef: berg */ () => `<path class="f-rock" d="M-50 19 L-10 -36 L4 -18 L16 -30 L50 19 Z"/><path class="f-wall" d="M-10 -36 L-21 -21 L-13 -23 L-7 -18 L-1 -24 Z"/><path class="f-wall" d="M16 -30 L10 -22 L15 -24 L21 -21 Z"/>
     <path d="M-10 -36 L-10 -54" style="stroke:var(--ink)" stroke-width="1.8"/><polygon class="f-stamp" points="-10,-54 4,-50 -10,-45"/>`
 ];
 function deco(p){
@@ -2276,7 +2275,7 @@ function panelFor(i){
   ];
   if(a.open){
     if(i>0 && !areaFull(i-1) && !ls.some(l=>d[l.id]))
-      kids.push(h('div',{class:'soon'}, guide(S.path,'hmm',36), `Tip: rond eerst ${AREAS[i-1].lw||'de'} ${AREAS[i-1].naam} af. Hier bouw je daarop verder.`));
+      kids.push(h('div',{class:'soon'}, guide(S.path,'hmm',36), `Tip: rond eerst halte ${i} (${AREAS[i-1].naam.toLowerCase()}) af. Hier bouw je daarop verder.`));
     kids.push(h('div',{class:'lessons'}, ls.map(l=>{
       const isD = d[l.id], isN = nxt && l.id===nxt.id;
       return h('button',{class:'lesson'+(isD?' done':'')+(isN?' next':''), onclick:()=>openLesson(l.id)},
@@ -2295,7 +2294,7 @@ function renderMap(){
   const p = PATHS[S.path], d = doneFor(S.path);
   if(!AREAS[selArea]) selArea = 0;
   const nDone = L.filter(x=>d[x.id]).length, full = allBuiltDone(), ca = currentArea();
-  const msg = full ? 'Je hebt de hele route afgelegd. Proficiat! Je certificaat vind je op de Meestertop.' : (ca>0 && !lessonsOf(ca).some(l=>d[l.id])) ? `Op naar ${AREAS[ca].lw||'de'} ${AREAS[ca].naam}! Hier draait het om: ${AREAS[ca].thema.toLowerCase()}.` : p.kaart;
+  const msg = full ? 'Je hebt de hele route afgelegd. Proficiat! Je certificaat vind je bij halte 8.' : (ca>0 && !lessonsOf(ca).some(l=>d[l.id])) ? `Op naar halte ${ca+1}: ${AREAS[ca].naam.toLowerCase()}! Hier draait het om: ${AREAS[ca].thema.toLowerCase()}.` : p.kaart;
   const mapBox = h('div',{class:'mapBox', html: mapMarkup(selArea)});
   const pick = el => { const g = el.closest('[data-area]'); if(!g) return; selArea=+g.dataset.area;
     mapBox.querySelectorAll('.stopG').forEach(n=>n.classList.toggle('sel', +n.dataset.area===selArea));
@@ -2578,7 +2577,7 @@ function certCard(){
 function renderCert(){
   setPath(S.path); app.className='wrap';
   app.replaceChildren(
-    h('div',{class:'lessonBar'}, h('button',{class:'x','aria-label':'Terug naar de kaart', onclick:()=>{ selArea=7; renderMap(); toTop(); }}, '✕'), h('div',{class:'kicker'},'Meestertop')),
+    h('div',{class:'lessonBar'}, h('button',{class:'x','aria-label':'Terug naar de kaart', onclick:()=>{ selArea=7; renderMap(); toTop(); }}, '✕'), h('div',{class:'kicker'},'Eindproef')),
     h('div',{class:'step', style:'margin-top:16px'}, h('h2',null,PATHS[S.path].cert.titel), certCard()));
 }
 
@@ -2603,7 +2602,7 @@ function renderSlot(){
   }
   if(isLast) kids.push(certCard());
   kids.push(h('div',{class:'actions'},
-    nxt ? h('button',{class:'btn', onclick:()=>openLesson(nxt.id)}, nxt.area!==les.area ? `Naar ${AREAS[nxt.area].lw||'de'} ${AREAS[nxt.area].naam}` : `Volgende les: ${nxt.titel}`) : null,
+    nxt ? h('button',{class:'btn', onclick:()=>openLesson(nxt.id)}, nxt.area!==les.area ? `Naar halte ${nxt.area+1}: ${AREAS[nxt.area].naam.toLowerCase()}` : `Volgende les: ${nxt.titel}`) : null,
     h('button',{class:'btn'+(nxt?' ghost':''), onclick:()=>{ selArea=currentArea(); renderMap(); toTop(); }}, 'Naar de kaart')));
   return h('div',{class:'step'}, h('h2',null,'Les voltooid'), ...kids);
 }
