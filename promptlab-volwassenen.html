@@ -1,3 +1,7 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Promptlab Volwassenen</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -311,6 +315,272 @@ textarea:focus{outline:none;border-color:var(--accent)}
   .seal{animation:pop .5s cubic-bezier(.2,1.6,.4,1)}
   @keyframes pop{from{transform:rotate(-30deg) scale(.6)}to{transform:rotate(-8deg) scale(1)}}
 }
+/* ===== intro per halte ===== */
+.intro{display:grid;gap:8px}
+.intro p{margin:0}
+.intro .ist{font-weight:700}
+.ileer{background:var(--sunk);border-radius:12px;padding:10px 12px;display:grid;gap:4px}
+.ileer ul{margin:0;padding-left:18px;display:grid;gap:3px}
+.itip{color:var(--muted);font-size:.93rem}
+.mapHead .bubble{max-width:72ch}
+/* ===== uitgebreide intro ===== */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:640px;margin-top:4px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px;display:grid;gap:2px}
+.stat b{font-family:var(--f-display);font-size:1.35rem;line-height:1.15;color:var(--accent)}
+.stat span{font-size:.8rem;color:var(--muted)}
+@media (max-width:520px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.isec{margin-top:34px;display:grid;gap:12px}
+.isec h2{font-family:var(--f-display);font-size:1.45rem;letter-spacing:-.01em}
+.isub{color:var(--muted);max-width:62ch;margin-top:-4px}
+.hoe{list-style:none;margin:0;padding:0;display:grid;gap:10px;grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:700px){.hoe{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.hoe{grid-template-columns:1fr}}
+.hoe li{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:grid;gap:6px;align-content:start}
+.hoe li span:last-child{color:var(--muted);font-size:.93rem}
+.hnr{width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-weight:700;font-family:var(--f-display)}
+.rlist{list-style:none;margin:0;padding:0;display:grid;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:8px 16px}
+.rlist li{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0;position:relative}
+.rlist li:not(:last-child){border-bottom:1px dashed var(--line)}
+.rnr{width:30px;height:30px;border-radius:50%;border:3px solid var(--accent);display:grid;place-items:center;font-weight:700;font-size:.85rem;background:var(--surface)}
+.rlist b{display:block}
+.rth{color:var(--muted);font-size:.9rem}
+.rn{font-size:.78rem;color:var(--muted);white-space:nowrap}
+.oefen{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.ocard{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
+.ocard b{display:block}
+.ocard div span{color:var(--muted);font-size:.9rem}
+.oico{flex:none;width:36px;height:36px;border-radius:10px;background:var(--mebg);display:grid;place-items:center}
+.oico svg{width:20px;height:20px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.weetjes{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.weet{background:var(--sunk);border-radius:var(--r);padding:12px 14px;display:grid;gap:4px}
+.weet span{color:var(--muted);font-size:.92rem}
+.extra{grid-template-columns:auto minmax(0,1fr);align-items:center;gap:18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.extra p{color:var(--muted);margin-top:6px}
+@media (max-width:520px){.extra{grid-template-columns:1fr}}
+.extra.solo{grid-template-columns:1fr}
+.icta{margin-top:26px;display:flex;justify-content:center}
+/* ---------- animaties ---------- */
+figure.anim{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.ahead{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.ahead b{font-family:var(--f-display)}
+.atag{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:color-mix(in srgb, var(--accent) 12%, transparent);border-radius:999px;padding:3px 10px}
+.astage{padding:16px;min-height:120px}
+figure.anim figcaption{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 16px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem;background:var(--sunk)}
+figure.anim figcaption span{flex:1 1 220px}
+.aknop{padding:8px 14px;font-size:.9rem}
+/* prompt */
+.ap{display:grid;gap:12px}
+.ap-bub{border-radius:14px;padding:10px 14px;display:grid;gap:2px;transition:opacity .5s ease, background .5s ease, filter .5s ease;max-width:94%}
+.ap-bub.me{background:color-mix(in srgb, var(--accent) 14%, var(--surface));justify-self:end}
+.ap-bub.ai{background:var(--sunk);justify-self:start}
+.ap-who{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.ap-txt{line-height:1.45}
+.ap-txt mark{background:color-mix(in srgb, var(--accent) 28%, transparent);color:inherit;border-radius:4px;padding:0 3px}
+@media (prefers-reduced-motion: no-preference){ .ap-txt mark{animation:apin .6s ease} }
+@keyframes apin{from{background:var(--accent);color:var(--accent-ink)}}
+.ap-bub.vaag .ap-txt{color:var(--muted);font-style:italic}
+.ap-bub.denk{filter:blur(.6px)}
+.ap-bub.goed{background:color-mix(in srgb, var(--ok) 14%, var(--surface));outline:2px solid color-mix(in srgb, var(--ok) 45%, transparent)}
+.ap-meter{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:center;font-size:.85rem}
+.ap-mk{color:var(--muted);font-weight:700}
+.ap-bar{height:10px;border-radius:999px;background:var(--sunk);overflow:hidden}
+.ap-bar i{display:block;height:100%;background:var(--accent);border-radius:999px;transition:width .8s ease, background .5s ease}
+.ap-bar i.vol{background:var(--ok)}
+.ap-lab{grid-column:2;color:var(--muted)}
+@media (max-width:520px){ .ap-meter{grid-template-columns:1fr} .ap-lab{grid-column:1} }
+/* kraak */
+.ak{display:grid;gap:12px}
+.ak-term{background:#0F1720;color:#B9F6CA;font-family:var(--f-mono);font-size:.9rem;border-radius:12px;padding:10px 14px 12px;display:grid;gap:4px;overflow:hidden}
+.ak-top{display:flex;align-items:center;gap:6px;color:#7E8C9A;font-size:.78rem;margin-bottom:4px}
+.ak-top i{width:9px;height:9px;border-radius:50%;background:#3A4652;display:block}
+.ak-gok{color:#FFFFFF;word-break:break-all}
+.ak-lijst{display:grid;gap:8px}
+.ak-rij{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border:1.5px solid var(--line);border-radius:12px;padding:8px 12px;transition:border-color .3s ease, background .3s ease}
+.ak-rij code{font-family:var(--f-mono);font-size:.95rem;word-break:break-all}
+.ak-st{font-size:.82rem;font-weight:700;color:var(--muted);white-space:nowrap}
+.ak-rij.bezig{border-color:var(--accent)}
+.ak-rij.weg{border-color:var(--nok);background:var(--nok-bg)} .ak-rij.weg .ak-st{color:var(--nok)}
+.ak-rij.houdt{border-color:var(--ok);background:var(--ok-bg)} .ak-rij.houdt .ak-st{color:var(--ok)}
+@media (prefers-reduced-motion: no-preference){ .ak-rij.weg{animation:akschud .4s ease} }
+@keyframes akschud{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+/* gerucht */
+.ag{display:grid;gap:8px}
+.ag-boven{display:flex;align-items:center;gap:12px}
+.ag-msg{flex:1;border-radius:12px;background:var(--sunk);padding:10px 14px;display:grid;gap:2px;min-height:68px;align-content:center;transition:background .4s ease}
+.ag-n{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.ag-t{font-weight:700;line-height:1.35}
+@media (prefers-reduced-motion: no-preference){ .ag-msg.flits{animation:agf .6s ease} }
+@keyframes agf{from{background:color-mix(in srgb, var(--accent) 30%, var(--sunk))}}
+.ag-msg.breek{background:var(--nok-bg)} .ag-msg.echt{background:var(--ok-bg)}
+.ag-wolk{flex:none;width:76px;display:grid;place-items:center;transition:transform .7s cubic-bezier(.3,1.5,.6,1);transform-origin:center}
+.ag-wolk:empty{display:none}
+.ag-net{width:100%;height:auto;display:block;max-width:440px;margin:0 auto}
+.ag-net .gl{stroke:var(--line);stroke-width:2;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .9s ease, stroke .4s ease}
+.ag-net .gl.on{stroke-dashoffset:0;stroke:var(--accent)}
+.ag-net .gk{fill:var(--sunk);stroke:var(--line);stroke-width:2;transition:fill .4s ease .5s, stroke .4s ease .5s}
+.ag-net .gk.on{fill:var(--accent);stroke:var(--accent)}
+.ag-net .gk.jij.stop{fill:var(--ok);stroke:var(--ok);transition-delay:0s}
+.ag-jij{font-size:12px;font-weight:700;fill:var(--ok);opacity:0;transition:opacity .4s ease}
+.ag-stop line{stroke:var(--nok);stroke-width:3;stroke-linecap:round}
+.ag-stop{opacity:0;transition:opacity .4s ease}
+.ag-jij.on,.ag-stop.on{opacity:1}
+/* ---------- animaties, reeks 2 ---------- */
+.a-eind{margin-top:12px;border-radius:12px;padding:10px 14px;background:var(--ok-bg);color:var(--ink);font-weight:700;line-height:1.4}
+@media (prefers-reduced-motion: no-preference){ .a-eind,.al-r,.ac-m,.az-r,.ak2-lijst li,.ap2-f,.au-r{animation:ain .45s ease both} }
+@keyframes ain{from{opacity:0;transform:translateY(6px)}}
+/* voorspel */
+.av{display:grid;gap:10px}
+.av-kop{font-size:.8rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.av-zin{font-family:var(--f-display);font-size:1.25rem;font-weight:700;line-height:1.35;min-height:1.4em}
+.av-nieuw{color:var(--accent)}
+.av-bars{display:grid;gap:6px;min-height:96px}
+.av-rij{display:grid;grid-template-columns:96px 1fr 44px;align-items:center;gap:8px;font-size:.92rem;border-radius:8px;padding:2px 4px;transition:background .3s ease}
+.av-w{font-family:var(--f-mono)}
+.av-b{height:12px;background:var(--sunk);border-radius:999px;overflow:hidden}
+.av-b i{display:block;height:100%;background:color-mix(in srgb, var(--accent) 45%, var(--sunk));border-radius:999px;transition:width .8s ease}
+.av-rij.gekozen{background:color-mix(in srgb, var(--accent) 14%, transparent)} .av-rij.gekozen .av-b i{background:var(--accent)}
+.av-p{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+/* lijst */
+.al{display:grid;gap:8px}
+.al-kop{border:2px dashed var(--line);border-radius:12px;padding:10px 14px;font-weight:700;display:grid;gap:2px}
+.al-kl{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.al-r{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:8px 12px;background:var(--surface);transition:border-color .3s ease, background .3s ease}
+.al-n{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--sunk);font-weight:700;font-size:.85rem}
+.al-t{display:grid;gap:1px;min-width:0} .al-t small{color:var(--muted)}
+.al-p{font-size:.78rem;font-weight:700;border-radius:999px;padding:3px 10px;opacity:0;transform:scale(1.6);transition:opacity .25s ease, transform .35s cubic-bezier(.3,1.6,.6,1);white-space:nowrap}
+.al-p.on{opacity:1;transform:none}
+.al-p.ok{background:var(--ok-bg);color:var(--ok)} .al-p.nok{background:var(--nok-bg);color:var(--nok)} .al-p.vraag{background:var(--sunk);color:var(--muted)} .al-p.todo{background:color-mix(in srgb, var(--accent) 14%, transparent);color:var(--accent)}
+.al-r.st-ok{border-color:color-mix(in srgb, var(--ok) 50%, var(--line))} .al-r.st-nok{border-color:color-mix(in srgb, var(--nok) 50%, var(--line))}
+@media (max-width:520px){ .al-r{grid-template-columns:28px 1fr} .al-p{grid-column:2;justify-self:start} }
+/* chat */
+.ac{display:grid;gap:8px}
+.ac-kop{font-size:.8rem;font-weight:700;color:var(--muted);text-align:center;padding-bottom:4px;border-bottom:1px solid var(--line)}
+.ac-m{max-width:86%;border-radius:16px;padding:9px 13px;line-height:1.4;display:grid;gap:3px;background:var(--sunk);justify-self:start}
+.ac-m.me{background:color-mix(in srgb, var(--accent) 16%, var(--surface));justify-self:end}
+.ac-m.sys{justify-self:center;background:transparent;border:1.5px dashed var(--line);font-size:.88rem;color:var(--muted);text-align:center}
+.ac-m.st-nok{outline:2px solid color-mix(in srgb, var(--nok) 55%, transparent)} .ac-m.st-ok{outline:2px solid color-mix(in srgb, var(--ok) 55%, transparent)}
+.ac-wie{font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.ac-pill{font-size:.75rem;font-weight:700;color:var(--nok)} .ac-m.st-ok .ac-pill{color:var(--ok)}
+.ac-m.typ{display:flex;gap:4px;padding:12px 14px}
+.ac-m.typ i{width:7px;height:7px;border-radius:50%;background:var(--muted);opacity:.5;display:block}
+@media (prefers-reduced-motion: no-preference){ .ac-m.typ i{animation:atyp 1s infinite} .ac-m.typ i:nth-child(2){animation-delay:.15s} .ac-m.typ i:nth-child(3){animation-delay:.3s} }
+@keyframes atyp{50%{opacity:1;transform:translateY(-3px)}}
+/* vlaggen */
+.avl{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+.avl-kop{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;background:var(--sunk);padding:8px 14px;font-size:.85rem;color:var(--muted)}
+.avl-kop b{color:var(--ink);font-family:var(--f-mono);font-weight:400;word-break:break-all}
+.avl-z{padding:9px 14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;transition:background .35s ease}
+.avl-l{font-size:.76rem;font-weight:700;background:var(--surface);color:var(--nok);border:1.5px solid var(--nok);border-radius:999px;padding:3px 10px;opacity:0;transform:translateX(10px);transition:opacity .3s ease, transform .3s ease}
+.avl-z.on{background:var(--nok-bg)} .avl-z.on .avl-l{opacity:1;transform:none}
+/* krimp */
+.ak2{display:grid;gap:8px}
+.ak2-lab{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.ak2-tekst{line-height:1.55;font-size:.95rem;background:var(--sunk);border-radius:12px;padding:10px 14px;transition:color .8s ease}
+.ak2-tekst .kern{transition:background .8s ease, color .8s ease;border-radius:4px}
+.ak2-tekst.dim{color:color-mix(in srgb, var(--muted) 55%, transparent)} .ak2-tekst.dim .kern{color:var(--ink);background:color-mix(in srgb, var(--accent) 22%, transparent)}
+.ak2-lijst{margin:0;padding:10px 14px 10px 32px;border:1.5px solid var(--accent);border-radius:12px;display:grid;gap:4px;min-height:44px;font-weight:700}
+/* sloten */
+.as{display:grid;gap:10px}
+.as-wie{font-size:.88rem;color:var(--muted);font-weight:700}
+.as-lane{position:relative;height:30px;margin:0 4px}
+.as-mark{position:absolute;top:0;font-size:1.5rem;line-height:1;transform:translateX(-50%);transition:left 1s ease, opacity .6s ease}
+.as-mark.weg{opacity:.3}
+.as-baan{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.as-slot,.as-acc{display:grid;justify-items:center;text-align:center;gap:2px;font-size:.82rem;min-width:0;border:1.5px solid var(--line);border-radius:12px;padding:8px 4px;background:var(--surface);transition:border-color .3s ease, background .3s ease}
+.as-slot small,.as-acc small{color:var(--muted);line-height:1.25}
+.as-ico{font-size:1.6rem;line-height:1.2}
+.as-slot.open{border-color:var(--nok);background:var(--nok-bg)}
+.as-slot.dicht{border-color:var(--ok);background:var(--ok-bg)}
+.as-gsm{justify-self:center;width:min(100%,280px);border:2px solid var(--ink);border-radius:18px;padding:12px;display:grid;gap:8px;text-align:center;font-size:.9rem;opacity:.25;transition:opacity .4s ease}
+.as-gsm.on{opacity:1}
+.as-gk{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.as-gk span{border-radius:10px;padding:6px;font-weight:700;background:var(--sunk);transition:background .3s ease, color .3s ease}
+.as-gsm.nee .as-gk .nee{background:var(--ok-bg);color:var(--ok);box-shadow:inset 0 0 0 2px var(--ok)}
+/* url */
+.au{display:grid;gap:10px}
+.au-kop{font-size:.9rem;color:var(--muted)}
+.au-r{display:grid;gap:6px}
+.au-bar{font-family:var(--f-mono);font-size:.92rem;background:var(--sunk);border:1px solid var(--line);border-radius:10px;padding:8px 12px;word-break:break-all}
+.au-bar span{transition:opacity .5s ease, background .5s ease, color .5s ease;border-radius:4px}
+.au-r.s1 .au-s,.au-r.s1 .au-pad{opacity:.3}
+.au-r.s2 .au-v{opacity:.45} .au-r.s2 .au-e{background:color-mix(in srgb, var(--accent) 25%, transparent);color:var(--ink);font-weight:700;padding:0 2px}
+.au-uit{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:.9rem;opacity:0;transition:opacity .4s ease}
+.au-r.s3 .au-uit{opacity:1}
+.au-p{font-size:.78rem;font-weight:700;border-radius:999px;padding:2px 10px} .au-p.ok{background:var(--ok-bg);color:var(--ok)} .au-p.nok{background:var(--nok-bg);color:var(--nok)}
+/* puzzel */
+.ap2{display:grid;gap:10px}
+.ap2-posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
+.ap2-post{border:1.5px solid var(--line);border-radius:12px;padding:8px 10px;font-size:.85rem;display:flex;gap:8px;align-items:flex-start;transition:border-color .3s ease, background .3s ease}
+.ap2-post.on{border-color:var(--nok);background:var(--nok-bg)}
+.ap2-i{font-size:1.1rem}
+.ap2-kaart{border:2px dashed var(--nok);border-radius:12px;padding:10px 14px;display:grid;gap:4px;min-height:60px}
+.ap2-f{display:flex;gap:8px;font-size:.92rem} .ap2-f span:first-child{color:var(--nok);font-weight:700}
+.ap2-msg{border-radius:12px;background:var(--sunk);padding:10px 14px;font-size:.92rem;line-height:1.45;opacity:0;transition:opacity .5s ease}
+.ap2-msg.on{opacity:1} .ap2-msg mark{background:color-mix(in srgb, var(--nok) 25%, transparent);color:inherit;border-radius:3px;padding:0 2px}
+/* backup */
+.ab{display:grid;gap:10px}
+.ab-rij{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.ab-box{border:1.5px solid var(--line);border-radius:12px;padding:8px;display:grid;gap:2px;align-content:start;min-height:110px;transition:border-color .3s ease, background .3s ease, opacity .4s ease;font-size:.85rem}
+.ab-box small{color:var(--muted);line-height:1.2}
+.ab-fs{display:flex;flex-wrap:wrap;gap:2px;font-size:1.2rem;margin-top:4px;min-height:1.6em}
+.ab-box.los{border-style:dashed} .ab-box.ransom{border-color:var(--nok);background:var(--nok-bg)} .ab-box.terug{border-color:var(--ok);background:var(--ok-bg)}
+.ab-msg{border-radius:12px;background:var(--sunk);padding:9px 14px;font-weight:700;opacity:0;transition:opacity .3s ease, background .3s ease}
+.ab-msg.on{opacity:1} .ab-msg.nok{background:var(--nok-bg);color:var(--nok)} .ab-msg.ok{background:var(--ok-bg);color:var(--ok)}
+@media (max-width:420px){ .ab-box{font-size:.78rem} }
+/* zoek */
+.az{display:grid;gap:8px}
+.az-foto{position:relative;overflow:hidden;display:flex;gap:10px;align-items:center;border:1px dashed var(--line);background:var(--sunk);border-radius:12px;padding:14px;font-style:italic;color:var(--muted)}
+.az-i{font-size:1.5rem;font-style:normal}
+.az-scan{position:absolute;left:-30%;top:0;bottom:0;width:30%;background:linear-gradient(90deg,transparent,color-mix(in srgb, var(--accent) 35%, transparent),transparent);opacity:0}
+@media (prefers-reduced-motion: no-preference){ .az-foto.scan .az-scan{opacity:1;animation:ascan 1.2s linear infinite} }
+@keyframes ascan{to{left:100%}}
+.az-lab{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.az-l{display:grid;gap:6px}
+.az-r{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:8px 12px;transition:border-color .3s ease, background .3s ease}
+.az-r small{color:var(--muted);display:block}
+.az-d{font-family:var(--f-mono);font-size:.85rem}
+.az-r.oudst.on{border-color:var(--ok);background:var(--ok-bg)}
+/* as */
+.aa{display:grid;gap:8px}
+.aa-t{font-family:var(--f-display)}
+.aa-graf{display:grid;grid-template-columns:auto 1fr;gap:8px;height:190px}
+.aa-y{display:flex;flex-direction:column;justify-content:space-between;font-size:.75rem;color:var(--muted);text-align:right;padding-bottom:22px;font-variant-numeric:tabular-nums;transition:color .3s ease}
+.aa-y.flits{color:var(--nok);font-weight:700}
+.aa-kols{display:flex;gap:10px;align-items:stretch;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:0 8px;margin-bottom:22px;position:relative}
+.aa-kol{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}
+.aa-staaf{width:70%;height:100%;display:flex;align-items:flex-end}
+.aa-staaf i{display:block;width:100%;background:var(--accent);border-radius:4px 4px 0 0;transition:height 1.2s cubic-bezier(.5,0,.3,1);position:relative}
+.aa-v{position:absolute;left:50%;top:-20px;transform:translateX(-50%);font-size:.78rem;font-weight:700;white-space:nowrap}
+.aa-graf{padding-top:18px}
+.aa-x{position:absolute;bottom:-22px;font-size:.78rem;color:var(--muted)}
+.aa-lab{border-radius:10px;padding:8px 12px;font-weight:700;background:var(--sunk);transition:background .3s ease}
+.aa-lab.nok{background:var(--nok-bg);color:var(--nok)} .aa-lab.ok{background:var(--ok-bg);color:var(--ok)}
+/* feed */
+.af{display:grid;gap:10px;justify-items:center}
+.af-tel{width:min(100%,260px);border:2px solid var(--ink);border-radius:22px;padding:10px;display:grid;gap:6px;overflow:hidden}
+.af-top{font-size:.78rem;font-weight:700;text-align:center;color:var(--muted)}
+.af-feed{display:grid;gap:6px}
+@media (prefers-reduced-motion: no-preference){ .af-feed.schuif{animation:aschuif .6s ease} }
+@keyframes aschuif{from{transform:translateY(24px);opacity:.3}}
+.af-post{display:flex;align-items:center;gap:8px;border-radius:10px;padding:7px 10px;font-size:.85rem;background:var(--sunk)}
+.af-dot{width:12px;height:12px;border-radius:50%;flex:none}
+.af-post.o0 .af-dot{background:var(--p1)} .af-post.o1 .af-dot{background:var(--p2)} .af-post.o2 .af-dot{background:var(--p3)} .af-post.o3 .af-dot{background:var(--p4)}
+.af-post.o0{background:color-mix(in srgb, var(--p1) 16%, var(--sunk))}
+.af-like{margin-left:auto;color:var(--nok)}
+.af-lab{text-align:center;font-weight:700;min-height:1.4em;max-width:46ch} .af-lab.ok{color:var(--ok)}
+/* knip */
+.ak3{display:grid;gap:8px}
+.ak3-lab{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.ak3-zin{font-family:var(--f-display);font-size:1.12rem;line-height:1.45;background:var(--sunk);border-radius:12px;padding:12px 14px}
+.ak3-zin .weg{transition:opacity .8s ease, text-decoration-color .5s ease}
+.ak3-zin.knip .weg{opacity:.35;text-decoration:line-through;text-decoration-color:var(--nok)}
+.ak3-zin.kort .weg{opacity:.08}
+.ak3-zin .hou{transition:background .5s ease}
+.ak3-zin.knip .hou{background:color-mix(in srgb, var(--nok) 22%, transparent);border-radius:4px}
+.ak3-zin.vol .hou{background:color-mix(in srgb, var(--ok) 22%, transparent);border-radius:4px}
+.ak3-post{border:1.5px solid var(--line);border-radius:12px;padding:10px 14px;font-weight:700;opacity:0;transform:translateY(6px);transition:opacity .4s ease, transform .4s ease}
+.ak3-post.on{opacity:1;transform:none;border-color:var(--nok)}
+.ak3-post.weg{opacity:.45;text-decoration:line-through}
 </style>
 
 <div class="wrap" id="app"></div>
@@ -349,6 +619,7 @@ const L = [
   jong:{
     gids:'Hoi! Ik ben Nova. Ik verken deze kaart samen met jou. Onderweg leer je hoe je AI zo aanspreekt dat je echt iets aan het antwoord hebt.',
     uitleg:'Een <b>prompt</b> is de vraag of opdracht die je aan een AI-chatbot geeft. De AI kan niet in je hoofd kijken: hij werkt alleen met wat jij typt. Hoe beter je vraag, hoe beter het antwoord.',
+    anim:{"soort": "voorspel", "titel": "Zo schrijft een AI-chatbot", "begin": "Na school ga ik", "woorden": [{"opties": [["naar", 58], ["met", 22], ["nog", 11]], "kies": "naar"}, {"opties": [["huis", 46], ["de", 31], ["training", 14]], "kies": "huis"}, {"opties": [["en", 52], ["om", 27], [".", 14]], "kies": "en"}, {"opties": [["eet", 38], ["speel", 33], ["maak", 20]], "kies": "eet"}], "onder": "De AI kiest telkens een woord dat waarschijnlijk volgt. Hij weet niet wat jij écht gaat doen.", "eind": "Zo werkt een chatbot: woord per woord, wat het meest waarschijnlijk is. Niet wat waar is."},
     voorbeeld:{kind:'chat', prompt:'Geef me 3 tips om sneller Franse woordjes te leren.', antwoord:'1. Oefen elke dag 10 minuten in plaats van één keer lang. 2. Zeg de woorden hardop. 3. Maak kaartjes met het Frans op de ene kant en het Nederlands op de andere.'},
     oef:[
       {type:'keuze2', titel:'Juist of fout?', opdracht:'Lees elke zin en kies.', knoppen:['Juist','Fout'], items:[
@@ -366,6 +637,7 @@ const L = [
   tiener:{
     gids:'Ik ben Kai. Ik gebruik AI elke week voor school en mijn bijjob, en ik heb gemerkt dat alles afhangt van hoe je het vraagt. Dat leer ik je hier, zonder blabla.',
     uitleg:'Een <b>prompt</b> is alles wat je in het tekstvak van een AI-tool typt: een vraag, een opdracht, soms met een stuk tekst erbij. De AI weet niet wat jij weet. Wat je niet zegt, vult hij zelf in, en daar gaat het vaak mis.',
+    anim:{"soort": "voorspel", "titel": "Zo schrijft een taalmodel", "begin": "Om goed te studeren, neem je best", "woorden": [{"opties": [["regelmatig", 44], ["je", 31], ["het", 15]], "kies": "regelmatig"}, {"opties": [["korte", 52], ["te", 27], ["en", 11]], "kies": "korte"}, {"opties": [["pauzes", 47], ["stukjes", 35], ["sessies", 12]], "kies": "pauzes"}], "onder": "Een taalmodel voorspelt het volgende woord op basis van miljoenen teksten. Dat klinkt logisch, maar het is geen controle op de feiten.", "eind": "Woord per woord het meest waarschijnlijke: daarom klinkt AI vlot, en daarom kan hij overtuigend fout zijn."},
     voorbeeld:{kind:'chat', prompt:'Geef 3 tips om me voor te bereiden op een mondeling examen.', antwoord:'1. Oefen hardop, niet alleen in je hoofd. 2. Maak per onderdeel een lijstje met kernwoorden. 3. Laat iemand je onverwachte vragen stellen.'},
     oef:[
       {type:'keuze2', titel:'Juist of fout?', opdracht:'Lees elke zin en kies.', knoppen:['Juist','Fout'], items:[
@@ -383,6 +655,7 @@ const L = [
   volw:{
     gids:'Ik ben Sam. Ik help je stap voor stap om AI-tools nuttig te gebruiken, op het werk en daarbuiten. Technische kennis heb je niet nodig.',
     uitleg:'Een <b>prompt</b> is de vraag of opdracht die je in een AI-tool zoals ChatGPT, Copilot of Claude typt. De tool kent je situatie niet. Alles wat hij moet weten, moet in je prompt staan.',
+    anim:{"soort": "voorspel", "titel": "Zo schrijft een AI-tool", "begin": "Beste klant, bedankt voor", "woorden": [{"opties": [["je", 61], ["uw", 24], ["de", 9]], "kies": "je"}, {"opties": [["bericht", 49], ["bestelling", 30], ["geduld", 13]], "kies": "bericht"}, {"opties": [["van", 41], [".", 33], ["en", 17]], "kies": "van"}, {"opties": [["gisteren", 45], ["vandaag", 28], ["maandag", 16]], "kies": "gisteren"}], "onder": "De tool kiest telkens een woord dat statistisch goed past. Wat er echt gebeurde, weet hij niet: dat moet in je prompt staan.", "eind": "Woord per woord, wat het meest waarschijnlijk is. Daarom moet alles wat de tool moet weten in je prompt staan."},
     voorbeeld:{kind:'chat', prompt:'Geef 3 tips om mijn mailbox overzichtelijk te houden.', antwoord:'1. Maak een paar vaste mappen, bijvoorbeeld Actie, Wachten en Archief. 2. Plan twee vaste momenten per dag om mails te verwerken. 3. Zet nieuwsbrieven met een regel automatisch apart.'},
     oef:[
       {type:'keuze2', titel:'Juist of fout?', opdracht:'Lees elke stelling en kies.', knoppen:['Juist','Fout'], items:[
@@ -503,6 +776,7 @@ L.push(
   jong:{
     gids:'Halte 2: duidelijk vragen! Hier word je detective: je speurt naar wat er ontbreekt in een prompt.',
     uitleg:'Soms lijkt een prompt duidelijk, maar mist er iets belangrijks. Stel jezelf de speurvragen: <b>wat</b> precies, <b>voor wie</b>, <b>wanneer of waar</b>, en <b>hoe</b> wil je het antwoord? Wat jij niet zegt, moet de AI raden.',
+    anim:{"soort": "prompt", "titel": "Van vaag naar duidelijk", "start": "Maak een quiz voor mijn klas.", "stappen": ["Maak een quiz [[over vulkanen]] voor mijn klas.", "Maak een quiz over vulkanen voor mijn klas [[van het eerste middelbaar]].", "Maak een quiz over vulkanen voor mijn klas van het eerste middelbaar, [[met 10 meerkeuzevragen]].", "Maak een quiz over vulkanen voor mijn klas van het eerste middelbaar, met 10 meerkeuzevragen. [[Zet de antwoorden apart onderaan.]]"], "voor": "Hier is een quiz! 1. Wat is de hoofdstad van Frankrijk? 2. Hoeveel poten heeft een spin? 3. Wie schilderde de Mona Lisa? …", "na": "<b>Quiz: vulkanen (1e middelbaar)</b><br>1. Hoe heet gesmolten gesteente dat uit een vulkaan stroomt? a) magma b) lava c) basalt<br>… 10 vragen, met de antwoorden onderaan.", "onder": "Elk stukje dat je toevoegt, hoeft de AI niet meer te raden."},
     voorbeeld:{kind:'vergelijk', vaag:'Schrijf een verjaardagsbericht.', sterk:'Schrijf een grappig verjaardagsbericht voor mijn oma die 80 wordt. Ze houdt van tuinieren. Max. 4 zinnen, om op een kaartje te schrijven.', waarom:'Nu weet de AI voor wie het is, wat oma graag doet, welke toon je wil en hoe lang het mag zijn.'},
     oef:[
       {type:'ontbreekt', titel:'Speur wat ontbreekt', opdracht:'Lees de prompt. Vink alles aan wat de AI nog moet weten.', prompt:'Maak een quiz voor mijn klas.', opties:[
@@ -520,6 +794,7 @@ L.push(
   tiener:{
     gids:'Halte 2: duidelijk vragen. Hier leer je zien wat er mist in een prompt, nog vóór je op verzenden drukt. Scheelt veel heen-en-weer.',
     uitleg:'Een prompt kan prima klinken en toch gaten hebben. Check vier dingen: <b>wat</b> precies, <b>voor wie</b>, <b>wanneer of waar</b>, en <b>in welke vorm</b>. Elk gat vult de AI zelf in, en meestal niet zoals jij het wil.',
+    anim:{"soort": "prompt", "titel": "Van vaag naar duidelijk", "start": "Help me met mijn GIP.", "stappen": ["Help me met mijn GIP [[over duurzame mode]].", "Help me met mijn GIP over duurzame mode. [[Ik wil hulp bij mijn planning.]]", "Help me met mijn GIP over duurzame mode. Ik wil hulp bij mijn planning. [[De deadline is 15 maart.]]", "Help me met mijn GIP over duurzame mode. Ik wil hulp bij mijn planning. De deadline is 15 maart. [[Maak er een weekschema van.]]"], "voor": "Natuurlijk! Een GIP is een geïntegreerde proef. Je kan beginnen met een onderwerp kiezen, bronnen zoeken, een inleiding schrijven …", "na": "<b>Weekschema GIP “Duurzame mode” tot 15 maart</b><br>Week 1: onderzoeksvraag en bronnen · Week 2: enquête opstellen · … · Week 8: nalezen en indienen.", "onder": "Onderwerp, soort hulp, deadline en vorm: vier gaten gedicht, één bruikbaar antwoord."},
     voorbeeld:{kind:'vergelijk', vaag:'Schrijf een post over ons schoolevent.', sterk:'Schrijf een Instagram-post voor het schoolfeest van vrijdag om 20 uur in de turnzaal. Voor leerlingen van 15 tot 18. Max. 3 zinnen, eindig met een oproep om tickets te kopen.', waarom:'Platform, wanneer, waar, voor wie, lengte en doel: de AI hoeft niets meer te verzinnen.'},
     oef:[
       {type:'ontbreekt', titel:'Spot de gaten', opdracht:'Lees de prompt. Vink alles aan wat de AI nog moet weten.', prompt:'Help me met mijn GIP.', opties:[
@@ -537,6 +812,7 @@ L.push(
   volw:{
     gids:'Welkom bij halte 2: duidelijk vragen. Hier leer je een prompt nalezen op ontbrekende info, zoals je een mail naleest voor je hem verstuurt.',
     uitleg:'Een prompt kan duidelijk klinken en toch belangrijke info missen. Loop vier vragen af: <b>wat</b> precies, <b>voor wie</b>, <b>wanneer of waar</b>, en <b>in welke vorm</b>. Wat ontbreekt, vult de tool zelf in, vaak met algemene of verzonnen details.',
+    anim:{"soort": "prompt", "titel": "Van vaag naar duidelijk", "start": "Schrijf een vacaturetekst.", "stappen": ["Schrijf een vacaturetekst [[voor een halftijdse boekhouder]].", "Schrijf een vacaturetekst voor een halftijdse boekhouder [[bij een kleine bakkerijketen met vier winkels]].", "Schrijf een vacaturetekst voor een halftijdse boekhouder bij een kleine bakkerijketen met vier winkels. [[We bieden flexibele uren en een fietsvergoeding.]]", "Schrijf een vacaturetekst voor een halftijdse boekhouder bij een kleine bakkerijketen met vier winkels. We bieden flexibele uren en een fietsvergoeding. [[Maximaal 150 woorden, warme toon.]]"], "voor": "Wij zoeken een gemotiveerde medewerker (m/v/x) voor een uitdagende functie in een dynamisch team. Jij bent flexibel en stressbestendig …", "na": "<b>Bakkerij met een hart voor cijfers?</b><br>Voor onze vier winkels zoeken we een halftijdse boekhouder (m/v/x). Jij houdt facturen en btw bij, wij bieden flexibele uren en een fietsvergoeding. …", "onder": "Functie, organisatie, aanbod en vorm: elk stukje maakt het antwoord bruikbaarder."},
     voorbeeld:{kind:'vergelijk', vaag:'Maak een verslag van de vergadering.', sterk:'Maak een kort verslag van onze teamvergadering van dinsdag, op basis van de notities hieronder. Voor collega’s die afwezig waren. Zet de beslissingen en acties met naam en deadline in een tabel.', waarom:'Welke vergadering, op basis van wat, voor wie en in welke vorm: alles staat erin.'},
     oef:[
       {type:'ontbreekt', titel:'Wat ontbreekt er?', opdracht:'Lees de prompt. Vink alles aan wat de tool nog moet weten.', prompt:'Schrijf een vacaturetekst.', opties:[
@@ -682,6 +958,7 @@ L.push(
   jong:{
     gids:'Halte 3: context geven! Hoe meer de AI over jouw situatie weet, hoe beter hij je kan helpen.',
     uitleg:'<b>Context</b> is de achtergrond bij je vraag: wie je bent, waarvoor je het nodig hebt en wat je al weet. Hoe meer nuttige context, hoe beter de AI begrijpt wat je bedoelt. Privégegevens zoals je adres of wachtwoord horen er nooit bij.',
+    anim:{"soort": "prompt", "titel": "Context maakt het verschil", "start": "Help me oefenen voor Frans.", "stappen": ["[[Ik zit in het 1ste middelbaar.]] Help me oefenen voor Frans.", "Ik zit in het 1ste middelbaar. [[Vrijdag heb ik een toets over de passé composé.]] Help me oefenen voor Frans.", "Ik zit in het 1ste middelbaar. Vrijdag heb ik een toets over de passé composé. [[Ik vergis me vaak met être en avoir.]] Help me oefenen.", "Ik zit in het 1ste middelbaar. Vrijdag heb ik een toets over de passé composé. Ik vergis me vaak met être en avoir. Help me oefenen [[met 10 zinnen, één per keer]]."], "voor": "Natuurlijk! Hier zijn wat Franse woorden: le chat, la maison, le chien, l’école …", "na": "<b>Oefening passé composé (être of avoir?)</b><br>1. Hier, je ___ (aller) au cinéma. Typ je antwoord, dan krijg je zin 2.", "onder": "De AI weet niets over jou. Wie je bent, wat je moet kennen en waar je vastzit: dat is context."},
     voorbeeld:{kind:'vergelijk', vaag:'Help me oefenen voor Frans.', sterk:'Ik zit in het 1ste middelbaar en heb vrijdag een toets Frans over de passé composé. Ik vergis me vaak tussen être en avoir. Maak 6 oefenzinnen.', waarom:'Niveau, onderwerp, deadline en wat je moeilijk vindt: zo oefen je net wat jij nodig hebt.'},
     oef:[
       {type:'keuze2', titel:'Nuttig of niet?', opdracht:'Je vraagt hulp bij je toets Frans. Heeft de AI iets aan deze info?', knoppen:nuttig, items:[
@@ -699,6 +976,7 @@ L.push(
   tiener:{
     gids:'Halte 3: context geven. Zonder context tast de AI in het duister en krijg je antwoorden die voor iedereen gelden. Met context krijg je er één voor jou.',
     uitleg:'<b>Context</b> is alles wat de AI moet weten om jou te begrijpen: je richting, je opdracht, wat je al hebt en waar je vastzit. Geef wat relevant is, niet je hele levensverhaal. Privégegevens laat je altijd weg.',
+    anim:{"soort": "prompt", "titel": "Context maakt het verschil", "start": "Help me met mijn GIP-planning.", "stappen": ["[[Ik zit in het 6de jaar Handel.]] Help me met mijn GIP-planning.", "Ik zit in het 6de jaar Handel. [[Mijn GIP is een ondernemingsplan voor een foodtruck.]] Help me met de planning.", "Ik zit in het 6de jaar Handel. Mijn GIP is een ondernemingsplan voor een foodtruck. [[De marktanalyse is klaar, de financiën nog niet.]] Help me met de planning.", "Ik zit in het 6de jaar Handel. Mijn GIP is een ondernemingsplan voor een foodtruck. De marktanalyse is klaar, de financiën nog niet. [[Deadline: 20 april.]] Help me met de planning."], "voor": "Een goede GIP-planning begint met een onderwerp kiezen en een onderzoeksvraag opstellen …", "na": "<b>Planning tot 20 april</b><br>Week 1–2: kostenraming foodtruck · Week 3: break-even · Week 4: financieel plan nalezen · Week 5: alles samenvoegen.", "onder": "Je richting, je opdracht, wat al klaar is en je deadline: zonder die context begint de AI bij nul."},
     voorbeeld:{kind:'vergelijk', vaag:'Help me met mijn GIP-planning.', sterk:'Ik zit in het 6de jaar Handel. Mijn GIP is een ondernemingsplan voor een foodtruck, deadline 15 maart. Het marktonderzoek is klaar, de financiële planning nog niet. Maak een weekplanning tot de deadline.', waarom:'Richting, onderwerp, deadline en wat al klaar is: de planning sluit aan bij waar jij staat.'},
     oef:[
       {type:'keuze2', titel:'Nuttig of niet?', opdracht:'Je vraagt hulp bij een motivatiebrief voor een studentenjob. Heeft de AI iets aan deze info?', knoppen:nuttig, items:[
@@ -716,6 +994,7 @@ L.push(
   volw:{
     gids:'Welkom bij halte 3: context geven. Een AI-tool weet niets over jouw werk of situatie. Hoe beter je die schetst, hoe minder je achteraf moet bijsturen.',
     uitleg:'<b>Context</b> is de achtergrond bij je vraag: je rol, je situatie, wat er al is en wat het probleem is. Geef wat relevant is. Persoonsgegevens van klanten of collega’s en vertrouwelijke info laat je weg.',
+    anim:{"soort": "prompt", "titel": "Context maakt het verschil", "start": "Schrijf een antwoord op een klacht.", "stappen": ["[[Ik werk bij de klantendienst van een webshop in fietsonderdelen.]] Schrijf een antwoord op een klacht.", "Ik werk bij de klantendienst van een webshop in fietsonderdelen. [[Een klant kreeg een verkeerde ketting geleverd.]] Schrijf een antwoord.", "Ik werk bij de klantendienst van een webshop in fietsonderdelen. Een klant kreeg een verkeerde ketting geleverd. [[We sturen de juiste gratis op en hij mag de andere houden.]] Schrijf een antwoord.", "Ik werk bij de klantendienst van een webshop in fietsonderdelen. Een klant kreeg een verkeerde ketting geleverd. We sturen de juiste gratis op en hij mag de andere houden. Schrijf een antwoord, [[vriendelijk en kort]]."], "voor": "Geachte klant, wij betreuren het dat u niet tevreden bent over onze dienstverlening en nemen uw klacht ernstig …", "na": "<b>Dag Tom,</b><br>sorry voor de verkeerde ketting! De juiste vertrekt vandaag gratis naar je. De andere mag je houden. Fijne rit!", "onder": "Je rol, de situatie en wat je wil aanbieden: dat is context. Geen namen of gegevens van echte klanten in de prompt."},
     voorbeeld:{kind:'vergelijk', vaag:'Schrijf een antwoord op een klacht.', sterk:'Ik werk bij de klantendienst van een webshop in fietsonderdelen. Een klant klaagt dat zijn bestelling 10 dagen te laat is door een fout in ons magazijn. We bieden gratis verzending bij een volgende bestelling. Schrijf een kort, oprecht antwoord.', waarom:'Je rol, wat er misliep, wiens fout het was en wat je aanbiedt: het antwoord kan meteen de deur uit.'},
     oef:[
       {type:'keuze2', titel:'Nuttig of niet?', opdracht:'Je vraagt hulp bij een planning voor je team. Heeft de tool iets aan deze info?', knoppen:nuttig, items:[
@@ -969,6 +1248,7 @@ L.push(
   jong:{
     gids:'Een grote opdracht voelt soms als een berg. Het geheim? Opdelen in kleine stapjes.',
     uitleg:'Een grote vraag in één keer stellen geeft vaak een vaag antwoord. Deel ze op in <b>stappen</b>: eerst een plan, daarna elk onderdeel apart. Zo hou jij het overzicht.',
+    anim:{"soort": "lijst", "titel": "Een grote vraag in stapjes", "kopLabel": "Grote opdracht", "kop": "Maak ons groepswerk over de Romeinen.", "items": [{"t": "Stap 1: welke onderdelen kan het groepswerk hebben?", "p": "6 onderdelen"}, {"t": "Stap 2: verdeel ze over ons vieren.", "p": "taken verdeeld"}, {"t": "Stap 3: geef 5 vragen om mijn deel (het leger) op te zoeken.", "p": "zoekvragen"}, {"t": "Stap 4: lees mijn tekst na op fouten.", "p": "nagelezen"}], "onder": "Eén grote vraag geeft een vaag antwoord. Stapjes geven jou het overzicht.", "eind": "Jij blijft de baas over het werk: na elke stap kijk je of het goed is."},
     voorbeeld:{kind:'gesprek', msgs:[
       ['me','We maken met 4 een groepswerk over de Romeinen. Stap 1: welke onderdelen kan zo’n groepswerk hebben? Geef er 6.'],
       ['ai','1. Het leger 2. Wonen en bouwen 3. Eten 4. Goden 5. Kleding 6. Spelletjes en vrije tijd'],
@@ -989,6 +1269,7 @@ L.push(
   tiener:{
     gids:'Je eindwerk in één prompt? Dan krijg je een oppervlakkig antwoord. Opdelen werkt veel beter.',
     uitleg:'Deel een grote taak op in <b>stappen</b>: eerst een structuur, dan elk deel apart, tot slot nalezen. Je kan de AI ook vragen om zelf stap voor stap te redeneren voor hij antwoordt.',
+    anim:{"soort": "lijst", "titel": "Een grote taak in stappen", "kopLabel": "Grote taak", "kop": "Schrijf mijn eindwerk over sociale media en slaap.", "items": [{"t": "Stap 1: stel een structuur voor met 5 hoofdstukken.", "p": "structuur"}, {"t": "Stap 2: welke bronnen heb ik nodig per hoofdstuk?", "p": "bronnenlijst"}, {"t": "Stap 3: geef feedback op mijn eigen tekst voor hoofdstuk 2.", "p": "feedback"}, {"t": "Stap 4: check of mijn conclusie aansluit bij mijn onderzoeksvraag.", "p": "nagelezen"}], "onder": "Laat de AI niet je eindwerk schrijven. Laat hem helpen bij elke stap, en schrijf zelf.", "eind": "Bij elke stap stuur jij bij. Zo blijft het jouw werk, en wordt het beter."},
     voorbeeld:{kind:'gesprek', msgs:[
       ['me','Ik schrijf een eindwerk over de invloed van sociale media op slaap. Stap 1: stel een structuur voor met 5 hoofdstukken, nog geen tekst.'],
       ['ai','1. Inleiding en onderzoeksvraag 2. Hoe slaap werkt 3. Sociale media en schermgebruik 4. Wat onderzoek zegt over het verband 5. Besluit en tips'],
@@ -1009,6 +1290,7 @@ L.push(
   volw:{
     gids:'Een groot project in één prompt gieten levert vaak een algemeen antwoord op. In stappen werken geeft meer grip.',
     uitleg:'Deel een groot project op in <b>fasen</b>: eerst een overzicht, dan elke fase apart uitwerken, tot slot alles samen nalezen. Zo kan je bij elke stap bijsturen voor je verder gaat.',
+    anim:{"soort": "lijst", "titel": "Een groot project in fasen", "kopLabel": "Groot project", "kop": "Organiseer onze opendeurdag.", "items": [{"t": "Fase 1: geef een overzicht van de fasen, nog zonder details.", "p": "overzicht"}, {"t": "Fase 2: werk de planning uit voor de laatste vier weken.", "p": "planning"}, {"t": "Fase 3: schrijf een uitnodiging voor buren en klanten.", "p": "tekst"}, {"t": "Fase 4: maak een checklist voor de dag zelf.", "p": "checklist"}], "onder": "Eén grote vraag geeft een algemeen antwoord. In fasen kan je bij elke stap bijsturen.", "eind": "Na elke fase controleer je het resultaat voor je verder gaat."},
     voorbeeld:{kind:'gesprek', msgs:[
       ['me','We organiseren een opendeurdag voor ons bedrijf. Stap 1: geef een overzicht van de fasen in de voorbereiding, nog zonder details.'],
       ['ai','1. Doel en doelgroep bepalen 2. Programma 3. Communicatie 4. Praktische organisatie 5. Evaluatie'],
@@ -1227,6 +1509,7 @@ L.push(
   jong:{
     gids:'Is het antwoord niet goed? Geen probleem. Je hoeft niet opnieuw te beginnen: je kan bijsturen!',
     uitleg:'Stuur bij met een <b>vervolgvraag</b>. Zeg concreet wat er anders moet: korter, grappiger, eenvoudiger, als lijstje. ‘Slecht’ of ‘opnieuw’ helpt niet: dan weet de AI niet wat beter moet.',
+    anim:{"soort": "chat", "titel": "Bijsturen in drie stappen", "kop": "Gesprek met de AI", "msgs": [{"w": "me", "t": "Schrijf een gedichtje voor de verjaardag van mijn juf."}, {"w": "ai", "t": "Lieve juf, op deze dag vol vreugde en licht, wensen wij u een jaar vol zonneschijn en …", "p": "te lang en te stijf", "st": "nok"}, {"w": "me", "t": "Korter: 4 regels. En grappig, ze houdt van katten."}, {"w": "ai", "t": "Hiep hiep hoera voor onze juf, / ze kent alle tafels uit haar hoofd. / Haar kat zegt miauw, wij zingen luid, / het feest begint, de taart is al op!", "p": "bijna!", "st": "nok"}, {"w": "me", "t": "Leuk! Maar laat de laatste regel rijmen op “juf”."}, {"w": "ai", "t": "… / Haar kat zegt miauw, wij roepen “puf!” / Gelukkige verjaardag, liefste juf!", "p": "✓ precies goed", "st": "ok"}], "onder": "Zeg wat er anders moet: korter, grappiger, rijmen. “Opnieuw” helpt de AI niet."},
     voorbeeld:{kind:'gesprek', msgs:[
       ['me','Schrijf een gedichtje voor de verjaardag van mijn juf.'],
       ['ai','Lieve juf, op deze dag vol vreugde en licht, wensen wij u een jaar dat schittert in uw zicht…'],
@@ -1248,6 +1531,7 @@ L.push(
   tiener:{
     gids:'Eerste antwoord niet top? Normaal. De echte skill is bijsturen, niet opnieuw beginnen.',
     uitleg:'Stuur bij met een <b>concrete vervolgvraag</b>: wat moet anders, en hoe? ‘Minder schools, meer in mijn stem’ werkt. ‘Nee’ of ‘beter’ niet: dan moet de AI raden wat je bedoelt.',
+    anim:{"soort": "chat", "titel": "Bijsturen in drie stappen", "kop": "Gesprek met de AI", "msgs": [{"w": "me", "t": "Schrijf een korte bio voor mijn profiel op een site voor vakantiejobs."}, {"w": "ai", "t": "Ik ben een gemotiveerde en dynamische jongere met een passie voor uitdagingen …", "p": "klinkt als iedereen", "st": "nok"}, {"w": "me", "t": "Minder schools. Ik ben 17, werkte twee zomers in een ijssalon en speel basket."}, {"w": "ai", "t": "17, twee zomers ijsjes gedraaid in de drukte van de kust, en op het basketveld de teamspeler die altijd passt …", "p": "te lang", "st": "nok"}, {"w": "me", "t": "Top, maar max. 2 zinnen."}, {"w": "ai", "t": "17 jaar, twee zomers ervaring in een drukke ijssalon. Teamspeler op en naast het basketveld.", "p": "✓ bruikbaar", "st": "ok"}], "onder": "Concreet bijsturen werkt: wat moet anders, en hoe. “Nee” of “beter” niet."},
     voorbeeld:{kind:'gesprek', msgs:[
       ['me','Schrijf een korte bio voor mijn profiel op een site voor vakantiejobs.'],
       ['ai','Ik ben een gemotiveerde en dynamische jongere met een passie voor uitdagingen en een sterke teamgeest.'],
@@ -1269,6 +1553,7 @@ L.push(
   volw:{
     gids:'Het eerste antwoord is zelden meteen perfect. Gericht bijsturen gaat sneller dan opnieuw beginnen.',
     uitleg:'Stuur bij met een <b>concrete vervolgvraag</b>: wat moet anders en hoe. ‘Korter en zonder jargon’ of ‘zet het uur erbij’ werkt. ‘Niet goed’ helpt de tool niet vooruit.',
+    anim:{"soort": "chat", "titel": "Bijsturen in drie stappen", "kop": "Gesprek met de AI-tool", "msgs": [{"w": "me", "t": "Schrijf een korte mail aan mijn team: de vergadering van donderdag verschuift naar vrijdag 10 uur."}, {"w": "ai", "t": "Beste collega’s, graag wil ik jullie informeren dat er een wijziging is opgetreden in de planning van onze wekelijkse …", "p": "te formeel en te lang", "st": "nok"}, {"w": "me", "t": "Korter en informeler. Zet het lokaal erbij: vergaderzaal 2."}, {"w": "ai", "t": "Hoi allemaal, de vergadering van donderdag gaat door op vrijdag om 10 uur in vergaderzaal 2. Tot dan!", "p": "bijna", "st": "nok"}, {"w": "me", "t": "Voeg nog toe dat wie niet kan, dat laat weten."}, {"w": "ai", "t": "Hoi allemaal, de vergadering van donderdag gaat door op vrijdag om 10 uur in vergaderzaal 2. Kan je niet? Laat het even weten. Tot dan!", "p": "✓ klaar om te versturen", "st": "ok"}], "onder": "Elke vervolgvraag zegt precies wat er moet veranderen. “Niet goed” helpt de tool niet vooruit."},
     voorbeeld:{kind:'gesprek', msgs:[
       ['me','Schrijf een korte mail aan mijn team: de vergadering van donderdag verschuift naar vrijdag 10 uur.'],
       ['ai','Beste collega’s, graag informeer ik jullie over een wijziging in onze planning. Door onvoorziene omstandigheden…'],
@@ -1384,6 +1669,7 @@ L.push(
   jong:{
     gids:'Halte 6: veilig en kritisch! Hier word je een echte speurneus. Je leert opletten voor fouten, privacy en eerlijkheid.',
     uitleg:'AI klinkt altijd heel zeker, ook als hij zich vergist. Soms <b>verzint</b> hij feiten, jaartallen of namen. Check belangrijke info daarom in een betrouwbare bron, zoals je cursus, een boek of een officiële website.',
+    anim:{"soort": "lijst", "titel": "Een AI-antwoord gecheckt", "kopLabel": "De AI antwoordt", "kop": "“Het geheim van de oude molen” werd geschreven door Anna Verbeke in 1998 en won de Gouden Uil.", "genummerd": false, "items": [{"t": "Bestaat het boek?", "s": "Gezocht in de bib-catalogus", "p": "✓ ja", "st": "ok"}, {"t": "Is Anna Verbeke de schrijver?", "s": "Op de kaft staat een andere naam", "p": "✗ verzonnen", "st": "nok"}, {"t": "Won het de Gouden Uil?", "s": "Niet te vinden in de lijst met winnaars", "p": "✗ verzonnen", "st": "nok"}], "onder": "AI klinkt altijd zeker, ook als hij iets verzint. Check belangrijke dingen in een betrouwbare bron.", "eind": "Twee van de drie feiten waren verzonnen, en het klonk heel zeker."},
     voorbeeld:{kind:'chat', prompt:'Wie schreef het boek ‘Het geheim van de oude molen’?', antwoord:'‘Het geheim van de oude molen’ werd geschreven in 1998 en won dat jaar een belangrijke jeugdboekenprijs.',
       noot:'In dit voorbeeld bestaat het boek niet eens! Toch verzint de AI een jaartal en een prijs. Het klinkt heel zeker, en dat maakt het gevaarlijk.'},
     oef:[
@@ -1402,6 +1688,7 @@ L.push(
   tiener:{
     gids:'Halte 6: veilig en kritisch. AI kan met een stalen gezicht onzin vertellen, inclusief verzonnen bronnen. Hier leer je dat spotten.',
     uitleg:'AI voorspelt woorden die logisch klinken. Daardoor kan hij <b>feiten, cijfers en zelfs bronnen verzinnen</b> die heel overtuigend lijken. Gebruik je iets voor school? Check het in een betrouwbare bron en zoek elke bron zelf op.',
+    anim:{"soort": "lijst", "titel": "Bronnen van de AI gecheckt", "kopLabel": "De AI geeft 2 bronnen", "kop": "1. Peeters, J. (2021). “Scrollen tot middernacht”. Tijdschrift voor Jeugdonderzoek.<br>2. Een studie van de WHO uit 2019 over schermtijd.", "genummerd": false, "items": [{"t": "Bestaat het artikel van Peeters?", "s": "Niet te vinden in Google Scholar of de bib", "p": "✗ verzonnen", "st": "nok"}, {"t": "Bestaat het tijdschrift?", "s": "Geen enkel spoor", "p": "✗ verzonnen", "st": "nok"}, {"t": "Heeft de WHO in 2019 iets over schermtijd gepubliceerd?", "s": "Ja, maar over kleine kinderen, niet over tieners", "p": "? klopt maar half", "st": "vraag"}], "onder": "AI kan bronnen verzinnen die er heel echt uitzien. Gebruik je iets voor school? Zoek de bron zelf op.", "eind": "Een bron die je niet zelf gevonden hebt, gebruik je niet."},
     voorbeeld:{kind:'chat', prompt:'Geef 2 wetenschappelijke bronnen over sociale media en slaap bij tieners.', antwoord:'1. Peeters, J. (2021). ‘Scrollen tot middernacht’. Tijdschrift voor Jeugdslaap, 14(2), 45–61. 2. …',
       noot:'Ziet er perfect uit, met auteur, jaartal en bladzijden. Maar in dit voorbeeld bestaat dat tijdschrift niet. Zoek elke bron zelf op voor je ze gebruikt.'},
     oef:[
@@ -1420,6 +1707,7 @@ L.push(
   volw:{
     gids:'Welkom bij halte 6: veilig en kritisch. Hier leer je de risico’s van AI-tools kennen: verzonnen info, privacy, eerlijkheid en vooroordelen.',
     uitleg:'AI-tools klinken zelfzeker, ook als ze zich vergissen. Ze kunnen <b>cijfers, regels, wetsartikels en bronnen verzinnen</b> die heel echt lijken. Gaat het over geld, recht, gezondheid of je werk? Controleer het dan bij een officiële bron.',
+    anim:{"soort": "lijst", "titel": "Een AI-antwoord gecheckt", "kopLabel": "De AI-tool antwoordt", "kop": "Als voltijdse bediende heb je recht op 25 vakantiedagen, vastgelegd in artikel 14 van de Vakantiewet van 2003.", "genummerd": false, "items": [{"t": "Klopt het aantal dagen?", "s": "Op de site van de overheid: 20 dagen bij een vijfdagenweek", "p": "✗ fout", "st": "nok"}, {"t": "Bestaat “artikel 14 van de Vakantiewet van 2003”?", "s": "Niet te vinden", "p": "✗ verzonnen", "st": "nok"}, {"t": "Kan het in je sector anders zijn?", "s": "Ja, via cao’s of je werkgever", "p": "? navragen", "st": "vraag"}], "onder": "AI-tools kunnen cijfers en wetsartikels verzinnen. Gaat het over geld, recht of gezondheid? Check een officiële bron.", "eind": "Het antwoord klonk officieel, maar het cijfer en het wetsartikel klopten niet."},
     voorbeeld:{kind:'chat', prompt:'Hoeveel dagen wettelijke vakantie heb ik als voltijdse bediende in België?', antwoord:'Als voltijdse bediende in België heb je recht op 25 wettelijke vakantiedagen per jaar.',
       noot:'Fout. In een vijfdagenweek zijn het er 20 (24 in een zesdagenweek), als je het jaar ervoor voltijds werkte. Het klinkt zeker, maar het klopt niet. Check zulke regels bij een officiële bron.'},
     oef:[
@@ -1668,6 +1956,7 @@ L.push(
   jong:{
     gids:'Halte 7: in de praktijk! Hier zet je AI aan het werk voor echte klusjes, zoals samenvatten, leren en kiezen.',
     uitleg:'AI kan lange teksten goed samenvatten, als je zegt <b>waarvoor</b>: om te leren, om aan iemand te vertellen of om snel te weten waarover het gaat. Zeg ook hoe lang en in welke vorm. Lees daarna na of er niets belangrijks ontbreekt.',
+    anim:{"soort": "krimp", "titel": "Van lange tekst naar leerkaartje", "labNa": "Om te leren", "tekst": "De Romeinen woonden vooral in steden. [[Rome was de hoofdstad van een groot rijk]] dat rond de Middellandse Zee lag. Ze bouwden [[wegen, bruggen en aquaducten]], waarvan je sommige nog kan bezoeken. Het leger was heel belangrijk: [[soldaten heetten legionairs]]. Kinderen van rijke ouders gingen naar school, andere kinderen werkten. [[In de Romeinse tijd sprak men Latijn]], een taal waar veel van onze woorden van komen. [[Rond het jaar 476 viel het West-Romeinse Rijk.]]", "punten": ["Rome: hoofdstad van een groot rijk", "Bouwwerken: wegen, bruggen, aquaducten", "Soldaten = legionairs", "Taal: Latijn", "Einde West-Romeinse Rijk: ±476"], "onder": "Zeg waarvoor je de samenvatting nodig hebt. Dan houdt de AI het belangrijkste over."},
     voorbeeld:{kind:'vergelijk', vaag:'Vat dit hoofdstuk samen.', sterk:'Vat het hoofdstuk over de Romeinen hieronder samen in 6 bullets, zodat ik het kan leren voor mijn toets. Zet bij elke bullet het jaartal als dat er is.', waarom:'Doel (leren voor de toets), lengte (6 bullets) en wat erin moet (jaartallen): zo krijg je een samenvatting om mee te studeren.'},
     oef:[
       {type:'koppel', titel:'Koppel de samenvatting', opdracht:'Drie keer hetzelfde hoofdstuk over de Romeinen, voor een ander doel. Welke samenvatting hoort bij welk doel?', knoppen:['A','B','C'], kop:'Drie samenvattingen', vraag:'Welke samenvatting past bij dit doel?',
@@ -1686,6 +1975,7 @@ L.push(
   tiener:{
     gids:'Halte 7: in de praktijk. Hier zet je AI in voor echte taken: samenvatten, feedback, studeren en kiezen.',
     uitleg:'Een goede samenvatting hangt af van je <b>doel</b>: studeren, een paper onderbouwen of iemand bijpraten. Zeg wat erin moet (kernideeën, cijfers, argumenten) en hoe lang. Lees na: AI laat soms nuances weg of voegt iets toe.',
+    anim:{"soort": "krimp", "titel": "Van artikel naar de kern", "labNa": "Samenvatting voor je paper", "tekst": "In dit onderzoek wilden we nagaan [[of schermgebruik na 22 uur samenhangt met minder slaap]]. We bevroegen [[2.100 leerlingen van 14 tot 18 jaar]] in Vlaanderen. Ze hielden een week lang een slaapdagboek bij. [[Wie na 22 uur nog meer dan een uur op zijn gsm zat, sliep gemiddeld 40 minuten minder.]] Opvallend was dat het verschil groter was in het weekend. [[Het onderzoek toont een verband, geen oorzaak.]]", "punten": ["Vraag: schermgebruik na 22 uur en slaap", "Methode: 2.100 leerlingen, slaapdagboek", "Resultaat: gemiddeld 40 minuten minder slaap", "Let op: verband, geen oorzaak"], "onder": "Een goede samenvatting volgt je doel: onderzoeksvraag, methode, resultaat en beperking."},
     voorbeeld:{kind:'vergelijk', vaag:'Vat dit artikel samen.', sterk:'Vat het wetenschappelijke artikel hieronder samen voor mijn paper biologie: onderzoeksvraag, methode, belangrijkste resultaat en beperkingen, elk in 1 à 2 zinnen. Voeg niets toe wat niet in het artikel staat.', waarom:'Je zegt waarvoor, welke onderdelen en hoe lang, en je stelt een grens tegen verzinsels.'},
     oef:[
       {type:'koppel', titel:'Koppel de samenvatting', opdracht:'Hetzelfde onderzoek over schermgebruik en slaap, samengevat voor drie doelen. Welke samenvatting hoort bij welk doel?', knoppen:['A','B','C'], kop:'Drie samenvattingen', vraag:'Welke samenvatting past bij dit doel?',
@@ -1704,6 +1994,7 @@ L.push(
   volw:{
     gids:'Welkom bij halte 7: in de praktijk. Hier zet je AI-tools in voor alledaagse taken, op het werk en thuis.',
     uitleg:'Een samenvatting is pas bruikbaar als ze past bij je <b>doel</b>: zelf snel lezen, je team informeren of een beslissing voorbereiden. Zeg wat erin moet en hoe lang. Lees na: een tool laat soms nuances weg of voegt iets toe.',
+    anim:{"soort": "krimp", "titel": "Van beleidsdocument naar teamupdate", "labNa": "Wat het team moet weten", "tekst": "De organisatie zet in op een moderne en flexibele werkomgeving. In dat kader wordt de regeling voor thuiswerk geëvalueerd en bijgestuurd. [[Vanaf 1 maart kan iedereen twee dagen per week thuiswerken]], in overleg met de leidinggevende. [[De thuiswerkvergoeding stijgt naar 150 euro per maand.]] De organisatie benadrukt het belang van verbondenheid. [[Op dinsdag is iedereen op kantoor.]] [[Aanvragen gebeuren via het HR-portaal vóór 15 februari.]]", "punten": ["Vanaf 1 maart: 2 thuiswerkdagen per week", "Vergoeding: 150 euro per maand", "Dinsdag: iedereen op kantoor", "Aanvragen vóór 15 februari via het HR-portaal"], "onder": "Zeg voor wie de samenvatting is en wat erin moet. Lees ze altijd na tegen het origineel."},
     voorbeeld:{kind:'vergelijk', vaag:'Vat dit document samen.', sterk:'Vat het beleidsdocument hieronder samen voor mijn team: wat verandert er voor ons, vanaf wanneer en wat moeten we doen? Maximaal 8 bullets. Gebruik alleen info uit het document.', waarom:'Doel, lezers, inhoud, lengte en een grens: de samenvatting kan zo naar je team.'},
     oef:[
       {type:'koppel', titel:'Koppel de samenvatting', opdracht:'Hetzelfde document over een nieuwe thuiswerkregeling, samengevat voor drie doelen. Welke samenvatting hoort bij welk doel?', knoppen:['A','B','C'], kop:'Drie samenvattingen', vraag:'Welke samenvatting past bij dit doel?',
@@ -1944,6 +2235,7 @@ L.push(
   jong:{
     gids:'Welkom bij de laatste halte! Tijd om alles wat je leerde samen te brengen.',
     uitleg:'Je kent nu alle bouwstenen: <b>rol</b>, <b>situatie</b>, <b>opdracht</b>, <b>formaat</b> en <b>grenzen</b>. Niet elke prompt heeft ze allemaal nodig. Maar hoe belangrijker de taak, hoe meer bouwstenen je gebruikt.',
+    anim:{"soort": "prompt", "titel": "Alle bouwstenen samen", "start": "Maak een plan voor een daguitstap.", "stappen": ["[[Wees een reisplanner voor jongeren.]] Maak een plan voor een daguitstap.", "Wees een reisplanner voor jongeren. [[Ik ga met 3 vrienden van 13 en de mama van Lien naar Gent.]] Maak een plan voor een daguitstap.", "Wees een reisplanner voor jongeren. Ik ga met 3 vrienden van 13 en de mama van Lien naar Gent. Maak een plan voor een daguitstap, [[als lijstje per uur]].", "Wees een reisplanner voor jongeren. Ik ga met 3 vrienden van 13 en de mama van Lien naar Gent. Maak een plan voor een daguitstap, als lijstje per uur. [[Max. 20 euro per persoon.]]"], "voor": "Een daguitstap kan leuk zijn naar zee, een pretpark of een museum. Neem zeker een picknick mee …", "na": "<b>Daguitstap Gent (max. 20 euro)</b><br>10 u: Gravensteen (−19 jaar gratis) · 12 u: picknick aan de Graslei · 14 u: …", "onder": "Rol, situatie, opdracht, formaat en grens: niet altijd allemaal nodig, wel voor een belangrijke vraag."},
     voorbeeld:{kind:'delen', labels:bouw5, delen:['Wees een reisplanner voor jongeren.','Ik ga met 3 vrienden van 13 en de mama van Lars een dag naar zee, met de trein vanuit Antwerpen.','Maak een plan voor de dag,','als tabel met uur, activiteit en wat het kost,','en hou het onder 20 euro per persoon.']},
     oef:[
       {type:'volgorde', titel:'Bouw de perfecte prompt', opdracht:'Tik de vijf bouwstenen aan in een logische volgorde.', labels:bouw5,
@@ -1956,6 +2248,7 @@ L.push(
   tiener:{
     gids:'Laatste halte. Tijd om al je skills te combineren.',
     uitleg:'Je hebt alle bouwstenen: <b>rol</b>, <b>situatie</b>, <b>opdracht</b>, <b>formaat</b> en <b>grenzen</b>. Een snelle vraag heeft er twee nodig, een belangrijke taak alle vijf. De kunst is kiezen wat nodig is.',
+    anim:{"soort": "prompt", "titel": "Alle bouwstenen samen", "start": "Help me een feest plannen.", "stappen": ["[[Wees een eventplanner.]] Help me een feest plannen.", "Wees een eventplanner. [[Ik word 18 en geef een feest voor 30 vrienden in de garage van mijn ouders.]] Help me het plannen.", "Wees een eventplanner. Ik word 18 en geef een feest voor 30 vrienden in de garage van mijn ouders. Help me het plannen [[met een checklist per week]].", "Wees een eventplanner. Ik word 18 en geef een feest voor 30 vrienden in de garage van mijn ouders. Help me het plannen met een checklist per week. [[Budget: 300 euro, geen sterke drank.]]"], "voor": "Een feest plannen begint met een thema, een locatie en een gastenlijst. Denk aan muziek, eten en decoratie …", "na": "<b>Checklist feest (300 euro)</b><br>Week 1: uitnodigingen en buren verwittigen · Week 2: muziek en verlichting · Week 3: eten en mocktails · …", "onder": "Rol, situatie, opdracht, formaat en grens: hoe belangrijker de taak, hoe meer bouwstenen je gebruikt."},
     voorbeeld:{kind:'delen', labels:bouw5, delen:['Wees een eventplanner.','Ik word 18 en geef een feest voor 30 vrienden in de jeugdlokalen, met een budget van 400 euro.','Maak een plan voor de voorbereiding,','als tabel met week, taak en wie het doet,','en verzin geen prijzen: laat ze open.']},
     oef:[
       {type:'volgorde', titel:'Bouw de perfecte prompt', opdracht:'Tik de vijf bouwstenen aan in een logische volgorde.', labels:bouw5,
@@ -1968,6 +2261,7 @@ L.push(
   volw:{
     gids:'Welkom bij de laatste halte. Tijd om alles samen te brengen.',
     uitleg:'Je kent alle bouwstenen: <b>rol</b>, <b>situatie</b>, <b>opdracht</b>, <b>formaat</b> en <b>grenzen</b>. Voor een snelle vraag volstaan er twee, voor een belangrijke taak gebruik je ze alle vijf.',
+    anim:{"soort": "prompt", "titel": "Alle bouwstenen samen", "start": "Help me met mijn loopbaan.", "stappen": ["[[Wees een loopbaancoach.]] Help me met mijn loopbaan.", "Wees een loopbaancoach. [[Ik werk 10 jaar in de logistiek en wil binnen 2 jaar teamleider worden.]] Help me.", "Wees een loopbaancoach. Ik werk 10 jaar in de logistiek en wil binnen 2 jaar teamleider worden. Help me [[met een stappenplan in een tabel]].", "Wees een loopbaancoach. Ik werk 10 jaar in de logistiek en wil binnen 2 jaar teamleider worden. Help me met een stappenplan in een tabel. [[Ik kan max. 3 uur per week investeren.]]"], "voor": "Een loopbaan uitbouwen vraagt tijd. Denk na over je passies, volg opleidingen en bouw een netwerk uit …", "na": "<b>Stappenplan teamleider (3 u per week)</b><br>Kwartaal 1: gesprek met je leidinggevende · Kwartaal 2: opleiding coachend leidinggeven · …", "onder": "Rol, situatie, opdracht, formaat en grens: voor een belangrijke vraag gebruik je ze alle vijf."},
     voorbeeld:{kind:'delen', labels:bouw5, delen:['Wees een loopbaancoach.','Ik werk 10 jaar in de logistiek en wil binnen 2 jaar teamleider worden; ik heb 4 uur per week om bij te leren.','Maak een opleidingsplan voor mij,','als tabel met periode, wat ik leer en hoe (opleiding, boek, praktijk),','en noem geen opleidingen of prijzen die je niet zeker weet.']},
     oef:[
       {type:'volgorde', titel:'Bouw de perfecte prompt', opdracht:'Tik de vijf bouwstenen aan in een logische volgorde.', labels:bouw5,
@@ -2075,6 +2369,82 @@ L.push(
 }}
 );
 L.forEach(l=>l.area = +l.id.split('.')[0]-1);
+/* ---------- uitgebreide intro (keuzescherm) ---------- */
+const INFO = {
+  hoeSub:'Drie paden, dezelfde acht haltes. Je hebt geen AI nodig om te oefenen: alles gebeurt hier op de pagina.',
+  hoe:[
+    {t:'Kies je gids', s:'Nova (12–14), Kai (15–18) of Sam (volwassenen). Elke gids gebruikt voorbeelden uit jouw leefwereld.'},
+    {t:'Volg de kaart', s:'Begin bij halte 1 en werk naar de eindproef toe. Je mag ook meteen naar een halte springen die je nodig hebt.'},
+    {t:'Lees, kijk, oefen', s:'Elke les heeft een korte uitleg, een voorbeeld en oefeningen die zichzelf verbeteren. Fout is niet erg: je krijgt meteen uitleg.'},
+    {t:'Verdien je certificaat', s:'Na elke halte krijg je een beloning. Na de eindproef krijg je een certificaat met je naam.'}],
+  extra:{titel:'Waarom leren prompten?', tekst:[
+    'AI-chatbots geven antwoorden die zo goed zijn als de vraag die je stelt. Een vage vraag levert een vaag antwoord op; een duidelijke vraag met de juiste context levert iets op waar je echt mee verder kan.',
+    'In Promptlab leer je dat stap voor stap: duidelijk vragen, context geven, een rol of stappen meegeven, bijsturen als het antwoord niet goed is, en kritisch blijven over wat de AI zegt. Wat je leert, werkt in elke AI-chatbot.']},
+  routeSub:'Van de basis naar de eindproef. Elke halte bouwt verder op de vorige.',
+  oefenSub:'Geen lange teksten, wel veel korte oefeningen. De volgorde van de antwoorden verandert bij elke poging.',
+  oefen:[
+    {ico:'search', t:'Prompt of niet?', s:'Is dit een goede vraag aan een AI, of niet?'},
+    {ico:'scale', t:'Vaag of sterk', s:'Vergelijk twee prompts en kies de beste.'},
+    {ico:'search', t:'Wat ontbreekt?', s:'Welk stukje informatie mist de AI nog?'},
+    {ico:'blocks', t:'Bouw de prompt', s:'Zet de stukjes in de juiste volgorde.'},
+    {ico:'eye', t:'Spot de fout', s:'Tik aan wat er niet klopt in een antwoord van de AI.'},
+    {ico:'pen', t:'Schrijf zelf', s:'Schrijf je eigen prompt en check hem met een lijstje.'}],
+  weetjes:[
+    {t:'Geen AI nodig', s:'Je oefent op voorbeelden in de pagina. Je hoeft nergens in te loggen of een chatbot te gebruiken.'},
+    {t:'Geen account', s:'Je voortgang wordt bewaard op dit toestel, apart per gids. Niemand anders ziet je antwoorden.'},
+    {t:'Op elk scherm', s:'Werkt op gsm, tablet en computer.'},
+    {t:'In de klas of een workshop', s:'Elke leeftijdsgroep heeft ook een eigen pagina. Reken ongeveer 30 tot 45 minuten per halte.'}]
+};
+
+/* ---------- intro per halte, in de stem van de gids ---------- */
+const PL_LEER = [
+  ['Herkennen wat een prompt is, en wat niet','Je eerste eenvoudige vraag aan een AI stellen','Het verschil zien tussen een vage en een duidelijke prompt'],
+  ['Aanwijzen welke informatie een prompt nog mist','Zeggen waarvoor je het antwoord nodig hebt en voor wie het is','Lengte, toon en niveau vastleggen'],
+  ['Relevante achtergrond meegeven','Een voorbeeld tonen om de stijl te sturen','Het juiste formaat vragen: lijst, tabel of stappenplan','Grenzen stellen: wat de AI níet moet doen'],
+  ['De AI een rol of perspectief geven','Een grote vraag opdelen in stappen','Samen met de AI ideeën en verhalen bedenken','De AI eerst vragen laten stellen'],
+  ['Beoordelen of een antwoord doet wat je vroeg','Bijsturen met een goede vervolgvraag','Een zwakke prompt herschrijven','Twee antwoorden vergelijken en het beste kiezen'],
+  ['Verzonnen feiten en bronnen herkennen','Weten welke gegevens je nooit deelt','Eerlijk aangeven wanneer en hoe je AI gebruikte','Vooroordelen in antwoorden opmerken','Kiezen wanneer je beter zelf nadenkt'],
+  ['Een bruikbare samenvatting vragen','Feedback op je tekst vragen zonder dat de AI alles herschrijft','AI gebruiken om te leren en te oefenen','Voor- en nadelen op een rij laten zetten','Je eigen herbruikbare sjabloon maken'],
+  ['Alle bouwstenen combineren in één sterke prompt','Alles toepassen in de eindproef']
+];
+const PL_TEKST = [
+ {jong:'Welkom bij halte 1! Een prompt is gewoon de vraag of opdracht die je aan een AI geeft. Klinkt simpel, maar niet alles wat je intypt is een goede prompt. Een AI kan niet raden wat jij in je hoofd hebt: hoe duidelijker je vraagt, hoe beter het antwoord. In deze halte ontdek je wat een prompt is, schrijf je je eerste prompt en leer je het verschil zien tussen vaag en duidelijk.',
+  tiener:'Halte 1: de basis. Je hebt waarschijnlijk al eens iets aan een AI-chatbot gevraagd, en soms kreeg je een nutteloos antwoord terug. Dat ligt vaak niet aan de AI, maar aan de vraag. Hier leer je wat een prompt precies is, wat je eerste prompt goed maakt en waarom “lang” niet hetzelfde is als “duidelijk”. Klinkt basic, maar alles wat volgt, bouwt hierop verder.',
+  volw:'Welkom bij het eerste onderdeel. Een prompt is de vraag of opdracht die je aan een AI-chatbot geeft. Het antwoord is zo goed als de vraag: een vage vraag levert een algemeen antwoord op dat je daarna moet herschrijven. In deze halte leer je herkennen wat een prompt is, stel je je eerste vraag en zie je het verschil tussen een vage en een duidelijke prompt. Dat verschil komt in elk volgend onderdeel terug.'},
+ {jong:'Halte 2: duidelijk vragen. Stel dat je vraagt: “Leg fotosynthese uit.” Dan weet de AI niet of je 8 bent of 18, en of het voor een toets is of voor een spreekbeurt. Daarom leer je hier drie dingen zeggen: wat je wil, voor wie het is, en hoe lang of moeilijk het mag zijn. Met die drie trucs wordt elk antwoord meteen beter.',
+  tiener:'Halte 2: duidelijk vragen. Vraag je “Help met mijn motivatiebrief”, dan krijg je een standaardtekst die bij niemand past. Ook niet bij jou. Hier leer je zien wat een prompt mist, zeggen waarvoor en voor wie je het antwoord nodig hebt, en afbakenen: lengte, toon, niveau. Hoe precieser je vraagt, hoe minder je achteraf moet herschrijven.',
+  volw:'Dit onderdeel gaat over duidelijk vragen. Vraag je “Schrijf een mail naar de school”, dan moet de AI raden naar wie, waarover en in welke toon. Je leert aanwijzen welke informatie een prompt nog mist, zeggen wat het doel en het publiek zijn, en de lengte, toon en het niveau vastleggen. Zo krijg je meteen iets bruikbaars in plaats van een algemene tekst.'},
+ {jong:'Halte 3: context geven. De AI weet niets over jou, je klas of je opdracht, tenzij jij het vertelt. Hier leer je de AI een beetje achtergrond geven, een voorbeeld tonen van hoe je het wil, en vragen om een handig formaat zoals een lijstje of een tabel. En je leert iets belangrijks: zeggen wat de AI níet moet doen, bijvoorbeeld “geef hints, geen antwoorden”.',
+  tiener:'Halte 3: context geven. Een AI kent je richting, je GIP of je planning niet. Geef je die context mee, dan wordt het antwoord iets wat echt bij jou past. Je leert achtergrond geven, een voorbeeld tonen om de stijl te sturen, het juiste formaat vragen en grenzen stellen: “geef feedback, herschrijf niet”. Die laatste is goud waard als je zelf wil blijven schrijven.',
+  volw:'Dit onderdeel gaat over context. De AI kent je functie, je team of je situatie niet, tenzij je die meegeeft. Je leert relevante achtergrond geven, een eerder voorbeeld tonen zodat de stijl klopt, het juiste formaat vragen (een lijst, een tabel, een stappenplan) en grenzen stellen, zoals “verzin geen cijfers”. Met goede context bespaar je veel heen-en-weer.'},
+ {jong:'Halte 4: rollen en stappen. Wist je dat je een AI kan vragen om iets te spelen? “Wees mijn quizmaster” of “wees een sportcoach” geeft heel andere antwoorden. Je leert ook een grote opdracht in stukjes opdelen, samen met de AI een verhaal of rap bedenken, en de AI eerst vragen laten stellen voor hij antwoordt. Dat laatste is een echte pro-truc.',
+  tiener:'Halte 4: rollen en stappen. Hier wordt het interessant. Je geeft de AI een rol (“wees een strenge examinator”), je deelt een groot project op in fases, je gebruikt de AI als sparringpartner voor creatieve ideeën, en je laat hem eerst doorvragen voor hij iets voorstelt. Zo werk je met de AI samen in plaats van hem gewoon iets te laten uitspuwen.',
+  volw:'Dit onderdeel gaat over rollen en stappen. Je kan een AI een rol of perspectief geven, zoals een kritische klant of een ervaren collega, en krijgt dan gerichtere antwoorden. Je leert ook een groot project opdelen in fases, samen creatief werken aan ideeën, en de AI eerst vragen laten stellen voor hij een voorstel doet. Zo wordt de AI meer een gesprekspartner dan een zoekmachine.'},
+ {jong:'Halte 5: bijsturen. Het eerste antwoord van een AI is zelden meteen perfect, en dat is niet erg. Je mag gewoon zeggen: “korter” of “grappiger” of “voor iemand van 12”. Hier leer je kijken of een antwoord doet wat je vroeg, een betere vervolgvraag stellen, een zwakke prompt herschrijven en kiezen welk van twee antwoorden het beste is, en waarom.',
+  tiener:'Halte 5: bijsturen. Het verschil tussen iemand die AI goed gebruikt en iemand die afhaakt: de eerste stuurt bij. Je leert een antwoord toetsen aan wat je vroeg, bijsturen met een gerichte vervolgvraag (“minder schools, meer mijn stem”), een zwakke prompt van iemand anders herschrijven, en twee antwoorden vergelijken met argumenten.',
+  volw:'Dit onderdeel gaat over bijsturen. Een eerste antwoord is een vertrekpunt, geen eindproduct. Je leert beoordelen of een antwoord doet wat je vroeg, bijsturen met een gerichte vervolgvraag (“formeler en zonder jargon”), een zwakke prompt herschrijven en twee antwoorden vergelijken op basis van duidelijke criteria. Zo haal je in twee of drie stappen een bruikbaar resultaat.'},
+ {jong:'Halte 6: veilig en kritisch. Een AI klinkt altijd heel zeker, maar hij kan zich vergissen en zelfs dingen verzinnen. Hier leer je verzonnen feiten herkennen, en weet je welke dingen je nooit deelt met een AI, zoals je adres of wachtwoorden. Je leert ook eerlijk zeggen wanneer je AI gebruikte, vooroordelen opmerken, en kiezen wanneer je het beter zelf doet.',
+  tiener:'Halte 6: veilig en kritisch. Misschien de belangrijkste halte. AI verzint soms feiten en bronnen, en brengt ze even overtuigend als echte. Je leert dat herkennen, weten welke info je nooit deelt (ook niet over vrienden), eerlijk aangeven wanneer je AI gebruikte voor een taak of je GIP, vooroordelen in antwoorden opmerken en kiezen wanneer je AI beter niet gebruikt, zodat je zelf blijft leren.',
+  volw:'Dit onderdeel gaat over veilig en kritisch gebruik. AI kan feiten en bronnen verzinnen en brengt die even overtuigend als correcte informatie. Je leert dat herkennen, weten welke gegevens je nooit deelt (klantgegevens, rijksregisternummers), afspraken over AI-gebruik op het werk respecteren, vooroordelen in antwoorden opmerken en bewust kiezen wanneer een beslissing bij jou blijft.'},
+ {jong:'Halte 7: in de praktijk. Nu gebruik je alles wat je leerde voor echte dingen: een hoofdstuk samenvatten, feedback krijgen op je opstel zonder dat de AI het voor je schrijft, Franse woordjes oefenen, of kiezen welke hobby je wil doen. Op het einde maak je je eigen sjabloon: een prompt die je altijd opnieuw kan gebruiken.',
+  tiener:'Halte 7: in de praktijk. Hier pas je alles toe op dingen die je echt tegenkomt: een wetenschappelijk artikel samenvatten, feedback op een motivatiebrief, examenvragen laten maken om te oefenen, een studiekeuze afwegen. Je sluit af met je eigen sjabloon: een prompt die je elke keer opnieuw kan gebruiken, met plekjes om in te vullen.',
+  volw:'Dit onderdeel gaat over toepassingen uit de praktijk: een lang document samenvatten, feedback vragen op een rapport of offerte, nieuwe software leren met uitleg en oefenvragen, en voor- en nadelen afwegen bij een beslissing. Je sluit af met een eigen sjabloon: een herbruikbare prompt voor een taak die je wekelijks doet, zodat je niet telkens opnieuw moet beginnen.'},
+ {jong:'De laatste halte! Eerst bouw je de perfecte prompt: alle trucs samen in één vraag, voor een vakantieplan met vrienden. Daarna de eindproef: een mix van oefeningen uit alle haltes. Haal je die, dan word je officieel Promptmeester!',
+  tiener:'Laatste halte. Eerst combineer je alle bouwstenen in één sterke prompt, voor een plan dat je echt zou kunnen gebruiken. Daarna de eindproef: een mix van alles wat je leerde, zonder nieuwe voorbeelden. Haal je die, dan krijg je je skillkaart.',
+  volw:'Het laatste onderdeel. Je combineert alle bouwstenen in één sterke prompt: doel, publiek, context, formaat, grenzen en een rol. Daarna volgt de eindproef met een mix van oefeningen uit alle onderdelen. Wie die afrondt, krijgt een deelnamebewijs.'}
+];
+const PL_TIP = [
+ {jong:'Vraag jezelf af: zou een vriend snappen wat je bedoelt als je hem dit zou vragen?', tiener:'Lees je prompt nog eens alsof je iemand anders bent. Snap je dan wat er gevraagd wordt?', volw:'Lees je prompt na alsof een nieuwe collega hem moet uitvoeren.'},
+ {jong:'Onthoud: wat, voor wie, en hoe lang.', tiener:'Doel en publiek eerst. Dat scheelt je drie keer herschrijven.', volw:'Wie en waarvoor: twee vragen die je vooraf altijd beantwoordt.'},
+ {jong:'“Geef hints, geen antwoorden” helpt je echt leren in plaats van overschrijven.', tiener:'“Geef feedback, herschrijf niet” houdt je tekst van jou.', volw:'Vraag de AI om aan te geven wat hij niet zeker weet.'},
+ {jong:'Probeer eens: “Stel me eerst drie vragen voor je antwoordt.”', tiener:'Laat de AI eerst doorvragen bij grote beslissingen.', volw:'Een kritische rol (“wees een strenge klant”) haalt zwakke plekken in je tekst naar boven.'},
+ {jong:'Niet tevreden? Zeg het gewoon tegen de AI, net als tegen een vriend.', tiener:'Stuur bij met één duidelijke wijziging per keer.', volw:'Noem bij het bijsturen wat goed was én wat anders moet.'},
+ {jong:'Klinkt iets heel zeker maar heel vreemd? Check het in je boek of bij je juf.', tiener:'Check elke bron die een AI noemt. Bestaat die echt?', volw:'Deel nooit persoonsgegevens van klanten of collega’s in een AI-tool.'},
+ {jong:'Bewaar je beste prompt, dan kan je hem later opnieuw gebruiken.', tiener:'Bewaar je sjablonen in een notitie, dan heb je ze altijd bij de hand.', volw:'Begin met één taak die je wekelijks doet en maak daar een sjabloon voor.'},
+ {jong:'Neem je tijd: er is geen klok.', tiener:'Geen tijdslimiet. Lees elke vraag rustig.', volw:'Er is geen tijdslimiet. Neem rustig de tijd.'}
+];
+AREAS.forEach((a,i)=>{ a.intro = {};
+  for(const p of ['jong','tiener','volw']) a.intro[p] = {tekst:PL_TEKST[i][p], leer:PL_LEER[i], tip:PL_TIP[i][p]}; });
 
 const VAST = 'volw';
 L.forEach(l=>{ for(const p of Object.keys(l.per)) if(p!==VAST) delete l.per[p]; });
@@ -2255,7 +2625,8 @@ function renderChoose(){
     h('section',{class:'hero'},
       h('div',{class:'crew'}, Object.keys(PATHS).map(k=>guide(k,'happy',76))),
       h('h1',null,'Leer AI de juiste vraag stellen.'),
-      h('p',null,'Een tocht langs 8 haltes en 30 korte lessen. Elke les duurt 5 tot 10 minuten en verbetert zichzelf. Kies je gids.')),
+      h('p',null,'Een tocht langs 8 haltes en 30 korte lessen. Elke les duurt 5 tot 10 minuten en verbetert zichzelf. Kies je gids.'),
+      kerncijfers()),
     h('div',{class:'paths'}, Object.entries(PATHS).map(([k,p]) =>
       h('button',{class:'path', style:`--pc:var(--c-${k})`, onclick:()=>{ S.path=k; selArea=currentArea(); save(); renderMap(); toTop(); }},
         guide(k,'neutral',64),
@@ -2263,8 +2634,36 @@ function renderChoose(){
           h('span',{class:'meta'}, p.label),
           h('b',null,`Met ${p.gids}`),
           h('small',null, `${p.gids} is je ${p.rol}. ${p.pitch}`))))),
+    ...introSections(),
     footer()
   );
+}
+
+/* ---------- uitgebreide intro onder de gidskeuze ---------- */
+function totaalMinuten(){ return L.reduce((s,l)=>s+(parseInt(l.duur)||0),0); }
+function kerncijfers(){
+  const min = totaalMinuten(), uur = Math.round(min/30)/2;
+  return h('div',{class:'stats'}, [[AREAS.length,'haltes'],[TOTAL,'korte lessen'],[Object.keys(PATHS).length,'gidsen'],[`± ${String(uur).replace('.',',')} uur`,'in totaal']]
+    .map(([g,t])=>h('div',{class:'stat'}, h('b',null,String(g)), h('span',null,t))));
+}
+function introSections(){
+  if(typeof INFO==='undefined') return [];
+  const sec = (titel, sub, ...kids) => h('section',{class:'isec'}, h('h2',null,titel), sub ? h('p',{class:'isub'}, sub) : null, ...kids);
+  const out = [];
+  if(INFO.hoe) out.push(sec('Zo werkt het', INFO.hoeSub,
+    h('ol',{class:'hoe'}, INFO.hoe.map((s,i)=>h('li',null, h('span',{class:'hnr'}, String(i+1)), h('b',null,s.t), h('span',null,s.s))))));
+  if(INFO.extra) out.push(h('section',{class:'isec extra'+(INFO.extra.beeld?'':' solo')},
+    INFO.extra.beeld ? h('div',{class:'xbeeld', html: INFO.extra.beeld()}) : null,
+    h('div',null, h('h2',null,INFO.extra.titel), ...INFO.extra.tekst.map(p=>h('p',{html:p})))));
+  out.push(sec('De route', INFO.routeSub,
+    h('ol',{class:'rlist'}, AREAS.map((a,i)=>h('li',null, h('span',{class:'rnr'}, String(i+1)),
+      h('div',null, h('b',null,a.naam), h('span',{class:'rth'}, a.thema)), h('span',{class:'rn'}, `${a.n} lessen`))))));
+  if(INFO.oefen) out.push(sec('Zo oefen je', INFO.oefenSub,
+    h('div',{class:'oefen'}, INFO.oefen.map(o=>h('div',{class:'ocard'}, h('span',{class:'oico', html:(ICON[o.ico]||ICON.check)}), h('div',null, h('b',null,o.t), h('span',null,o.s)))))));
+  if(INFO.weetjes) out.push(sec('Goed om te weten', null,
+    h('div',{class:'weetjes'}, INFO.weetjes.map(w=>h('div',{class:'weet'}, h('b',null,w.t), h('span',{html:w.s}))))));
+  out.push(h('div',{class:'icta'}, h('button',{class:'btn', onclick:()=>{ const el=document.querySelector('.paths'); el && el.scrollIntoView({behavior:'smooth', block:'center'}); }}, 'Kies je gids ↑')));
+  return out;
 }
 
 function nextLessonId(){ const d=doneFor(S.path); const l=L.find(x=>!d[x.id]); return l?l.id:null; }
@@ -2298,11 +2697,30 @@ function renderMap(){
   const p = PATHS[S.path], d = doneFor(S.path);
   if(!AREAS[selArea]) selArea = 0;
   const nDone = L.filter(x=>d[x.id]).length, full = allBuiltDone(), ca = currentArea();
-  const msg = full ? 'Je hebt de hele route afgelegd. Proficiat! Je certificaat vind je bij halte 8.' : (ca>0 && !lessonsOf(ca).some(l=>d[l.id])) ? `Op naar halte ${ca+1}: ${AREAS[ca].naam.toLowerCase()}! Hier draait het om: ${AREAS[ca].thema.toLowerCase()}.` : p.kaart;
+  const u = !!p.formeel;
+  const msgFor = i => {
+    const it = (AREAS[i].intro && AREAS[i].intro[S.path]) || {tekst:AREAS[i].thema};
+    const k = lessonsOf(i).filter(l=>!d[l.id]).length;
+    let st = '';
+    if(full) st = u ? 'U heeft de hele route afgelegd. Proficiat! Uw bewijs vindt u bij halte 8.' : 'Je hebt de hele route afgelegd. Proficiat! Je certificaat vind je bij halte 8.';
+    else if(areaFull(i)) st = u ? 'Deze halte heeft u al afgerond.' : 'Deze halte heb je al afgerond.';
+    else if(i===ca && nDone===0) st = p.kaart;
+    else if(i===ca && k<lessonsOf(i).length) st = `Nog ${k} ${k===1?'les':'lessen'} te gaan in deze halte.`;
+    else if(i===ca) st = `Op naar halte ${i+1}!`;
+    const box = h('div',{class:'intro'});
+    if(st) box.append(h('p',{class:'ist'}, st));
+    box.append(h('p',{html:it.tekst}));
+    if(it.leer) box.append(h('div',{class:'ileer'}, h('b',null, u?'In deze halte leert u':'In deze halte leer je'), h('ul',null, it.leer.map(x=>h('li',{html:x})))));
+    if(it.tip) box.append(h('p',{class:'itip'}, h('b',null,'Tip: '), h('span',{html:it.tip})));
+    return box;
+  };
+  const msg = msgFor(selArea);
   const mapBox = h('div',{class:'mapBox', html: mapMarkup(selArea)});
   const pick = el => { const g = el.closest('[data-area]'); if(!g) return; selArea=+g.dataset.area;
     mapBox.querySelectorAll('.stopG').forEach(n=>n.classList.toggle('sel', +n.dataset.area===selArea));
     const np = panelFor(selArea); document.getElementById('panel').replaceWith(np);
+    const ns = say(S.path, [msgFor(selArea)], {size:60, mood: areaFull(selArea)?'happy':'neutral'}); ns.id='gidsTekst';
+    document.getElementById('gidsTekst').replaceWith(ns);
     if(window.innerWidth<820) np.scrollIntoView({behavior:'smooth', block:'nearest'}); };
   mapBox.addEventListener('click', e=>pick(e.target));
   mapBox.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); pick(e.target); } });
@@ -2311,7 +2729,7 @@ function renderMap(){
       h('div',{class:'brand'}, flask(), 'Promptlab'),
       h('span',{class:'chip', style:'cursor:default'}, guide(S.path,'neutral',30), `${p.label} · met ${p.gids}`)),
     h('section',{class:'mapHead'},
-      say(S.path, [msg], {size:60, mood: full?'happy':'neutral'}),
+      (n => (n.id='gidsTekst', n))(say(S.path, [msg], {size:60, mood: full?'happy':'neutral'})),
       h('div',{class:'meter'}, h('span',null,`${nDone} / ${TOTAL} lessen`), h('span',{class:'bar', role:'progressbar','aria-label':'Voortgang','aria-valuemin':0,'aria-valuemax':TOTAL,'aria-valuenow':nDone}, h('i',{style:`width:${nDone/TOTAL*100}%`})))),
     h('div',{class:'world'}, mapBox, panelFor(selArea)),
     footer(true)
@@ -2357,6 +2775,306 @@ function iconFor(ex){
 }
 const sentences = html => { const parts = html.split(/(?<=[.!?])\s+(?=[A-ZÀ-Ü<])/); return parts.length>3 ? [parts.slice(0,2).join(' '), ...parts.slice(2)] : parts; };
 
+/* ---------- animaties (korte uitlegfilmpjes in de pagina) ---------- */
+const ANIMS = {};
+function animFig(a){
+  const maker = ANIMS[a.soort]; if(!maker) return null;
+  const rustig = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  const stage = h('div',{class:'astage', 'aria-live':'polite'});
+  const knop = h('button',{class:'btn ghost aknop'}, rustig ? '▶ Speel af' : '↻ Opnieuw afspelen');
+  let run = 0;
+  const play = instant => {
+    const id = ++run;
+    const T = (ms, fn) => { if(instant) return fn(); setTimeout(()=>{ if(id===run && stage.isConnected) fn(); }, ms); };
+    stage.replaceChildren(); maker(stage, a, T, instant);
+  };
+  knop.addEventListener('click', ()=>{ knop.textContent='↻ Opnieuw afspelen'; play(false); });
+  const fig = h('figure',{class:'anim'},
+    h('div',{class:'ahead'}, h('span',{class:'atag'}, '▶ Animatie'), h('b',null, a.titel)),
+    stage,
+    h('figcaption',null, h('span',{html:a.onder||''}), knop));
+  if(rustig){ play(true); }
+  else if('IntersectionObserver' in window){
+    play(true);
+    const io = new IntersectionObserver(es=>{ if(es.some(e=>e.isIntersecting)){ io.disconnect(); play(false); } }, {threshold:.45});
+    setTimeout(()=>io.observe(fig), 50);
+  } else play(false);
+  return fig;
+}
+const mark = s => s.replace(/\[\[(.+?)\]\]/g, '<mark>$1</mark>');
+
+/* 1. Een prompt wordt stap voor stap duidelijker */
+ANIMS.prompt = (st, a, T) => {
+  const pr = h('div',{class:'ap-bub me'}, h('span',{class:'ap-who'},'Jij'), h('span',{class:'ap-txt', html:a.start}));
+  const an = h('div',{class:'ap-bub ai vaag'}, h('span',{class:'ap-who'},'AI'), h('span',{class:'ap-txt', html:a.voor}));
+  const fill = h('i'), lab = h('span',{class:'ap-lab'}, 'De AI moet veel raden');
+  st.append(h('div',{class:'ap'}, pr, h('div',{class:'ap-meter'}, h('span',{class:'ap-mk'},'Hoe duidelijk is je vraag?'), h('div',{class:'ap-bar'}, fill), lab), an));
+  fill.style.width = '18%';
+  const n = a.stappen.length;
+  a.stappen.forEach((s,i)=>{
+    T(1600 + i*1700, ()=>{
+      pr.querySelector('.ap-txt').innerHTML = mark(s);
+      fill.style.width = Math.round(18 + (i+1)*(82/n)) + '%';
+      an.classList.add('denk'); an.style.opacity = String(Math.max(.35, 1 - (i+1)*.17));
+      lab.textContent = i < n-1 ? 'Nog iets minder raden…' : 'Alles wat de AI moet weten';
+    });
+  });
+  T(1600 + n*1700 + 400, ()=>{
+    an.classList.remove('vaag','denk'); an.classList.add('goed'); an.style.opacity = '1';
+    an.querySelector('.ap-txt').innerHTML = a.na; fill.classList.add('vol');
+    lab.textContent = 'Bruikbaar antwoord, in één keer';
+  });
+};
+
+/* 2. Een kraakprogramma probeert wachtwoorden */
+ANIMS.kraak = (st, a, T, instant) => {
+  const gok = h('span',{class:'ak-gok'}, '…'), tel = h('span',{class:'ak-tel'}, '0');
+  const rows = a.rijen.map(r=>{ const pill = h('span',{class:'ak-st'}, 'wacht'); const row = h('div',{class:'ak-rij'}, h('code',null, r.ww), pill); return {r,row,pill}; });
+  st.append(h('div',{class:'ak'},
+    h('div',{class:'ak-term'}, h('div',{class:'ak-top'}, h('i'),h('i'),h('i'), h('span',null,'Kraakprogramma')),
+      h('div',null, 'Probeert: ', gok), h('div',null, 'Pogingen: ', tel)),
+    h('div',{class:'ak-lijst'}, rows.map(x=>x.row))));
+  let t = 900, pogingen = 0;
+  const fmt = v => Math.round(v).toLocaleString('nl-BE');
+  const vreemd = () => Array.from({length:6+Math.floor(Math.random()*8)}, ()=>'abcdefghijklmnopqrstuvwxyz-0123456789'[Math.floor(Math.random()*37)]).join('');
+  rows.forEach(({r,row,pill})=>{
+    T(t, ()=>{ row.classList.add('bezig'); pill.textContent = 'bezig…'; });
+    if(!r.sterk){
+      r.gok.forEach((g,i)=>{ t += 380; const tt=t; T(tt, ()=>{ gok.textContent = g; pogingen += 1 + Math.random()*4e5; tel.textContent = fmt(pogingen); }); });
+      t += 500;
+      T(t, ()=>{ row.classList.remove('bezig'); row.classList.add('weg'); pill.textContent = 'Gekraakt · ' + r.tijd; gok.textContent = r.ww + '  ✓'; });
+      t += 900;
+    } else {
+      for(let i=0;i<12;i++){ t += 260; T(t, ()=>{ gok.textContent = vreemd(); pogingen *= 3.1; tel.textContent = fmt(pogingen); }); }
+      t += 400;
+      T(t, ()=>{ row.classList.remove('bezig'); row.classList.add('houdt'); pill.textContent = 'Niet gekraakt · ' + r.tijd; gok.textContent = 'geeft op…'; });
+    }
+  });
+  if(instant){ tel.textContent = 'miljarden'; }
+};
+
+/* 3. Een gerucht gaat van persoon naar persoon */
+ANIMS.gerucht = (st, a, T) => {
+  const W = 340, lagen = [1,2,4,8], ys = [26, 82, 138, 194];
+  const xs = n => Array.from({length:n}, (_,i)=> (W/n)*(i+.5));
+  let lijnen = '', knopen = '';
+  lagen.forEach((n,l)=>{ xs(n).forEach((x,i)=>{
+    if(l>0){ const px = xs(lagen[l-1])[Math.floor(i/2)]; lijnen += `<line class="gl l${l}" x1="${px}" y1="${ys[l-1]}" x2="${x}" y2="${ys[l]}" pathLength="1"/>`; }
+    knopen += `<circle class="gk l${l}${l===3&&i===5?' jij':''}" cx="${x}" cy="${ys[l]}" r="${l===0?13:11}"/>`;
+  }); });
+  const jx = xs(8)[5];
+  const svg = `<svg viewBox="0 0 ${W} 250" class="ag-net" role="img" aria-label="${a.titel}">${lijnen}${knopen}
+    <text class="ag-jij" x="${jx}" y="${ys[3]+30}" text-anchor="middle">jij</text>
+    <g class="ag-stop" transform="translate(${jx} ${ys[3]+50})"><line x1="-9" y1="-9" x2="9" y2="9"/><line x1="9" y1="-9" x2="-9" y2="9"/></g></svg>`;
+  const tekst = h('div',{class:'ag-msg'}, h('span',{class:'ag-n'}, 'Versie 1'), h('span',{class:'ag-t', html:a.versies[0]}));
+  const wolk = h('div',{class:'ag-wolk', html: (typeof gerucht==='function') ? gerucht(70) : ''});
+  const net = h('div',{class:'ag-netwrap', html:svg});
+  st.append(h('div',{class:'ag'}, h('div',{class:'ag-boven'}, tekst, wolk), net));
+  const zet = l => { net.querySelectorAll('.l'+l).forEach(e=>e.classList.add('on')); };
+  T(300, ()=>zet(0));
+  a.versies.forEach((v,i)=>{ if(i===0) return;
+    T(300 + i*2200, ()=>{ zet(i); tekst.querySelector('.ag-n').textContent = 'Versie ' + (i+1); tekst.querySelector('.ag-t').innerHTML = v;
+      tekst.classList.remove('flits'); void tekst.offsetWidth; tekst.classList.add('flits'); wolk.style.transform = `scale(${1 + i*0.28})`; });
+  });
+  const tEind = 300 + a.versies.length*2200;
+  T(tEind, ()=>{ net.querySelector('.jij').classList.add('stop'); net.querySelector('.ag-stop').classList.add('on'); net.querySelector('.ag-jij').classList.add('on');
+    tekst.querySelector('.ag-n').textContent = 'Jij'; tekst.querySelector('.ag-t').innerHTML = a.breek; tekst.classList.add('breek'); });
+  T(tEind + 2600, ()=>{ tekst.classList.remove('breek'); tekst.classList.add('echt'); tekst.querySelector('.ag-n').textContent = 'Wat er echt gebeurde'; tekst.querySelector('.ag-t').innerHTML = a.echt; wolk.style.transform = 'scale(.7)'; });
+};
+
+/* ---------- animaties, reeks 2 ---------- */
+const eindBox = (st, a, T, ms) => { if(!a.eind) return; const e = h('div',{class:'a-eind', html:a.eind}); T(ms, ()=>{ st.append(e); }); };
+const PILL = {ok:'ok', nok:'nok', vraag:'vraag', todo:'todo'};
+
+/* Een taalmodel schrijft woord per woord */
+ANIMS.voorspel = (st, a, T) => {
+  const zin = h('div',{class:'av-zin', html:a.begin}), bars = h('div',{class:'av-bars'});
+  st.append(h('div',{class:'av'}, h('div',{class:'av-kop'}, a.vraag||'Welk woord komt er nu?'), zin, bars));
+  let t = 700;
+  a.woorden.forEach(w=>{
+    T(t, ()=>{ bars.replaceChildren(...w.opties.map(([wd,p])=>h('div',{class:'av-rij'+(wd===w.kies?' kies':'')}, h('span',{class:'av-w'}, wd), h('div',{class:'av-b'}, h('i',{style:'width:0%','data-p':p})), h('span',{class:'av-p'}, p+'%'))));
+      requestAnimationFrameSafe(()=>bars.querySelectorAll('i').forEach(i=>i.style.width=i.dataset.p+'%')); });
+    t += 1300;
+    T(t, ()=>{ bars.querySelector('.kies')?.classList.add('gekozen'); });
+    t += 700;
+    T(t, ()=>{ zin.append(' ', h('span',{class:'av-nieuw'}, w.kies)); });
+    t += 300;
+  });
+  eindBox(st, a, T, t + 500);
+};
+function requestAnimationFrameSafe(fn){ (window.requestAnimationFrame||setTimeout)(()=> (window.requestAnimationFrame||setTimeout)(fn)); }
+
+/* Een lijst die stap voor stap verschijnt en een stempel krijgt */
+ANIMS.lijst = (st, a, T) => {
+  const box = h('div',{class:'al'});
+  if(a.kop) box.append(h('div',{class:'al-kop'}, a.kopLabel ? h('span',{class:'al-kl'}, a.kopLabel) : null, h('span',{html:a.kop})));
+  st.append(box);
+  let t = a.kop ? 900 : 400;
+  a.items.forEach((it,i)=>{
+    const pill = it.p ? h('span',{class:'al-p '+(it.st||'ok')}, it.p) : null;
+    const row = h('div',{class:'al-r'}, h('span',{class:'al-n'}, a.genummerd===false ? '•' : String(i+1)), h('div',{class:'al-t'}, h('b',{html:it.t}), it.s ? h('small',{html:it.s}) : null), pill);
+    T(t, ()=>{ box.append(row); });
+    if(pill){ T(t+700, ()=>{ pill.classList.add('on'); row.classList.add('st-'+(it.st||'ok')); }); }
+    t += a.tempo || 1500;
+  });
+  eindBox(box, a, T, t + 300);
+};
+
+/* Een gesprek dat zich afspeelt */
+ANIMS.chat = (st, a, T) => {
+  const box = h('div',{class:'ac'}, a.kop ? h('div',{class:'ac-kop'}, a.kop) : null);
+  st.append(box);
+  let t = 500;
+  a.msgs.forEach(m=>{
+    const w = m.w || 'ai';
+    if(w!=='me' && w!=='sys'){ const dots = h('div',{class:'ac-m '+w+' typ'}, h('i'),h('i'),h('i')); T(t, ()=>box.append(dots)); t += 900; T(t, ()=>dots.remove()); }
+    const el = h('div',{class:'ac-m '+w+(m.st?' st-'+m.st:'')}, m.wie ? h('span',{class:'ac-wie'}, m.wie) : null, h('span',{html:m.t}), m.p ? h('span',{class:'ac-pill'}, m.p) : null);
+    T(t, ()=>box.append(el));
+    t += m.wacht || 1500;
+  });
+  eindBox(box, a, T, t);
+};
+
+/* Rode vlaggen in een bericht, een voor een */
+ANIMS.vlaggen = (st, a, T) => {
+  const rows = a.zinnen.map(z=>{ const lab = z.vlag ? h('span',{class:'avl-l'}, z.vlag) : null; return {z, el:h('div',{class:'avl-z'}, h('span',{html:z.t}), lab)}; });
+  st.append(h('div',{class:'avl'}, h('div',{class:'avl-kop'}, h('span',null, a.kanaal||'Bericht'), h('b',null, a.van||'')), ...rows.map(r=>r.el)));
+  let t = 900;
+  rows.forEach(r=>{ if(!r.z.vlag) return; T(t, ()=>r.el.classList.add('on')); t += 1500; });
+  eindBox(st, a, T, t);
+};
+
+/* Een lange tekst krimpt tot de kern */
+ANIMS.krimp = (st, a, T) => {
+  const tekst = h('div',{class:'ak2-tekst', html:a.tekst.replace(/\[\[(.+?)\]\]/g,'<span class="kern">$1</span>')});
+  const lijst = h('ul',{class:'ak2-lijst'});
+  st.append(h('div',{class:'ak2'}, h('div',{class:'ak2-lab'}, a.labVoor||'De lange tekst'), tekst, h('div',{class:'ak2-lab'}, a.labNa||'De samenvatting'), lijst));
+  T(1400, ()=>tekst.classList.add('dim'));
+  let t = 2600;
+  a.punten.forEach(p=>{ T(t, ()=>lijst.append(h('li',{html:p}))); t += 1100; });
+  eindBox(st, a, T, t + 200);
+};
+
+/* Twee sloten: wachtwoord en code */
+ANIMS.sloten = (st, a, T) => {
+  const mark = h('span',{class:'as-mark'}, '🦹');
+  const s1 = h('div',{class:'as-slot'}, h('span',{class:'as-ico'}, '🔒'), h('b',null,'Slot 1'), h('small',null, a.slot1));
+  const s2 = h('div',{class:'as-slot'}, h('span',{class:'as-ico'}, '🔒'), h('b',null,'Slot 2'), h('small',null, a.slot2));
+  const acc = h('div',{class:'as-acc'}, h('span',{class:'as-ico'}, '📬'), h('small',null, a.account));
+  const gsm = h('div',{class:'as-gsm'}, h('b',null, a.gsmKop||'Jouw gsm'), h('span',null, a.gsmVraag), h('div',{class:'as-gk'}, h('span',{class:'ja'}, 'Goedkeuren'), h('span',{class:'nee'}, 'Weigeren')));
+  st.append(h('div',{class:'as'}, h('div',{class:'as-wie'}, '🦹 ', a.dief), h('div',{class:'as-lane'}, mark), h('div',{class:'as-baan'}, s1, s2, acc), gsm));
+  mark.style.left = '0%';
+  T(700, ()=>mark.style.left = '16.6%');
+  T(1900, ()=>{ s1.classList.add('open'); s1.querySelector('.as-ico').textContent='🔓'; });
+  T(2900, ()=>mark.style.left = '50%');
+  T(4000, ()=>gsm.classList.add('on'));
+  T(5500, ()=>gsm.classList.add('nee'));
+  T(6200, ()=>{ s2.classList.add('dicht'); mark.classList.add('weg'); });
+  eindBox(st, a, T, 7200);
+};
+
+/* Een webadres van achter naar voor lezen */
+ANIMS.url = (st, a, T) => {
+  const box = h('div',{class:'au'}, a.kop ? h('div',{class:'au-kop', html:a.kop}) : null); st.append(box);
+  let t = 600;
+  a.urls.forEach(u=>{
+    const m = u.u.match(/^(https?:\/\/)([^\/]+)(.*)$/); const host = m[2], parts = host.split('.');
+    const eig = parts.slice(-2).join('.'), voor = parts.slice(0,-2).join('.');
+    const row = h('div',{class:'au-r'},
+      h('div',{class:'au-bar'}, h('span',{class:'au-s'}, m[1]), voor ? h('span',{class:'au-v'}, voor+'.') : null, h('span',{class:'au-e'}, eig), h('span',{class:'au-pad'}, m[3])),
+      h('div',{class:'au-uit'}, h('span',null, 'Eigenaar: '), h('b',null, eig), h('span',{class:'au-p '+(u.ok?'ok':'nok')}, u.ok ? (a.okTekst||'✓ echt') : (a.nokTekst||'✗ niet echt'))));
+    T(t, ()=>box.append(row)); t += 900;
+    T(t, ()=>row.classList.add('s1')); t += 900;
+    T(t, ()=>row.classList.add('s2')); t += 1100;
+    T(t, ()=>row.classList.add('s3')); t += 1300;
+  });
+  eindBox(box, a, T, t);
+};
+
+/* Losse stukjes info vormen samen een profiel */
+ANIMS.puzzel = (st, a, T) => {
+  const posts = a.stukjes.map(s=>h('div',{class:'ap2-post'}, h('span',{class:'ap2-i'}, s.i||'📌'), h('span',{html:s.post})));
+  const kaart = h('div',{class:'ap2-kaart'}, h('b',null, a.kaartKop||'Wat een oplichter nu weet'));
+  const bericht = h('div',{class:'ap2-msg', html:a.bericht});
+  st.append(h('div',{class:'ap2'}, h('div',{class:'ap2-posts'}, posts), kaart, bericht));
+  let t = 700;
+  a.stukjes.forEach((s,i)=>{ T(t, ()=>{ posts[i].classList.add('on'); }); T(t+500, ()=>kaart.append(h('div',{class:'ap2-f'}, h('span',null,'✓'), h('span',{html:s.weet})))); t += 1400; });
+  T(t+300, ()=>bericht.classList.add('on'));
+  eindBox(st, a, T, t + 2200);
+};
+
+/* 3-2-1 back-up tegen ransomware */
+ANIMS.backup = (st, a, T) => {
+  const doc = n => Array.from({length:n}, (_,i)=>h('span',{class:'ab-f'}, a.bestanden ? a.bestanden[i%a.bestanden.length] : '📄'));
+  const mk = (cls, kop, sub) => { const files = h('div',{class:'ab-fs'}); return {el:h('div',{class:'ab-box '+cls}, h('b',null,kop), h('small',null,sub), files), files}; };
+  const L = mk('l', a.laptop||'Laptop', a.subL||'origineel'), S = mk('s', a.schijf||'Externe schijf', a.subS||'losgekoppeld na de back-up'), C = mk('c', a.cloud||'Cloud', a.subC||'op een andere plek');
+  const msg = h('div',{class:'ab-msg'});
+  st.append(h('div',{class:'ab'}, h('div',{class:'ab-rij'}, L.el, S.el, C.el), msg));
+  L.files.append(...doc(4));
+  const zeg = (txt, cls) => { msg.className = 'ab-msg on ' + (cls||''); msg.innerHTML = txt; };
+  T(900, ()=>{ zeg(a.t1||'Kopie 1 en 2: back-up maken'); S.files.append(...doc(4)); C.files.append(...doc(4)); S.el.classList.add('vol'); C.el.classList.add('vol'); });
+  T(2600, ()=>{ if(!a.subS) S.el.classList.add('los'); zeg(a.t2||'De schijf gaat weer los van de laptop'); });
+  T(4200, ()=>{ L.el.classList.add('ransom'); L.files.querySelectorAll('.ab-f').forEach(f=>f.textContent=a.kapot||'🔒'); zeg(a.t3||'Ransomware versleutelt alles op de laptop', 'nok'); });
+  T(6200, ()=>{ L.el.classList.remove('ransom'); L.el.classList.add('terug'); L.files.replaceChildren(...doc(4)); zeg(a.t4||'Terugzetten van de back-up: niets kwijt', 'ok'); });
+  eindBox(st, a, T, 7600);
+};
+
+/* Omgekeerd zoeken: de oudste versie van een foto */
+ANIMS.zoek = (st, a, T) => {
+  const foto = h('div',{class:'az-foto'}, h('span',{class:'az-i'}, '🖼️'), h('span',{html:a.foto}), h('span',{class:'az-scan'}));
+  const lijst = h('div',{class:'az-l'});
+  st.append(h('div',{class:'az'}, foto, h('div',{class:'az-lab'}, a.lab||'Gevonden met deze foto, van nieuw naar oud'), lijst));
+  T(400, ()=>foto.classList.add('scan'));
+  let t = 2000;
+  a.hits.forEach(hh=>{ const r = h('div',{class:'az-r'+(hh.oudst?' oudst':'')}, h('span',{class:'az-d'}, hh.datum), h('div',null, h('small',null, hh.site), h('b',{html:hh.t}))); T(t, ()=>lijst.append(r)); t += 1000; });
+  T(t+200, ()=>{ foto.classList.remove('scan'); lijst.querySelector('.oudst')?.classList.add('on'); });
+  eindBox(st, a, T, t + 1400);
+};
+
+/* Een grafiek met afgeknipte as wordt eerlijk */
+ANIMS.as = (st, a, T) => {
+  const vals = a.punten.map(p=>p.v), max = Math.max(...vals), lo = a.vanaf;
+  const mooi = x => { const e = Math.pow(10, Math.floor(Math.log10(x))); for(const m of [1,2,2.5,5,10]) if(m*e >= x-1e-9) return m*e; };
+  const st1 = mooi((max-lo)*1.12/4), hi = lo + 4*st1, st2 = mooi(max*1.08/4), hiE = 4*st2;
+  const nl = (v, stp) => { const d = stp===undefined ? 2 : stp>=1 ? 0 : stp>=0.1 ? 1 : 2; return String(+(v.toFixed(d))).replace('.', ','); };
+  const bars = a.punten.map(p=>{ const b = h('i',null, h('span',{class:'aa-v'}, nl(p.v)+(a.eenheid||''))); return {p, b, el:h('div',{class:'aa-kol'}, h('div',{class:'aa-staaf'}, b), h('span',{class:'aa-x'}, p.l))}; });
+  const ticks = h('div',{class:'aa-y'});
+  const zetY = (l,hh) => ticks.replaceChildren(...[4,3,2,1,0].map(k=>h('span',null, nl(l+(hh-l)*k/4, (hh-l)/4)+(a.eenheid||''))));
+  const lab = h('div',{class:'aa-lab nok'}, a.labVoor||'De as begint niet bij 0');
+  st.append(h('div',{class:'aa'}, h('b',{class:'aa-t'}, a.titelGrafiek), h('div',{class:'aa-graf'}, ticks, h('div',{class:'aa-kols'}, bars.map(b=>b.el))), lab));
+  const zet = (l,hh) => { zetY(l,hh); bars.forEach(b=>b.b.style.height = Math.max(2,(b.p.v-l)/(hh-l)*100)+'%'); };
+  zet(lo, hi);
+  T(2600, ()=>{ lab.className = 'aa-lab'; lab.textContent = a.labTussen||'Kijk naar de onderkant…'; ticks.classList.add('flits'); });
+  T(4200, ()=>{ zet(0, hiE); lab.className = 'aa-lab ok'; lab.textContent = a.labNa||'Met de as vanaf 0: het verschil is klein'; ticks.classList.remove('flits'); });
+  eindBox(st, a, T, 5800);
+};
+
+/* Een feed die steeds meer van hetzelfde toont */
+ANIMS.feed = (st, a, T) => {
+  const ond = a.onderwerpen, feed = h('div',{class:'af-feed'}), lab = h('div',{class:'af-lab'});
+  const post = (k, liked) => h('div',{class:'af-post o'+k+(liked?' liked':'')}, h('span',{class:'af-dot'}), h('span',null, ond[k]), liked ? h('span',{class:'af-like'}, '♥') : null);
+  const rondes = a.rondes || [[0,1,2,3,0,2],[0,0,1,0,3,0],[0,0,0,2,0,0],[0,0,0,0,0,0]];
+  st.append(h('div',{class:'af'}, h('div',{class:'af-tel'}, h('div',{class:'af-top'}, a.app||'Voor jou'), feed), lab));
+  const toon = (r, i) => { feed.replaceChildren(...r.map((k,j)=>post(k, j===0 && i>0 && i<rondes.length))); };
+  toon(rondes[0], 0); lab.textContent = a.lab0 || 'Je feed is gevarieerd.';
+  rondes.slice(1).forEach((r,i)=>{ T(1800 + i*2000, ()=>{ toon(r, i+1); feed.classList.remove('schuif'); void feed.offsetWidth; feed.classList.add('schuif'); lab.innerHTML = (a.labs||[])[i] || ''; }); });
+  const tEind = 1800 + (rondes.length-1)*2000 + 600;
+  if(a.uit){ T(tEind, ()=>{ toon(a.uit, 0); feed.classList.remove('schuif'); void feed.offsetWidth; feed.classList.add('schuif'); lab.innerHTML = a.labUit; lab.classList.add('ok'); }); }
+  eindBox(st, a, T, tEind + 1400);
+};
+
+/* Een citaat wordt geknipt */
+ANIMS.knip = (st, a, T) => {
+  const zin = h('div',{class:'ak3-zin', html:'“' + a.zin.replace(/\[\[(.+?)\]\]/g,'<span class="hou">$1</span>').replace(/(^|<\/span>)([^<]+)(?=<span|$)/g, (m,p,txt)=>p+'<span class="weg">'+txt+'</span>') + '”'});
+  const lab = h('div',{class:'ak3-lab'}, a.labVol||'Wat er echt gezegd werd');
+  const post = h('div',{class:'ak3-post', html:a.post});
+  st.append(h('div',{class:'ak3'}, lab, zin, post));
+  T(1800, ()=>{ zin.classList.add('knip'); lab.textContent = '✂ ' + (a.labKnip||'Geknipt'); });
+  T(3200, ()=>{ zin.classList.add('kort'); post.classList.add('on'); lab.textContent = a.labGedeeld||'Zo ging het rond'; });
+  T(5600, ()=>{ zin.classList.remove('knip','kort'); post.classList.remove('on'); post.classList.add('weg'); lab.textContent = a.labTerug||'De volledige zin zegt het omgekeerde'; zin.classList.add('vol'); });
+  eindBox(st, a, T, 6800);
+};
+
 function renderStep(){
   const {les,c,step} = cur;
   const STEPS = stepsOf(c);
@@ -2367,6 +3085,7 @@ function renderStep(){
     body = h('div',{class:'step'},
       h('h2',null, les.titel),
       say(S.path, [c.gids, ...sentences(c.uitleg)], {size:84}),
+      c.anim ? animFig(c.anim) : null,
       h('div',{class:'actions'}, next));
   } else if(kind==='voorbeeld'){
     body = h('div',{class:'step'}, h('h2',null,'Zo ziet dat eruit'), renderExample(c.voorbeeld), h('div',{class:'actions'}, next));
@@ -2421,7 +3140,7 @@ function renderExample(v){
 
 function react(ok, text){
   return h('div',{class:'react '+(ok?'ok':'nok'), role:'status'}, guide(S.path, ok?'happy':'hmm', 34),
-    h('div',{class:'bubble'}, h('b',null, ok?'Juist! ':'Niet helemaal. '), text));
+    h('div',{class:'bubble'}, h('b',null, ok?'Juist! ':'Niet helemaal. '), ok && typeof text==='string' ? text.replace(/^Juist\.\s*/,'') : text));
 }
 
 function shuf(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
